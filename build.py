@@ -32,9 +32,9 @@ def top(build_ver):
             '    Build: '    + str(build_ver) + '\n' +
             '    Author: '   + '/u/kwwxis' + '\n' +
             '    Modified: ' + datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S-0' +
-                               str(7 if time.localtime().tm_isdst else 8) + '00 (ISO-8601)') +
+                               str(7 if time.localtime().tm_isdst else 8) + '00 (ISO-8601)') + '\n' +
             '    Source: '   + 'github.com/matthew0x40/aww-css/' + '\n' +
-            '\n*/')
+            '*/')
 
 def run():
     with open(r'build.dat','r+') as build:
