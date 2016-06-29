@@ -1,0 +1,265 @@
+
+/* titlebox toggles
+--------------------------------------------------------------------------------*/
+
+.titlebox {
+    margin-top: -10px;
+}
+
+.titlebox form.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.toggle.flairtoggle {
+    height: 0;
+    visibility: hidden;
+}
+
+.titlebox > .tagline {
+    text-align: center;
+}
+
+/* remove icons */
+.titlebox form.leavecontributor-button:before,
+.titlebox .leavemoderator:before, .moderator.toggle .main:before {
+    display: none;
+}
+
+.titlebox form.toggle:not(.res-sr-style-toggle),
+.titlebox .leavemoderator {
+    margin-left: 15px;
+}
+
+/* subreddit style toggle
+--------------------------------------------------------------------------------*/
+
+.res .res-sr-style-toggle label {
+    color: rgba(0,0,0,0.35);
+}
+
+.res .res-sr-style-toggle input[type=checkbox] {
+    display: none;
+}
+
+.res .res-sr-style-toggle label:before {
+    content: '✓';
+    display: inline-block;
+    font-weight: bold;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* subscribers & users online
+--------------------------------------------------------------------------------*/
+
+.subscribers, .users-online {
+    display: inline-block;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 15px 0 10px 0;
+}
+
+.subscribers {
+    float: left;
+}
+
+.users-online:before {
+    display: none;
+}
+
+.subscribers .word, .users-online .word {
+    font-size: 0;
+}
+
+.subscribers .word:before  { content: 'Subscribers'; }
+.users-online .word:before { content: 'Online'; }
+
+.subscribers .word:before, .users-online .word:before {
+    font-size: 14px;
+    color: rgba(0,0,0,0.55);
+}
+
+.subscribers .number, .users-online .number {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+}
+
+
+/* subscribe buttons
+--------------------------------------------------------------------------------*/
+
+.titlebox .fancy-toggle-button.subscribe-button {
+    display: flex;
+    justify-content: center;
+}
+
+.res .subButtons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* margin top/bottom */
+.titlebox .fancy-toggle-button.subscribe-button, .res .titlebox .res-fancy-toggle-button {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* subscribe button no-RES */
+body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
+    width: 100%;
+    max-width: 150px;
+}
+
+/* subscribe and RES sub button */
+.titlebox .fancy-toggle-button.subscribe-button .option.active,
+.res .titlebox .res-fancy-toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 13px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #333;
+    height: 38px;
+    min-width: 82px;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+/* colors */
+.titlebox .fancy-toggle-button.subscribe-button .option.active {
+    color: #fa84a6;
+    border: 3px solid #fa84a6;
+}
+.titlebox .fancy-toggle-button.subscribe-button .option.active:focus,
+.titlebox .fancy-toggle-button.subscribe-button .option.active:hover {
+    color: white;
+    background: #fa84a6;
+}
+
+.res .titlebox .res-fancy-toggle-button.RESshortcut {
+    color: #b4d337;
+    border: 3px solid #b4d337;
+}
+.res .titlebox .res-fancy-toggle-button.RESshortcut:focus,
+.res .titlebox .res-fancy-toggle-button.RESshortcut:hover {
+    color: white;
+    background: #b4d337;
+}
+
+.res .titlebox .res-fancy-toggle-button.RESDashboardToggle {
+    color: #49acd5;
+    border: 3px solid #49acd5;
+}
+.res .titlebox .res-fancy-toggle-button.RESDashboardToggle:focus,
+.res .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover {
+    color: white;
+    background: #49acd5;
+}
+
+/* subscribe buttons box
+--------------------------------------------------------------------------------*/
+
+/* count box */
+.subscribers:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #eef2f9;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    right: 0;
+    margin-top: -20px;
+    opacity: 0.7;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.subscribers .word, .subscribers .number, .users-online .word, .users-online .number {
+    position: relative;
+    z-index: 5;
+}
+
+/* count box separator */
+.users-online:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 1px;
+    background: rgba(0,0,0,0.1);
+}
+
+/* count box space */
+.users-online {
+    margin-bottom: 21px;
+    position: relative;
+}
+
+/* flair tagline box
+--------------------------------------------------------------------------------*/
+
+.titlebox > .tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    margin: 0 -10px 0 -10px;
+    position: relative;
+}
+
+/* tagline box */
+.titlebox > .tagline:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    top: 0;
+    left: 0;
+    background: url(%%overlay-1%%);
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.titlebox > .tagline > *:not(.flairselector) {
+    z-index: 5;
+    position: relative;
+}
+
+/* if mod or approved submitter: margin between sub count box and flair count box */
+.users-online + .leavemoderator, .users-online + .toggle {
+    margin-top: 10px;
+}
+
+.leavemoderator + form.toggle.flairtoggle, .toggle + form.toggle.flairtoggle {
+    margin-top: 20px;
+}
+
+/* border top if mod and/or approved submitter, no border top otherwise because this
+tagline box will touch the sub count box which already has a border bottom */
+.leavemoderator + form.toggle.flairtoggle ~ .tagline:before,
+.toggle + form.toggle.flairtoggle ~ .tagline:before {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    height: 47px;
+}
+
+/* "bottom" border */
+.side .md hr:first-of-type {
+    margin-top: 0;
+}

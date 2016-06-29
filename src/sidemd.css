@@ -1,0 +1,165 @@
+
+/* misc md
+--------------------------------------------------------------------------------*/
+
+.side .md hr {
+    border: 0;
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+    margin: 20px -10px 15px -10px;
+}
+
+
+/* quick rules box
+--------------------------------------------------------------------------------*/
+
+.side .md h3 {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+}
+
+.side .md h3 + ol {
+    list-style-type: none;
+    counter-reset: siderules;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    padding-left: 20px;
+}
+
+.side .md h3 + ol li {
+    position: relative;
+    font-size: 13px;
+    border: 1px solid #e3e3e3;
+    padding: 10px 10px 10px 30px;
+    box-sizing: border-box;
+}
+
+/* li number */
+.side .md h3 + ol li:before {
+    counter-increment: siderules;
+    content: counter(siderules);
+    position: absolute;
+    text-align: center;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    margin-right: -13px;
+    z-index: 3;
+    background: white;
+    border-radius: 50%;
+    background: #CFDAF0;
+    color: white;
+}
+
+/* li background */
+.side .md h3 + ol li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(%%overlay-1%%);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* li text */
+.side .md h3 + ol li p {
+    position: relative;
+    z-index: 2;
+}
+
+/* margin between */
+.side .md h3 + ol li + li {
+    margin-top: 20px;
+}
+
+/* read full rules link */
+.side .md h3 + ol + ul {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 14px;
+    list-style-type: none;
+    margin-top: 15px;
+    padding-left: 0;
+    text-align: center;
+}
+
+/* related subs table
+--------------------------------------------------------------------------------*/
+
+.side .md h4, .side .md h4 strong {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal !important;
+    font-size: 18px;
+    text-align: center;
+}
+
+.side .md table td {
+    border: 1px solid white;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.side .md h4 + table {
+    position: relative;
+}
+
+.side .md h4 + table thead {
+    display: none;
+}
+
+.side .md h4 + table td {
+    background: transparent;
+    position: relative;
+    z-index: 5;
+}
+
+.side .md h4 + table:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(%%overlay-1%%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+.side .md h4 + table tr:not(:last-of-type) td:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+}
+.side .md h4 + table tr td:last-of-type:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    background: white;
+}
+
+/* spray and neuter box
+--------------------------------------------------------------------------------*/
+.side .md h6 {
+    margin: 15px 10px 10px 10px;
+    padding: 15px 20px;
+    background: #eef2f9;
+    font-weight: normal;
+    text-decoration: initial;
+    font-size: 12px;
+    line-height: 20px;
+}

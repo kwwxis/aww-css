@@ -1,0 +1,106 @@
+
+/* Thumbnail
+--------------------------------------------------------------------------------*/
+
+.thumbnail.self {
+    background: url(%%text-post%%) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.thumbnail.default {
+    background: url(%%no-thumbnail%%) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #9edef5;
+    height: 55px;
+    box-sizing: border-box;
+}
+
+/* Link listing
+--------------------------------------------------------------------------------*/
+
+.link {
+    padding: 22px 10px 20px 5px;
+    border: 1px solid transparent;
+    background: white;
+    margin: 0;
+}
+
+/* normal separator border */
+.link:not(:first-child) {
+    border-top: 1px solid #eee;
+}
+
+.link .thumbnail {
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+/* Last clicked
+--------------------------------------------------------------------------------*/
+.link.last-clicked, .link.last-clicked:not(:first-child):not(.RES-keyNav-activeThing) {
+    border: 1px dashed #BCDDFF;
+}
+.link.last-clicked + .clearleft + .link {
+    border-top: 0;
+}
+
+/* Active Element
+--------------------------------------------------------------------------------*/
+
+/* remove RES default bg color on md */
+.res .link .RES-keyNav-activeElement, .res .link .RES-keyNav-activeElement .md-container {
+    background-color: transparent !important;
+}
+/*.res .link.RES-keyNav-activeThing {
+    border: 1px solid #BCDDFF;
+}*/
+.res .link.RES-keyNav-activeThing:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #bcddff;
+}
+.expando-button {
+	margin: 0px 5px 0px 0px !important;
+	width: 23px !important;
+	height: 23px !important;
+        float: left;
+	background-color: transparent !important;
+	background-image: url(%%expand%%) !important;
+	cursor: pointer;
+}
+
+/* Expando Buttons
+--------------------------------------------------------------------------------*/
+
+.expando-button {
+    margin-top: 2px !important;
+}
+
+.content .expando-button.selftext.collapsed {background-position: 0 0px;}			
+.content .expando-button.selftext.collapsed:hover {background-position: 0px -23px;}
+.content .expando-button.selftext.expanded {background-position: 0px -46px;}				
+.content .expando-button.selftext.expanded:hover {background-position: 0px -69px;}	
+
+.expando-button.video.collapsed, .expando-button.video-muted.collapsed {background-position: 0px 0px !important;}
+.expando-button.video.collapsed:hover, .expando-button.video-muted.collapsed:hover, .eb-vch {background-position: 0px -23px !important;}
+.expando-button.video.expanded, .expando-button.video-muted.expanded, .eb-ve {background-position: 0px -46px !important;}
+.expando-button.video.expanded:hover, .expando-button.video-muted.expanded:hover, .eb-veh {background-position: 0px -69px !important;}
+
+.res .expando-button.image.collapsedExpando {background-position: 0px 0px !important;}
+.res .expando-button.image.collapsedExpando:hover {background-position: 0px -23px !important;}
+.res .expando-button.image.expanded {background-position: 0px -46px !important;}
+.res .expando-button.image.expanded:hover {background-position: 0px -69px !important;}
+
+/* Nav Buttons
+--------------------------------------------------------------------------------*/
+#siteTable > .nav-buttons {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}

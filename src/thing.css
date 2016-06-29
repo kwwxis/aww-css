@@ -1,0 +1,14 @@
+.md > p:first-child > a[href="#stickytitle"]:before {
+    content: attr(title);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 0;
+    background: white;
+    color: rgba(0,0,0,0.8);
+}
+
+.thing, .entry {
+    position: relative;
+}

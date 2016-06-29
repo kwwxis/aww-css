@@ -1,0 +1,7 @@
+.commentarea>.usertext textarea {
+    background-image: url(%%commentrules%%);
+    background-repeat: no-repeat;
+    background-position: 2px 2px;
+    background-size: 90%;
+    border: 1px solid #ccc;
+}

@@ -5,15 +5,23 @@ import time
 import datetime
 from csscompressor import compress
 
-order       = [ 'etc.css',
-                'forms.css',
-                'header.css',
-                'sidebar.css',
-                'thing.css',
-                'links.css',
-                'comments.css',
-                'search.css',
-                'ext.css']
+# -------------- FILE NAME ------ PURPOSE --------------
+               
+order       = [ 'etc.css',      # general layout and whatever can't be categorized into the other files
+                'forms.css',    # forms other than the submit link form
+                'submit.css',   # submit post form
+                'header.css',   # subreddit header
+                'sidebar.css',  # subreddit sidebar
+                'sidemd.css',   # sidebar usertext md
+                'titlebox.css', # sidebar titlebox except for the usertext md
+                'thing.css',    # "things" (linklisting items, comments, etc)
+                'links.css',    # links within linklisting and linklisting page
+                'comments.css', # comments and comment page
+                'search.css',   # search page; search in sidebar is in sidebar.css
+                'footer.css',   # subreddit footer
+                'ext.css']      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
+                
+# input/output variables
 src_dir     = 'src'
 dist_dir    = 'dist'
 dist_file   = 'dist.css'

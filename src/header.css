@@ -1,0 +1,303 @@
+
+/* Header
+--------------------------------------------------------------------------------*/
+
+#header {
+    position: relative;
+    background: transparent;
+    border-bottom: 0;
+}
+
+#header-bottom-left {
+    position: relative;
+    min-height: 77px;
+    padding-bottom: 29px; /* bottom padding because tabmenu is absolute
+                             tabmenu height (24px) + tabmenu top margin (5px) */
+}
+
+#header-img, #header-img.default-header {
+    width: 112px;
+    height: 75px;
+    margin: 0;
+    float: left;
+}
+
+/* Header BG
+--------------------------------------------------------------------------------*/
+body #header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(%%overlay-0%%), repeating-linear-gradient(45deg, #B2D9D8, #B2D9D8 10px, #DDE2CB 10px, #DDE2CB 20px);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* comments page */
+body.comments-page #header:after {
+    background: url(%%overlay-0%%), repeating-linear-gradient(45deg,#EBA697,#EBA697 8px,#F1C6B8 8px,#F1C6B8 16px);
+}
+
+/* banner */
+/*#header-bottom-left:after {
+    background-image: url(%%banner-2%%);
+    background-repeat: repeat-x;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 260px;
+}*/
+
+/* SR header area
+--------------------------------------------------------------------------------*/
+#sr-header-area {
+    background-color: rgba(0,0,0,0.025);
+    border: 0;
+}
+
+.res #RESShortcutsEditContainer,
+.res #RESShortcutsSort,
+.res #RESShortcutsRight,
+.res #RESShortcutsLeft,
+.res #RESShortcutsAdd,
+.res #RESShortcutsTrash {
+    background-color: transparent;
+}
+
+/* all SR-header-area text */
+.sr-bar a,
+.sr-bar .separator,
+.sr-list .separator,
+.srSep,
+.dropdown.srdrop .selected,
+#sr-more-link,
+.res #RESShortcutsEditContainer,
+.res #RESShortcutsSort,
+.res #RESShortcutsRight,
+.res #RESShortcutsLeft,
+.res #RESShortcutsAdd,
+.res #RESShortcutsTrash,
+.res #RESShortcuts {
+    color: rgba(0,0,0,0.35);
+    transition: color 200ms;
+}
+
+#sr-header-area:hover .sr-bar a,
+#sr-header-area:hover .sr-bar .separator,
+#sr-header-area:hover .sr-list .separator,
+#sr-header-area:hover .srSep,
+#sr-header-area:hover .dropdown.srdrop .selected,
+#sr-header-area:hover #sr-more-link,
+.res #sr-header-area:hover #RESShortcutsEditContainer,
+.res #sr-header-area:hover #RESShortcutsSort,
+.res #sr-header-area:hover #RESShortcutsRight,
+.res #sr-header-area:hover #RESShortcutsLeft,
+.res #sr-header-area:hover #RESShortcutsAdd,
+.res #sr-header-area:hover #RESShortcutsTrash,
+.res #sr-header-area:hover #RESShortcuts {
+    color: rgba(0,0,0,0.85);
+}
+
+#sr-header-area .sr-list {
+    margin-right: 55px;
+}
+
+#sr-more-link {
+    background: transparent;
+}
+
+/* Pagename
+--------------------------------------------------------------------------------*/
+.pagename {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    height: 77px;
+    box-sizing: border-box;
+    font-size: 28px;
+    color: #898CFF;
+    z-index: 5;
+}
+
+.pagename a {
+    font-size: 0;
+}
+
+.pagename a {
+    background: url(%%awwlogo%%) no-repeat;
+    background-size: contain;
+    width: 142px;
+    height: 42px;
+    display: inline-block;
+    float: left;
+}
+
+.pagename a:before {
+    content: 'r/aww';
+    letter-spacing: 0.5px;
+}
+
+/* Tab menu
+--------------------------------------------------------------------------------*/
+
+.tabmenu {
+    display: block;
+    background: #97b8d4;
+    padding-left: 12px;
+}
+
+#header-bottom-left .tabmenu {
+    /* use absolute and bottom padding on #header-bottom-left in 
+       case tabmenu doesn't exist (like in submit page) and we
+       have to put in fake tabmenu */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* fake tabmenu */
+#header-bottom-left:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background: #97b8d4;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 17px;
+    color: white;
+    line-height: 24px;
+    padding-left: 20px;
+}
+
+.tabmenu li {
+    display: inline-block;
+    position: relative;
+    height: 23px;
+}
+
+.tabmenu li a {
+    background: transparent;
+    color: white;
+    display: inline-block;
+    line-height: 23px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.tabmenu li.selected a {
+    color: inherit;
+    border-color: transparent;
+    box-shadow: 0 -2px 8px -1px rgba(0,0,0,0.1);
+}
+
+.tabmenu li.selected a {
+    top: -3px;
+    height: 27px;
+    position: relative;
+}
+
+.tabmenu li:not(.selected):hover {
+    background: rgba(0,0,0,0.06);
+}
+
+/* header bottom right (user area)
+--------------------------------------------------------------------------------*/
+
+#header-bottom-right {
+    padding: 0 4px 0 0;
+    line-height: 24px;
+    /* RES can really do some annoying shit sometimes */
+    top: initial !important;
+    bottom: 0 !important;
+}
+
+#header-bottom-right, .res #userbarToggle {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+#header-bottom-right a, .user {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#header-bottom-right .separator {
+    color: rgba(255,255,255,0.6);
+}
+
+/* SR DROP CHOICES
+--------------------------------------------------------------------------------*/
+
+.dropdown.srdrop .selected {
+    background-image: none;
+    padding-right: 0;
+}
+
+#sr-header-area .drop-choices.srdrop {
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    z-index: 500;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.4);
+    min-width: 160px;
+    border: 0;
+    margin: 0;
+    top: 0 !important;
+    left: 0 !important;
+    overflow-y: auto;
+    box-sizing: border-box;
+    transform: translateX(-320px);
+    -webkit-transform: translateX(-320px);
+    -moz-transform: translateX(-320px);
+    -ms-transform: translateX(-320px);
+    -o-transform: translateX(-320px);
+    transition: .2s -webkit-transform ease-in-out;
+    -webkit-transition: .2s -webkit-transform ease-in-out;
+    -moz-transition: .2s -moz-transform ease-in-out;
+    -ms-transition: .2s -ms-transform ease-in-out;
+    -o-transition: .2s -o-transform ease-in-out;
+}
+
+#sr-header-area .drop-choices.srdrop.inuse {
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+#sr-header-area .drop-choices.srdrop:before {
+    content: 'My Subreddits';
+    display: block;
+    height: 18px;
+    line-height: 18px;
+    box-sizing: border-box;
+    padding: 0 5px;
+    color: rgba(0,0,0,0.6);
+}
+
+.drop-choices.srdrop .choice.bottom-option {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    border-top: 1px solid #d6d6d6;
+    margin-top: 5px;
+}
+
+.drop-choices.srdrop a.choice {
+    padding: 2px 5px 1px 5px;
+}

@@ -1,0 +1,322 @@
+
+/* Sidebar
+--------------------------------------------------------------------------------*/
+
+.side {
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.25);
+    position: relative;
+    padding-top: 314px;
+    margin-right: 8px;
+}
+
+.sidecontentbox, .titlebox {
+    padding: 10px;
+}
+
+.titlebox .bottom, .sidebox.create .spacer {
+    display: none
+}
+
+/* Welcome text
+--------------------------------------------------------------------------------*/
+
+.titlebox > h1, .titlebox > h1:before, .titlebox > h1 a:before {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.titlebox > h1:before {
+    content: 'Welcome to';
+    font-size: 14px;
+}
+
+.titlebox > h1 a {
+    display: block;
+    font-size: 0;
+    margin-top: -5px;
+}
+
+.titlebox > h1 a:before {
+    content: '/r/aww';
+    font-size: 36px;
+}
+
+.titlebox > h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
+}
+
+/* sub description
+--------------------------------------------------------------------------------*/
+
+/* these two elements should only be shown to those who have CSS disabled */
+.side .md h1:first-of-type, .side .md h5:first-of-type {
+    display: none;
+}
+
+.side .md blockquote:first-of-type {
+    position: absolute;
+    top: 90px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    border: 0;
+    padding: 0 15px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* sidebar main links
+--------------------------------------------------------------------------------*/
+.morelink .nub {display: none;}
+
+.morelink {
+    background: none;
+    border: 0;
+    transition: box-shadow 100ms;
+    position: relative;
+}
+
+.morelink a {
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.submit-link .morelink, .side .md h5 + ul li a {
+    display: block;
+    position: relative;
+    border: 0;
+    background: #90D4F7;
+    color: white;
+    font-weight: normal;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/* button dark bottom edge (LIGHT COMES FROM THE SKY, SON) */
+.submit-link .morelink:after, .side .md h5 + ul li a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.1);
+    border-radius: 0 0 3px 3px;
+}
+
+/* button active */
+.submit-link .morelink:active, .side .md h5 + ul li a:active {
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* button active - hide bottom edge */
+.submit-link .morelink:active:after, .side .md h5+ul li a:active:after {
+    display: none;
+}
+
+/* submit link */
+.submit-link {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    right: 0;
+}
+
+/* other links */
+.side .md h5 + ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    max-width: 250px;
+    margin: 0 auto;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side .md h5 + ul li {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.side .md h5 + ul li a {
+    color: white;
+}
+
+.side .md h5 + ul li:nth-of-type(1) {
+    flex-basis: 50%;
+    padding-right: 3px;
+}
+
+.side .md h5 + ul li:nth-of-type(2) {
+    flex-basis: 50%;
+    padding-left: 3px;
+}
+
+.side .md h5 + ul li:nth-of-type(1) a {
+    background-color: #CDC6FF;
+}
+.side .md h5 + ul li:nth-of-type(2) a {
+    background-color: #CDC6FF;
+}
+.side .md h5 + ul li:nth-of-type(3) a {
+    background-color: #BCD3FE;
+}
+
+/* submit link hover -> read rules
+--------------------------------------------------------------------------------*/
+
+.submit-link .morelink:hover a:before {
+    content: 'Please read the rules before posting';
+    position: absolute;
+    bottom: 100%;
+    z-index: 5;
+    margin-bottom: 6px;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 10px 40px;
+    background: #F1646C;
+    background: rgba(243, 136, 142, 0.95);
+    border-bottom: 2px solid #f1646c;
+}
+
+.submit-link .morelink:hover .nub,
+.submit-link .morelink:hover .nub:before,
+.submit-link .morelink:hover .nub:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: static;
+}
+.submit-link .morelink:hover .nub:before,
+.submit-link .morelink:hover .nub:after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 100%;
+}
+.submit-link .morelink:hover .nub:before {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid white;
+    margin-bottom: -9px;
+}
+.submit-link .morelink:hover .nub:after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f1646c;
+    margin-bottom: -4px;
+}
+
+/* sidebar search
+--------------------------------------------------------------------------------*/
+
+#search input[type="text"]:placeholder-shown {
+    color: rgba(28,17,13,0.4);
+}
+
+#search input[type=text] {
+    border: 1px solid #d9d9d9!important;
+    border-top: 1px solid silver!important;
+    border-radius: 3px;
+    background: white;
+    box-sizing: border-box;
+    line-height: 21px;
+    font-size: 13px;
+    font-family: verdana;
+}
+
+#search, #search input[type=text] {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.side #searchexpando {
+    border: 0;
+    border-radius: 0;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding: 15px 0px 5px 25px;
+}
+
+.side #searchexpando label:first-of-type {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.side #searchexpando select {
+    border: 0;
+    margin-left: 5px;
+    padding: 2px;
+    background: rgba(255,255,255,0.6);
+}
+
+.side #searchexpando p a {
+    display: inline-block;
+    margin-top: 4px;
+    color: #D39A58;
+}
+
+.side #moresearchinfo {
+    margin-top: 10px;
+    margin-right: 25px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* side content box
+--------------------------------------------------------------------------------*/
+
+.sidecontentbox {
+    padding: 10px 15px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 15px;
+}
+
+.sidecontentbox .content {
+    border: 0;
+}
+
+.sidecontentbox .title {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebox.create {
+    display: none;
+}
+
+.sidecontentbox .collapse-button {
+    border: 0;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 12px;
+    color: rgba(0,0,0,0.3);
+}

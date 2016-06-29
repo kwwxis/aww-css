@@ -1,0 +1,20 @@
+.tabmenu + .tabpane-content {
+    border-top: 0;
+}
+
+.sheets { margin: 0; }
+
+
+.flairgrant .linefield {
+    background: transparent;
+}
+
+.linefield {
+    border: 1px solid #d6d6d6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background: #ecf6ff;
+}
+
+.drop-choices {
+    z-index: 10000;
+}
