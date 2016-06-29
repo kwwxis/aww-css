@@ -33,6 +33,7 @@ def top(build_ver):
             '    Author: '   + '/u/kwwxis' + '\n' +
             '    Modified: ' + datetime.datetime.now().strftime('%Y-%m-%dT%H:%M:%S-0' +
                                str(7 if time.localtime().tm_isdst else 8) + '00 (ISO-8601)') +
+            '    Source: '   + 'github.com/matthew0x40/aww-css/' + '\n' +
             '\n*/')
 
 def run():
