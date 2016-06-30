@@ -282,6 +282,7 @@ body.comments-page #header:after {
     display: flex;
     align-items: center;
     padding: 0 4px 0 0;
+    height: 24px;
     line-height: 24px;
     /* RES can really do some annoying shit sometimes */
     top: initial !important;
@@ -303,6 +304,56 @@ body.comments-page #header:after {
 #header-bottom-right .separator {
     color: rgba(255,255,255,0.6);
     display: none;
+}
+
+#header-bottom-right .flat-list, #header-bottom-right .flat-list li {
+    display: inline-block;
+    height: 24px;
+}
+
+/* userbar toggle hover */
+.res #userbarToggle:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+/* logout */
+.logout {
+    margin-left: 5px;
+}
+
+/* User profile link
+--------------------------------------------------------------------------------*/
+.user > a {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 2px
+}
+.user > a:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+/* RES account switcher
+--------------------------------------------------------------------------------*/
+
+.res #RESAccountSwitcherIcon:after {
+    content: '';
+    display: block;
+    background-image: url(%%spritesheet%%);
+    background-position: -8px -56px;
+    width: 24px;
+    height: 23px;
+    transform: scale(0.7);
+}
+
+.res #RESAccountSwitcherIcon {
+    width: 24px;
+    height: 24px;
+    background-image: none !important;
+    margin-left: 0;
+}
+.res #RESAccountSwitcherIcon:hover {
+    background: rgba(0,0,0,0.06);
 }
 
 /* mail icon
@@ -331,10 +382,15 @@ body.comments-page #header:after {
     min-width: 24px;
     top: 0;
     padding-left: 5px;
+    margin-left: 5px;
 }
 
-#mail.havemail { background: #FF7500; }
-#mail:hover    { background: rgba(0,0,0,0.06); }
+#mail.havemail {
+    background: #FF7500;
+}
+#mail:hover    {
+    background: rgba(0,0,0,0.06);
+}
 
 .message-count {
     border-radius: 0;
@@ -342,24 +398,95 @@ body.comments-page #header:after {
     padding-right: 5px;
 }
 
-/* RES account switcher
+/* Mod mail
 --------------------------------------------------------------------------------*/
 
-.res #RESAccountSwitcherIcon:after {
+#modmail, #modmail.havemail, #modmail.nohavemail {
+    font-size: 0 !important;
+    background-image: none !important;
+    height: 24px;
+    width: 24px;
+    top: 0;
+    margin-bottom: 0;
+}
+#modmail.havemail {
+    background: #FF7500;
+}
+#modmail:after {
     content: '';
     display: block;
     background-image: url(%%spritesheet%%);
-    background-position: -8px -56px;
-    width: 24px;
+    background-position: -9px -116px;
     height: 23px;
+    width: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
     transform: scale(0.7);
 }
 
-.res #RESAccountSwitcherIcon {
+#modmail:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+/* Preferences
+--------------------------------------------------------------------------------*/
+
+.pref-lang:before, .pref-lang:after {
+    content: "";
+    position: absolute;
+    display: block;
+    -webkit-transform: scale(0.82) rotate(45deg);
+    -moz-transform: scale(0.82) rotate(45deg);
+    -ms-transform: scale(0.82) rotate(45deg);
+    -o-transform: scale(0.82) rotate(45deg);
+}
+
+.pref-lang:before {
+    width: 4px;
+    height: 5px;
+    top: 5px;
+    left: 9px;
+    border: 3px solid white;
+    border-radius: 5px;
+    border-top: 0;
+}
+
+.pref-lang:after {
+    width: 4px;
+    height: 13px;
+    top: 7px;
+    left: 8px;
+    background-color: white;
+    border-radius: 3px;
+}
+.pref-lang {
+    display: inline-block;
+    position: relative;
+    font-size: 0 !important;
     width: 24px;
     height: 24px;
-    background-image: none !important;
+    top: -4px;
 }
-.res #RESAccountSwitcherIcon:hover {
+.pref-lang:hover {
+    background: rgba(0,0,0,0.06);
+}
+
+/* RES settings gear icon
+--------------------------------------------------------------------------------*/
+.res #RESSettingsButton, .res #openRESPrefs {
+    height: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+}
+
+.res .gearIcon:after {
+    text-shadow: none;
+    color: white;
+}
+
+.res #openRESPrefs:hover {
     background: rgba(0,0,0,0.06);
 }
