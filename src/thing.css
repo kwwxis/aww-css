@@ -11,4 +11,5 @@
 
 .thing, .entry {
     position: relative;
+    overflow: visible !important;
 }

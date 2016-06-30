@@ -211,33 +211,6 @@ body.comments-page #header:after {
     background: rgba(0,0,0,0.06);
 }
 
-/* header bottom right (user area)
---------------------------------------------------------------------------------*/
-
-#header-bottom-right {
-    padding: 0 4px 0 0;
-    line-height: 24px;
-    /* RES can really do some annoying shit sometimes */
-    top: initial !important;
-    bottom: 0 !important;
-}
-
-#header-bottom-right, .res #userbarToggle {
-    background-color: transparent;
-    border-color: transparent;
-    color: white;
-}
-
-#header-bottom-right a, .user {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 12px;
-    color: white;
-}
-
-#header-bottom-right .separator {
-    color: rgba(255,255,255,0.6);
-}
-
 /* SR DROP CHOICES
 --------------------------------------------------------------------------------*/
 
@@ -300,4 +273,93 @@ body.comments-page #header:after {
 
 .drop-choices.srdrop a.choice {
     padding: 2px 5px 1px 5px;
+}
+
+/* header bottom right (user area)
+--------------------------------------------------------------------------------*/
+
+#header-bottom-right {
+    display: flex;
+    align-items: center;
+    padding: 0 4px 0 0;
+    line-height: 24px;
+    /* RES can really do some annoying shit sometimes */
+    top: initial !important;
+    bottom: 0 !important;
+}
+
+#header-bottom-right, .res #userbarToggle {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+}
+
+#header-bottom-right a, .user {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+#header-bottom-right .separator {
+    color: rgba(255,255,255,0.6);
+    display: none;
+}
+
+/* mail icon
+--------------------------------------------------------------------------------*/
+
+#mail:after, #mail.nohavemail:after, #mail.havemail:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(%%spritesheet%%);
+    background-position: -8px -31px;
+    width: 25px;
+    height: 14px;
+    transform: scale(0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+#mail, #mail.nohavemail, #mail.havemail {
+    background-image: none !important;
+    position: relative;
+    height: 24px;
+    min-width: 24px;
+    top: 0;
+    padding-left: 5px;
+}
+
+#mail.havemail { background: #FF7500; }
+#mail:hover    { background: rgba(0,0,0,0.06); }
+
+.message-count {
+    border-radius: 0;
+    margin-left: 0;
+    padding-right: 5px;
+}
+
+/* RES account switcher
+--------------------------------------------------------------------------------*/
+
+.res #RESAccountSwitcherIcon:after {
+    content: '';
+    display: block;
+    background-image: url(%%spritesheet%%);
+    background-position: -8px -56px;
+    width: 24px;
+    height: 23px;
+    transform: scale(0.7);
+}
+
+.res #RESAccountSwitcherIcon {
+    width: 24px;
+    height: 24px;
+    background-image: none !important;
+}
+.res #RESAccountSwitcherIcon:hover {
+    background: rgba(0,0,0,0.06);
 }

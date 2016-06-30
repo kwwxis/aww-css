@@ -19,6 +19,7 @@ order       = [ 'etc.css',      # general layout and whatever can't be categoriz
                 'comments.css', # comments and comment page
                 'search.css',   # search page; search in sidebar is in sidebar.css
                 'footer.css',   # subreddit footer
+                'wiki.css',     # subreddit wiki
                 'ext.css']      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
                 
 # input/output variables

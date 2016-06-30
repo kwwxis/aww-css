@@ -3,18 +3,24 @@
 --------------------------------------------------------------------------------*/
 
 .thumbnail.self {
-    background: url(%%text-post%%) no-repeat;
+    background-image: url(%%text-post%%);
+    background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
 .thumbnail.default {
-    background: url(%%no-thumbnail%%) no-repeat;
+    background-image: url(%%no-thumbnail%%);
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border: 2px solid #9edef5;
     height: 55px;
     box-sizing: border-box;
+}
+
+.stickied .thumbnail.self {
+    background-image: url(%%text-post-mod%%);
 }
 
 /* Link listing
