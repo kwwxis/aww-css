@@ -18,3 +18,7 @@
 .drop-choices {
     z-index: 10000;
 }
+
+ul.image-preview-list {
+    margin: 20px 10px 10px 20px;
+}

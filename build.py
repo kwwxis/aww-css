@@ -17,6 +17,7 @@ order       = [ 'etc.css',      # general layout and whatever can't be categoriz
                 'thing.css',    # "things" (linklisting items, comments, etc)
                 'links.css',    # links within linklisting and linklisting page
                 'comments.css', # comments and comment page
+                'usertext.css', # usertext editor input
                 'search.css',   # search page; search in sidebar is in sidebar.css
                 'footer.css',   # subreddit footer
                 'wiki.css',     # subreddit wiki

@@ -290,7 +290,7 @@ body.comments-page #header:after {
 }
 
 #header-bottom-right, .res #userbarToggle {
-    background-color: transparent;
+    background-color: #97b8d4;
     border-color: transparent;
     color: white;
 }
@@ -303,7 +303,7 @@ body.comments-page #header:after {
 
 #header-bottom-right .separator {
     color: rgba(255,255,255,0.6);
-    display: none;
+    display: none !important;
 }
 
 #header-bottom-right .flat-list, #header-bottom-right .flat-list li {
@@ -311,7 +311,16 @@ body.comments-page #header:after {
     height: 24px;
 }
 
-/* userbar toggle hover */
+/* userbar toggle */
+.res #userbarToggle {
+    min-height: 24px !important;
+    border-radius: 0 !important;
+}
+
+#userbarToggle.userbarShow {
+    left: -17px;
+}
+
 .res #userbarToggle:hover {
     background: rgba(0,0,0,0.06);
 }
@@ -343,6 +352,8 @@ body.comments-page #header:after {
     background-position: -8px -56px;
     width: 24px;
     height: 23px;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
     transform: scale(0.7);
 }
 
@@ -367,6 +378,8 @@ body.comments-page #header:after {
     background-position: -8px -31px;
     width: 25px;
     height: 14px;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
     transform: scale(0.7);
     top: 0;
     right: 0;
@@ -388,7 +401,7 @@ body.comments-page #header:after {
 #mail.havemail {
     background: #FF7500;
 }
-#mail:hover    {
+#mail:not(.havemail):hover    {
     background: rgba(0,0,0,0.06);
 }
 
@@ -422,43 +435,31 @@ body.comments-page #header:after {
     position: absolute;
     top: 0;
     left: 0;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
     transform: scale(0.7);
 }
 
-#modmail:hover {
+#modmail:not(.havemail):hover {
     background: rgba(0,0,0,0.06);
 }
 
 /* Preferences
 --------------------------------------------------------------------------------*/
 
-.pref-lang:before, .pref-lang:after {
-    content: "";
-    position: absolute;
-    display: block;
-    -webkit-transform: scale(0.82) rotate(45deg);
-    -moz-transform: scale(0.82) rotate(45deg);
-    -ms-transform: scale(0.82) rotate(45deg);
-    -o-transform: scale(0.82) rotate(45deg);
-}
-
-.pref-lang:before {
-    width: 4px;
-    height: 5px;
-    top: 5px;
-    left: 9px;
-    border: 3px solid white;
-    border-radius: 5px;
-    border-top: 0;
-}
-
 .pref-lang:after {
-    width: 4px;
-    height: 13px;
-    top: 7px;
-    left: 8px;
-    background-color: white;
-    border-radius: 3px;
+    content: '';
+    display: block;
+    background-image: url(%%spritesheet%%);
+    background-position: -8px -146px;
+    width: 24px;
+    height: 23px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
 }
 .pref-lang {
     display: inline-block;
@@ -489,4 +490,50 @@ body.comments-page #header:after {
 
 .res #openRESPrefs:hover {
     background: rgba(0,0,0,0.06);
+}
+
+
+/* Account switcher dropdown
+--------------------------------------------------------------------------------*/
+
+.res #RESAccountSwitcherIconOverlay {
+    display: none !important;
+}
+
+.res #RESAccountSwitcherDropdown {
+    margin-top: 6px !important;
+    border: 0;
+    border-bottom: 2px solid #97b8d4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    background: white;
+}
+
+#RESAccountSwitcherDropdown.RESDropdownList li {
+    border: 0;
+    color: rgba(0,0,0,0.6);
+}
+#RESAccountSwitcherDropdown.RESDropdownList li:hover {
+    color: rgba(0,0,0,1);
+    background: transparent;
+}
+
+/* Mail and RES settings hover dropdowns
+--------------------------------------------------------------------------------*/
+.res .RESHover.RESHoverDropdownList.RESDropdownList {
+    margin: -2px 0 0 0 !important;
+    border: 0;
+    border-bottom: 2px solid #97b8d4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    background: white;
+}
+.res .RESHover.RESHoverDropdownList.RESDropdownList li,
+.RESDropdownList a, .RESDropdownList a:visited {
+    border: 0;
+    color: rgba(0,0,0,0.6);
+    background: transparent !important;
+}
+.res .RESHover.RESHoverDropdownList.RESDropdownList li:hover,
+.RESDropdownList a:hover, .RESDropdownList a:visited:hover {
+    color: rgba(0,0,0,1) !important;
+    background: transparent !important;
 }

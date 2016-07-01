@@ -27,19 +27,16 @@
 }
 
 .titlebox > h1:before {
+    display: block;
     content: 'Welcome to';
+    color: rgba(0,0,0,0.6);
     font-size: 14px;
 }
 
 .titlebox > h1 a {
-    display: block;
+    display: inline-block;
     font-size: 0;
     margin-top: -5px;
-}
-
-.titlebox > h1 a:before {
-    content: '/r/aww';
-    font-size: 36px;
 }
 
 .titlebox > h1 {
@@ -48,6 +45,26 @@
     left: 0;
     right: 0;
     padding-top: 20px;
+}
+
+/* sidebar title link - text version */
+.titlebox > h1 a:before {
+    content: '/r/aww';
+    font-size: 36px;
+}
+
+/* sidebar title link - image version */
+.titlebox > h1 a:before {
+    content: '';
+    display: inline-block;
+    background-image: url(%%spritesheet%%);
+    background-position: -155px -118px; /* black */
+    background-position: -155px -3px; /* colored */
+    height: 51px;
+    width: 189px;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
 }
 
 /* sub description
@@ -66,6 +83,38 @@
     padding: 0 15px;
     font-size: 15px;
     text-align: center;
+}
+
+/* paw prints at top left and bottom right of sub description */
+.side .md blockquote:first-of-type:before,
+.side .md blockquote:first-of-type:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(%%spritesheet%%);
+    background-position: -266px -178px;
+    width: 56px;
+    height: 56px;
+    background-color: #f3f3f3;
+    pointer-events: none;
+}
+
+.side .md blockquote:first-of-type:before {
+    top: -25px;
+    left: 0;
+    transform: scale(0.5) rotateZ(-35deg);
+}
+
+
+.side .md blockquote:first-of-type:after {
+    right: 0;
+    bottom: 0px;
+    transform: scale(0.5) rotateZ(35deg);
+}
+
+.side .md blockquote:first-of-type p {
+    position: relative;
+    z-index: 1;
 }
 
 /* sidebar main links
@@ -276,7 +325,7 @@
 .side #searchexpando p a {
     display: inline-block;
     margin-top: 4px;
-    color: #D39A58;
+    color: #583800;
 }
 
 .side #moresearchinfo {

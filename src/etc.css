@@ -6,12 +6,18 @@ body > .debuginfo:before {
 }
 
 body {
-    background: #fafafa;
+    background: #F9FAFB;
 }
 
-#siteTable {
-    margin: 10px;
-    box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
+#siteTable, .commentarea {
+    border-left: 1px solid #fdfdfd;
+}
+
+#siteTable, #siteTable_organic {
+    margin: 10px 0 0 10px;
+}
+.commentarea {
+    margin-left: 10px;
 }
 
 .content[role=main] {

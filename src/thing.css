@@ -13,3 +13,24 @@
     position: relative;
     overflow: visible !important;
 }
+
+.thing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.entry {
+    float: left;
+    width: 100%;
+    max-width: calc(100% - 153px);
+}
+
+commentarea .entry {
+    max-width: calc(100% - 40px);
+}
+
+.child {
+    width: 100%;
+}

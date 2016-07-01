@@ -1,0 +1,207 @@
+
+.commentarea > .usertext textarea:not(:focus) {
+    background-image: url(%%commentrules%%);
+    background-repeat: no-repeat;
+    background-position: 2px 5px;
+    background-size: 85%;
+    border: 1px solid #ccc;
+    outline: 0 !important;
+}
+
+/* COMMENT USERTEXT BOX
+--------------------------------------------------------------------------------*/
+
+.commentarea > .usertext {
+    height: auto;
+    overflow: visible;
+}
+
+.usertext .bottom-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.usertext .usertext-buttons {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    padding-left: 2px;
+}
+
+.usertext .help-toggle, .usertext a.reddiquette {
+    margin: 0;
+    line-height: 20px;
+    border: 1px solid #d6d6d6;
+    background: #fdfdfd;
+    padding: 0 8px;
+}
+
+
+.usertext .help-toggle a, .usertext a.reddiquette {
+    color: rgba(0,0,0,0.6);
+}
+
+.usertext a.reddiquette {
+    border-right: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.usertext .help-toggle {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.usertext-edit textarea {
+    max-width: 518px;
+}
+
+.usertext .markhelp {
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.usertext .markhelp table {
+    margin-top: 10px;
+}
+
+
+.usertext button[type=submit] {
+    background: #6DC981;
+    border: 0;
+    color: white;
+    line-height: 29px;
+    padding: 0 10px;
+    min-width: 77px;
+    margin: 0;
+    outline: 0;
+    margin-right: 5px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.usertext button.cancel {
+    background: rgba(0,0,0,0.23);
+}
+
+/* RES EDITOR
+--------------------------------------------------------------------------------*/
+
+.res .markdownEditor-wrapper {
+    position: relative;
+    margin-top: 40px;
+    width: auto;
+}
+
+.res .markdownEditor {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0,0,0,0.05);
+    padding: 5px 5px 2px 0;
+    background: white;
+}
+
+.res .markdownEditor .edit-btn:not(.btn-macro) {
+    border: 0;
+}
+
+.res .RESCharCounter {
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.res .commentingAs {
+    position: absolute;
+    bottom: 100%;
+    font-weight: normal;
+    color: rgba(0,0,0,0.45);
+    font-size: 12px;
+    padding-left: 5px;
+    margin-bottom: 9px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.RESMacroWrappingSpan {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin: 0 0 10px 0 !important;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.res .markdownEditor-wrapper + .md {
+    margin-top: -2px;
+    padding: 0;
+}
+
+.res .markdownEditor-wrapper + .md textarea {
+    padding-top: 3px;
+}
+
+.res .RESMacroDropdownTitle {
+    background-image: none;
+    position: relative;
+}
+
+.res .RESMacroDropdownTitle:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgba(0,0,0,0.25);
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    margin-left: 5px;
+}
+
+.res .RESBigEditorPop {
+    margin: 0;
+    line-height: 20px;
+    border: 1px solid #d6d6d6;
+    background: #fdfdfd;
+    color: rgba(0,0,0,0.6);
+    padding: 0 8px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.res .usertext .help-toggle {
+    border-right: 0;
+    border-radius: 0 !important;
+}
+
+.res .RESDialogSmall.livePreview {
+    margin-top: 10px;
+}
+
+/* USERTEXT-COMMENTS SEPARATOR
+--------------------------------------------------------------------------------*/
+.commentarea > .usertext {
+    position: relative;
+    padding-bottom: 10px;
+    margin-left: 0;
+    padding-left: 10px;
+    margin-bottom: 45px;
+}
+.commentarea > .usertext:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    margin-top: 5px;
+    left: 0;
+
+    height: 20px;
+    width: 100%;
+    
+    background: #f9fafb;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}

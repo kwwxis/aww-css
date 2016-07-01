@@ -8,7 +8,6 @@
 
 .titlebox {
     border-top: 1px solid rgba(0,0,0,0.1);
-    margin-top: -12px;
 }
 
 /* submit text button - moderators
@@ -16,6 +15,7 @@
 
 .submit-text {
     border-top: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: -12px;
 }
 
 .submit-text .morelink {

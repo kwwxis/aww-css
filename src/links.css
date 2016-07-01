@@ -2,25 +2,23 @@
 /* Thumbnail
 --------------------------------------------------------------------------------*/
 
-.thumbnail.self {
-    background-image: url(%%text-post%%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.thumbnail.self, .thumbnail.default {
+    background: url(%%spritesheet%%) no-repeat;
 }
 
-.thumbnail.default {
-    background-image: url(%%no-thumbnail%%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #9edef5;
-    height: 55px;
-    box-sizing: border-box;
+.thumbnail.self {
+    background-position: -77px -19px;
 }
 
 .stickied .thumbnail.self {
-    background-image: url(%%text-post-mod%%);
+    background-position: -77px -72px;
+}
+
+.thumbnail.default {
+    border: 2px solid #9edef5;
+    height: 55px;
+    box-sizing: border-box;
+    background-position: -76px -125px;
 }
 
 /* Link listing
@@ -43,6 +41,10 @@
     margin-right: 15px;
 }
 
+.link .title {
+    margin-bottom: 5px;
+}
+
 /* Last clicked
 --------------------------------------------------------------------------------*/
 .link.last-clicked, .link.last-clicked:not(:first-child):not(.RES-keyNav-activeThing) {
@@ -50,6 +52,23 @@
 }
 .link.last-clicked + .clearleft + .link {
     border-top: 0;
+}
+
+/* space between last stickied link and following non-stickied link
+--------------------------------------------------------------------------------*/
+.thing.stickied + .clearleft + .thing:not(.stickied) {
+    margin-top: 20px
+}
+
+.thing.stickied + .clearleft + .thing:not(.stickied):before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-top: 1px solid #eee;
 }
 
 /* Active Element
@@ -72,41 +91,108 @@
     width: 2px;
     background: #bcddff;
 }
-.expando-button {
-	margin: 0px 5px 0px 0px !important;
-	width: 23px !important;
-	height: 23px !important;
-        float: left;
-	background-color: transparent !important;
-	background-image: url(%%expand%%) !important;
-	cursor: pointer;
-}
 
 /* Expando Buttons
 --------------------------------------------------------------------------------*/
 
 .expando-button {
-    margin-top: 2px !important;
+    float: left;
+	margin: 2px 5px 0px 0px !important;
+	width: 23px !important;
+	height: 23px !important;
+	background-color: transparent !important;
+	background-image: url(%%spritesheet%%) !important;
+	cursor: pointer;
 }
 
-.content .expando-button.selftext.collapsed {background-position: 0 0px;}			
-.content .expando-button.selftext.collapsed:hover {background-position: 0px -23px;}
-.content .expando-button.selftext.expanded {background-position: 0px -46px;}				
-.content .expando-button.selftext.expanded:hover {background-position: 0px -69px;}	
+.expando-button.collapsed,
+.res .expando-button.collapsed {
+    background-position: -42px -26px;
+}
 
-.expando-button.video.collapsed, .expando-button.video-muted.collapsed {background-position: 0px 0px !important;}
-.expando-button.video.collapsed:hover, .expando-button.video-muted.collapsed:hover, .eb-vch {background-position: 0px -23px !important;}
-.expando-button.video.expanded, .expando-button.video-muted.expanded, .eb-ve {background-position: 0px -46px !important;}
-.expando-button.video.expanded:hover, .expando-button.video-muted.expanded:hover, .eb-veh {background-position: 0px -69px !important;}
+.expando-button.collapsed:hover,
+.res .expando-button.collapsed:hover {
+    background-position: -42px -49px;
+}
 
-.res .expando-button.image.collapsedExpando {background-position: 0px 0px !important;}
-.res .expando-button.image.collapsedExpando:hover {background-position: 0px -23px !important;}
-.res .expando-button.image.expanded {background-position: 0px -46px !important;}
-.res .expando-button.image.expanded:hover {background-position: 0px -69px !important;}
+.expando-button.expanded,
+.res .expando-button.expanded {
+    background-position: -42px -72px;
+}
+
+.expando-button.expanded:hover,
+.res .expando-button.expanded:hover {
+    background-position: -42px -95px;
+}
 
 /* Nav Buttons
 --------------------------------------------------------------------------------*/
 #siteTable > .nav-buttons {
     border-top: 1px solid #eee;
     padding-top: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.nav-buttons:before {
+    content: 'View more';
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+}
+
+.nextprev {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nextprev a {
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    padding: 0 22px;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: transparent;
+    outline: 0;
+}
+
+.nextprev a[rel*="next"] {
+    color: #f28aa8;
+    border: 1px solid #f28aa8;
+}
+.nextprev a[rel*="next"]:hover,
+.nextprev a[rel*="next"]:focus {
+    background-color: #f28aa8;
+    color: white;
+}
+
+.nextprev a[rel*="prev"] {
+    color: #4db5e0;
+    border: 1px solid #4db5e0;
+}
+.nextprev a[rel*="prev"]:hover,
+.nextprev a[rel*="prev"]:focus {
+    background-color: #4db5e0;
+    color: white;
+}
+
+.nextprev .separator {
+    font-size: 0;
+    height: 26px;
+    width: 1px;
+    margin: 0 8px;
+    background: rgba(0,0,0,0.1);
+    display: inline-block;
+    border: 0;
 }
