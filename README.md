@@ -4,7 +4,7 @@
 
 Not yet complete
             
-# Order of concatenation
+## Order of concatenation
              
 | First Header  | Second Header |
 | ------------- | ------------- |
@@ -17,7 +17,8 @@ Not yet complete
 | titlebox.css  | everything in the sidebar titlebox except for usertext md |
 | thing.css     | style for .thing elements (links and comments alike) |
 | links.css     | linklisting links and page |
-| comments.css  | comments and comments page |
+| comments.css  | comments page (except sitetable) |
+| ctable.css    | sitetable and comments in comments page |
 | usertext.css  | usertext and editor |
 | search.css    | search page (does not include search input in sidebar, which is in sidebar.css) |
 | footer.css    | subreddit footer |

@@ -19,7 +19,8 @@ order       = [ 'etc.css',      # general layout, common margins, and whatever c
                 'titlebox.css', # sidebar titlebox except for the usertext md
                 'thing.css',    # style for .thing elements (links and comments alike)
                 'links.css',    # links within linklisting and linklisting page
-                'comments.css', # comments and comment page
+                'comments.css', # comments page (except sitetable)
+                'ctable.css',   # sitetable and comments in comments page
                 'usertext.css', # usertext editor input
                 'search.css',   # search page (does not include search input in sidebar, which is in sidebar.css)
                 'footer.css',   # subreddit footer

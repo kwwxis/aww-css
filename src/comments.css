@@ -109,10 +109,3 @@ select#comment-visits {
     border: 0;
     background: #fbefb9;
 }
-
-/* site table
---------------------------------------------------------------------------------*/
-
-.commentarea > .sitetable > .thing {
-    margin-bottom: 10px;
-}
