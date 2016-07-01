@@ -1,3 +1,6 @@
+# This is just the python file that puts all the CSS files
+# together and minifies the output to make my life easier
+
 import os.path
 import shutil
 import glob
@@ -7,18 +10,18 @@ from csscompressor import compress
 
 # -------------- FILE NAME ------ PURPOSE --------------
                
-order       = [ 'etc.css',      # general layout and whatever can't be categorized into the other files
-                'forms.css',    # forms other than the submit link form
+order       = [ 'etc.css',      # general layout, common margins, and whatever can't be categorized into the other files
+                'forms.css',    # forms other than the submit post form
                 'submit.css',   # submit post form
                 'header.css',   # subreddit header
                 'sidebar.css',  # subreddit sidebar
                 'sidemd.css',   # sidebar usertext md
                 'titlebox.css', # sidebar titlebox except for the usertext md
-                'thing.css',    # "things" (linklisting items, comments, etc)
+                'thing.css',    # style for .thing elements (links and comments alike)
                 'links.css',    # links within linklisting and linklisting page
                 'comments.css', # comments and comment page
                 'usertext.css', # usertext editor input
-                'search.css',   # search page; search in sidebar is in sidebar.css
+                'search.css',   # search page (does not include search input in sidebar, which is in sidebar.css)
                 'footer.css',   # subreddit footer
                 'wiki.css',     # subreddit wiki
                 'ext.css']      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
