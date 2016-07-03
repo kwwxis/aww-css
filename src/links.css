@@ -1,26 +1,3 @@
-
-/* Thumbnail
---------------------------------------------------------------------------------*/
-
-.thumbnail.self, .thumbnail.default {
-    background: url(%%spritesheet%%) no-repeat;
-}
-
-.thumbnail.self {
-    background-position: -77px -19px;
-}
-
-.stickied .thumbnail.self {
-    background-position: -77px -72px;
-}
-
-.thumbnail.default {
-    border: 2px solid #9edef5;
-    height: 55px;
-    box-sizing: border-box;
-    background-position: -76px -125px;
-}
-
 /* Link listing
 --------------------------------------------------------------------------------*/
 
@@ -33,7 +10,7 @@
 
 /* normal separator border */
 .link:not(:first-child) {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #E2E2E2;
 }
 
 .link .thumbnail {
@@ -56,40 +33,19 @@
 
 /* space between last stickied link and following non-stickied link
 --------------------------------------------------------------------------------*/
-.thing.stickied + .clearleft + .thing:not(.stickied) {
-    margin-top: 20px
+.link.stickied + .clearleft + .link:not(.stickied) {
+    margin-top: 15px;
 }
 
-.thing.stickied + .clearleft + .thing:not(.stickied):before {
+.link.stickied + .clearleft + .link:not(.stickied):before {
     content: '';
     display: block;
     position: absolute;
     bottom: 100%;
     left: 0;
     width: 100%;
-    height: 20px;
-    border-top: 1px solid #eee;
-}
-
-/* Active Element
---------------------------------------------------------------------------------*/
-
-/* remove RES default bg color on md */
-.res .link .RES-keyNav-activeElement, .res .link .RES-keyNav-activeElement .md-container {
-    background-color: transparent !important;
-}
-/*.res .link.RES-keyNav-activeThing {
-    border: 1px solid #BCDDFF;
-}*/
-.res .link.RES-keyNav-activeThing:after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: -1px;
-    top: 10px;
-    bottom: 10px;
-    width: 2px;
-    background: #bcddff;
+    height: 15px;
+    border-top: 1px solid #E2E2E2;
 }
 
 /* Expando Buttons
@@ -107,28 +63,28 @@
 
 .expando-button.collapsed,
 .res .expando-button.collapsed {
-    background-position: -42px -26px;
+    background-position: -42px -26px !important;
 }
 
 .expando-button.collapsed:hover,
 .res .expando-button.collapsed:hover {
-    background-position: -42px -49px;
+    background-position: -42px -49px !important;
 }
 
 .expando-button.expanded,
 .res .expando-button.expanded {
-    background-position: -42px -72px;
+    background-position: -42px -72px !important;
 }
 
 .expando-button.expanded:hover,
 .res .expando-button.expanded:hover {
-    background-position: -42px -95px;
+    background-position: -42px -95px !important;
 }
 
 /* Nav Buttons
 --------------------------------------------------------------------------------*/
 #siteTable > .nav-buttons {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #E2E2E2;
     padding-top: 20px;
 }
 
@@ -148,14 +104,15 @@
     color: rgba(0,0,0,0.5);
 }
 
-.nextprev {
+.nextprev, .search-result-group footer .nav-buttons > * {
     font-size: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nextprev a {
+.nextprev a,
+.search-result-group footer .nav-buttons > * a {
     display: inline-block;
     font-size: 15px;
     letter-spacing: 0.2px;

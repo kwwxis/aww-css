@@ -1,3 +1,11 @@
 .mod-toolbox .menuarea.modtools {
     margin: 5px !important;
 }
+
+.comments-page.mod-toolbox .menuarea.modtools,
+.listing-page.mod-toolbox .menuarea.modtools {
+    position: fixed !important;
+    top: 5px !important;
+    left: 10px !important;
+    right: 320px !important;
+}

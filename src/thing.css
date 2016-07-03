@@ -1,14 +1,6 @@
-.md > p:first-child > a[href="#stickytitle"]:before {
-    content: attr(title);
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    right: 0;
-    background: white;
-    color: rgba(0,0,0,0.8);
-}
 
+/* Thing - inner positioning
+--------------------------------------------------------------------------------*/
 .thing, .entry {
     position: relative;
     overflow: visible !important;
@@ -23,14 +15,116 @@
 
 .entry {
     float: left;
-    width: 100%;
-    max-width: calc(100% - 153px);
+    max-width: none;
+    width: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+.link .entry {
+    flex-basis: calc(100% - 160px);
+    max-width: calc(100% - 160px);
 }
 
-commentarea .entry {
-    max-width: calc(100% - 40px);
+.comment .entry {
+    flex-basis: calc(100% - 40px);
+}
+.comments-page.mod-toolbox .menuarea.modtools ~ .commentarea > .sitetable .thing.comment .entry {
+    flex-basis: calc(100% - 50px);
 }
 
 .child {
     width: 100%;
+    flex-basis: 100%;
+}
+
+/* Link tagline and title
+--------------------------------------------------------------------------------*/
+
+.link .tagline, .link .title {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+.link .title {
+    font-size: large;
+}
+
+.link .tagline {
+    font-size: small;
+}
+
+/* Thumbnail - ones with images are always 70px by 70px
+--------------------------------------------------------------------------------*/
+.thumbnail,
+.search-result.has-thumbnail > .thumbnail {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #958a86;
+}
+
+.thumbnail img,
+.search-result.has-thumbnail > .thumbnail img {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnail.self, .thumbnail.default,
+.search-result.has-thumbnail > .thumbnail.self,
+.search-result.has-thumbnail > .thumbnail.default {
+    background: url(%%spritesheet%%) no-repeat;
+    border: 0;
+    height: 50px;
+}
+
+.thumbnail.self,
+.search-result.has-thumbnail > .thumbnail.self {
+    background-position: -74px -19px;
+}
+
+.stickied .thumbnail.self {
+    background-position: -74px -72px;
+}
+
+.thumbnail.default,
+.search-result.has-thumbnail > .thumbnail.default {
+    border: 3px solid #9edef5;
+    height: 55px;
+    background-position: -74px -123px;
+}
+
+/* Special colors
+--------------------------------------------------------------------------------*/
+.thing.spam {
+    background: #ffd6d9 !important;
+}
+
+.comment.spam > .child, .message.spam > .child {
+    background: transparent;
+    padding-bottom: 5px;
+    padding-right: 2px
+}
+
+/* Active Element
+--------------------------------------------------------------------------------*/
+.res .RES-keyNav-activeElement, .res .RES-keyNav-activeElement .md-container {
+    background-color: transparent !important;
+}
+
+.res .link.RES-keyNav-activeThing:after,
+.res .comment.RES-keyNav-activeThing > .entry:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #bcddff;
+}
+.res .comment.RES-keyNav-activeThing > .entry:after {
+    right: 0;
 }

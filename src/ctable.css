@@ -2,6 +2,139 @@
 /* site table
 --------------------------------------------------------------------------------*/
 
-.commentarea > .sitetable > .thing {
-    margin-bottom: 10px;
+.res .comment.RES-keyNav-activeThing > .entry:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: #bcddff;
+}
+
+/* link thing
+--------------------------------------------------------------------------------*/
+
+.comments-page .link .entry {
+    padding-left: 10px;
+}
+
+/* position expando button at bottom right of thumbnail */
+.comments-page .link .expando-button {
+    position: absolute;
+    right: 100%;
+    top: 56px;
+}
+
+/* comments
+--------------------------------------------------------------------------------*/
+.comment.thing, .comment .entry {
+    border: 0;
+}
+
+.comment {
+    margin-bottom: 0;
+    padding-top: 10px;
+    border-radius: 3px;
+    margin-left: 0;
+    padding-left: 10px;
+}
+.comment .child {
+    border: 0;
+}
+
+.comment + .clearleft + .comment {
+    margin-top: 5px;
+}
+
+.new-comment .usertext-body {
+    border: 0;
+}
+.commentarea > .sitetable > .comment {
+    margin-bottom: 3px;
+    margin-top: 0 !important;
+    border: 1px solid #e3e3e3;
+    padding-left: 15px;
+    border-radius: 0;
+}
+.commentarea > .sitetable > .comment:before,
+.comment-permalink-page.comments-page .commentarea > .infobar:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    background: #e2ebfb;
+}
+
+
+/* comments - tagline
+--------------------------------------------------------------------------------*/
+.comment .tagline {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+}
+
+/* comments - flat list buttons
+--------------------------------------------------------------------------------*/
+.comment .buttons {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 11px;
+    padding-left: 30px;
+}
+.comment .entry .buttons li a {
+    font-weight: normal;
+}
+.comment .entry .buttons li.reply-button a:before {
+    content: 'reply';
+    position: absolute;
+    left: 0;
+    color: #4db5e0;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.25px
+}
+.comment .entry .buttons li.reply-button a:hover:before {
+    text-decoration: underline;
+}
+
+/* comments - single thread infobar
+--------------------------------------------------------------------------------*/
+.comment-permalink-page.comments-page .commentarea > .infobar {
+    margin: 20px 0px -1px 0px;
+    border: 0;
+    padding: 10px;
+    font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    font-size: 14px;
+    position: relative;
+    padding-left: 20px;
+    background: #ffc;
+    border: 1px solid #e3e3e3;
+}
+
+/* comments - alternating bg color
+--------------------------------------------------------------------------------*/
+.commentarea .comment .comment,
+.commentarea .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+{
+    background: #F3F4F5
+}
+
+.commentarea .comment,
+.commentarea .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+{
+    background-color: #fff;
 }

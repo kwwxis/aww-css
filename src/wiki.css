@@ -1,0 +1,67 @@
+.wiki-page .wiki-page-content {
+    margin-right: 15px;
+}
+
+.wiki-page .wikititle {
+    display: none;
+}
+
+.wiki-page .pageactions {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+/* Index (rules) page
+--------------------------------------------------------------------------------*/
+
+.wiki-page-index.wiki-page .wiki.md h1 {
+    text-align: center;
+}
+
+#wiki_aww_rules + p, #wiki_aww_rules + p + p, #wiki_aww_rules + p + p + p {
+    text-align: center;
+}
+
+.wiki-page-index.wiki-page .toc {
+    display: none;
+}
+
+.wiki-page-index.wiki-page .wiki-page-content .wiki.md {
+    max-width: 890px;
+    margin: 0 auto;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 120%
+}
+
+.wiki-page-index.wiki-page .wiki.md h4,
+.wiki-page-index.wiki-page .wiki.md h4 + ul {
+    background: white;
+    padding: 10px 20px;
+}
+
+
+.wiki-page-index.wiki-page .wiki.md h4 {
+    margin-bottom: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    font-style: normal;
+    background: #FFBDBD;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.wiki-page-index.wiki-page .wiki.md h4,
+.wiki-page-index.wiki-page .wiki.md h4 a {
+    color: white;
+}
+
+.wiki-page-index.wiki-page .wiki.md h4 + ul {
+    border-top: 0;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 40px;
+    font-size: 110%;
+}
+.wiki-page-index.wiki-page .wiki.md h4 + ul li p {
+    line-height: 1.7em;
+    color: rgba(0,0,0,0.85);
+}

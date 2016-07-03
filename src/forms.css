@@ -22,3 +22,17 @@
 ul.image-preview-list {
     margin: 20px 10px 10px 20px;
 }
+
+.dropdown.lightdrop .selected {
+    color: #4db5e0;
+    text-decoration: none;
+    background-image: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dropdown.lightdrop .selected:after {
+    content: '∨';
+    font-size: 9px;
+    margin-left: 3px
+}

@@ -27,6 +27,42 @@
     content: 'Submitting to /r/aww';
 }
 
+/* Title
+--------------------------------------------------------------------------------*/
+
+.submit-page .content > h1 {
+    font-size: 0;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+}
+.submit-page .content > h1:before {
+    content: 'Submit a link to /r/aww';
+    display: block;
+    font-size: x-large;
+}
+.submit-page .content > h1:after {
+    content: "If you haven't already, please read our community's rules before posting. Thank you!";
+    display: block;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 280px;
+    color: rgba(0,0,0,0.4);
+}
+
+/* Layout
+--------------------------------------------------------------------------------*/
+
+.submit-page .content[role="main"] {
+    max-width: 700px;
+}
+
+.submit-page .submit.content {
+    margin: 0 auto;
+    width: 500px;
+}
+
 /* Input elements
 --------------------------------------------------------------------------------*/
 
@@ -42,7 +78,7 @@
 
 /* Hide things we don't want
 --------------------------------------------------------------------------------*/
-.submit-page .content > h1,
+
 .submit-page .formtabs-content .infobar,
 .submit-page #suggested-reddits,
 .formtabs-content > .spacer:first-child {
@@ -52,10 +88,6 @@
 
 /* Form container
 --------------------------------------------------------------------------------*/
-.submit-page .submit.content {
-    margin-left: 15px;
-    margin-top: 15px;
-}
 
 .submit-page .formtabs-content {
     border: 0;
@@ -85,7 +117,6 @@
 
 .submit-page ul.tabmenu.formtab li.selected a,
 .submit-page ul.tabmenu.formtab li:hover a {
-    background: white;
     box-shadow: none;
     border-bottom: 2px solid rgba(0,0,0,0.5);
 }
@@ -156,80 +187,58 @@
 /* Rule reminders
 --------------------------------------------------------------------------------*/
 
-.submit-page .submit_text.roundfield {
-    padding: 0;
-    box-shadow: none;
-    margin-bottom: -20px;
-    border-bottom: 0;
-}
-
-.submit-page .submit_text h1,
-.submit-page .submit_text .md > h2 {
-    display: none;
-}
-
-.submit-page .submit_text .md {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
-
-/* rule reminder list */
-.submit-page .submit_text .md ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.submit-page .submit_text .md ul li:nth-of-type(1):before,
-.submit-page .submit_text .md ul li:nth-of-type(2):before {
-    content: 'rule reminder';
+#title-field:before, #url-field:before,
+.submit-page .submit_text .md:before {
+    content: 'Rule reminder';
     text-transform: uppercase;
     color: rgba(0,0,0,0.4);
+    font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    font-size: 14px;
+    display: block;
+
+    background: #F4F8FF;
+    padding: 15px 15px 0 15px;
+    margin: -20px -20px 0 -20px;
 }
 
-.submit-page .submit_text .md ul li {
-    background: #eef2f9;
-    padding: 10px;
+#title-field .title:before,
+#url-field .title:before {
+    font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    display: block;
+    margin-bottom: 20px;
+    text-transform: initial;
+    color: rgba(0,0,0,0.8);
+    font-size: 17px;
+
+    background: #F4F8FF;
+    padding: 5px 15px 15px 15px;
+    margin: 0 -20px 10px -20px;
 }
 
-.submit-page .submit_text .md ul li:not(:last-of-type) {
-    margin: 1px;
+#title-field .title:before {
+    content: 'Also, no sad content! Titles on their own must be 100% happy. And please do not ask for upvotes.';
+}
+#url-field .title:before {
+    content: 'Remember, no linking to personal sites, such as Facebook, Twitter, Tumblr, Instagram, etc.';
 }
 
-/* paragraph font size; !important b/c reddit default uses !important */
-.submit-page .submit_text .md ul li p {
-    font-size: 16px !important;
+/* Submit text
+--------------------------------------------------------------------------------*/
+
+/* hide everything but the last item because of the CSS rule reminders above */
+.submit-page .submit_text h1,
+.submit-page .submit_text h2,
+.submit-page .submit_text ul li:not(:last-child),
+.submit-page .submit_text ul li:last-child p:last-child {
+    display:none;
 }
 
-/* url-field reminder position */
-.submit-page #url-field {
-    padding-top: 135px;
+.submit-page .submit_text .md:before {
+    padding: 10px 20px;
 }
-.submit-page .submit_text .md ul li:nth-of-type(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* title-field reminder position */
-.submit-page #title-field,
-.submit-page #text-field {
-    padding-top: 120px;
-}
-.submit-page .submit_text .md ul li:nth-of-type(2) {
-    position: absolute;
-    top: 270px;
-    left: 0;
-}
-
-.submit-page #newlink-with-image-upload #text-field {
-    margin-top: 44px;
-}
-
-/* thank you */
-.submit-page .submit_text .md ul li:last-of-type p:last-of-type {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px !important;
-    color: rgba(0,0,0,0.4);
-    letter-spacing: 0.5px;
+.submit-page .submit_text ul {
+    list-style-type: none;
+    padding: 0 20px 10px 20px;
+    margin: -5px -20px -19px -20px;
+    background: #F4F8FF;
 }
