@@ -57,6 +57,7 @@
     border: 1px solid #e3e3e3;
     padding-left: 15px;
     border-radius: 0;
+    margin-left: 0 !important;
 }
 
 /* left colored border */
@@ -68,8 +69,9 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 3px;
-    background: #C2EFFD;
+    width: 2px;
+    background: #9edcf7;
+    opacity: 0.8;
 }
 
 .comments-page .link:before {

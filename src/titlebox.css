@@ -133,6 +133,7 @@ form.toggle.flairtoggle {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
 
 /* margin top/bottom */
@@ -244,7 +245,7 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     justify-content: center;
     align-items: center;
     min-height: 48px;
-    margin: 0 -10px 0 -10px;
+    margin: 0;
     position: relative;
 }
 

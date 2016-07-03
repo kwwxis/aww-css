@@ -8,7 +8,12 @@ body > .debuginfo:before {
 body {
     background: #F5F6F7;
     min-width: 780px; /* body min width */
-    overflow-x: auto !important;
+}
+
+@media (max-width: 780px) {
+    body {
+        overflow-x: auto !important;
+    }
 }
 
 #siteTable, #siteTable_organic {

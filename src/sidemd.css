@@ -25,6 +25,7 @@
     counter-reset: siderules;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     padding-left: 20px;
+    padding-right: 10px;
 }
 
 .side .md h3 + ol li {
@@ -109,6 +110,7 @@
 
 .side .md h4 + table {
     position: relative;
+    margin: 10px;
 }
 
 .side .md h4 + table thead {

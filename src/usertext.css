@@ -1,10 +1,11 @@
 
 /* Comment rules bg
 --------------------------------------------------------------------------------*/
-.usertext textarea:not(:focus) {
+.comments-page .usertext textarea:not(:focus),
+.submit-page .usertext textarea:not(:focus) {
     background-image: url(%%commentrules%%);
     background-repeat: no-repeat;
-    background-position: 2px 5px;
+    background-position: 6px 5px;
 }
 
 /* usertext main container
@@ -37,11 +38,11 @@
     padding-top: 20px;
     margin-top: 0;
     width: 100% !important;
-    max-width: 508px;
+    max-width: 500px;
 }
 
 .usertext-edit textarea {
-    min-width: 508px;
+    min-width: 500px;
     border: 1px solid #c8ccd0;
 }
 

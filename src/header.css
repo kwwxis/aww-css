@@ -111,6 +111,10 @@ body.comments-page #header:after {
     background: transparent;
 }
 
+.res #RESShortcutsViewport {
+    margin-right: 70px;
+}
+
 /* Pagename
 --------------------------------------------------------------------------------*/
 .pagename {
