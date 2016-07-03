@@ -58,6 +58,8 @@
     padding-left: 15px;
     border-radius: 0;
 }
+
+/* left colored border */
 .commentarea > .sitetable > .comment:before,
 .comment-permalink-page.comments-page .commentarea > .infobar:before {
     content: '';
@@ -67,9 +69,12 @@
     left: 0;
     bottom: 0;
     width: 3px;
-    background: #e2ebfb;
+    background: #C2EFFD;
 }
 
+.comments-page .link:before {
+    left: -1px;
+}
 
 /* comments - tagline
 --------------------------------------------------------------------------------*/
@@ -122,10 +127,9 @@
 .commentarea .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
-.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
-    background: #F3F4F5
+    background: #F4F8FF
 }
 
 .commentarea .comment,
@@ -133,8 +137,7 @@
 .commentarea .comment .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
-.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+.commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
     background-color: #fff;
 }

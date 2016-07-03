@@ -128,3 +128,9 @@
 .res .comment.RES-keyNav-activeThing > .entry:after {
     right: 0;
 }
+
+/* Expandos
+--------------------------------------------------------------------------------*/
+.entry > .madeVisible, .entry > .expando {
+    margin-top: 10px;
+}

@@ -11,15 +11,13 @@
 --------------------------------------------------------------------------------*/
 .panestack-title {
     margin: 0;
-    border-top: 1px solid #eee;
-    /* border-bottom: 1px solid #eee; */
-    border-bottom: 0; /* inset box shadow on menuarea instead */
     height: 34px;
     display: flex;
     align-items: center;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    padding-left: 10px;
-    box-shadow: 0 -1px 2px rgba(0,0,0,0.03);
+    padding-left: 15px;
+    position: relative;
+    z-index: 6;
 }
 
 .panestack-title .title {
@@ -52,9 +50,20 @@
     margin: 0;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
-    background: #F3F6FB;
-    padding: 10px;
-    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.2);
+    /* background: #F7FAFF; */
+    background: white;
+    padding: 5px 15px;
+    position: relative;
+    overflow: visible;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+
+.commentarea > .menuarea:after {
+    content: '';
+    display: table;
+    clear: left;
 }
 
 .comment-permalink-page .commentarea > .menuarea {
@@ -62,29 +71,125 @@
 }
 
 .menuarea > .spacer {
-    margin-bottom: 8px;
+    margin-bottom: 0 !important;
 }
 
-.commentarea .menuarea .toggle a {
+.commentarea .menuarea .toggle a, .commentarea .menuarea .help-hoverable {
     font-size: 12px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.55);
 }
+
+/* RES comment "navigate by" thing
+--------------------------------------------------------------------------------*/
 
 .res #REScommentNavToggle {
-    font-size: 13px;
-    display: flex;
-    align-items: center;
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin-left: 5px;
+    clear: none;
 }
 
-.res #REScommentNavToggle > div {
-    border: 0;
-    font-weight: normal;
-    font-size: 14px;
-    padding: 2px;
-    margin-left: 4px;
-    color: rgba(0,0,0,0.4);
+.res #REScommentNavToggle span:before {
+    content: 'navigate by.';
+    font-size: 12px;
+    color: rgba(0,0,0,0.55);
 }
-.res #REScommentNavToggle > div:hover {
-    color: rgba(0,0,0,0.6);
+.res #REScommentNavToggle span:after {
+    content: '∨';
+    font-size: 7px;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+
+.res #REScommentNavToggle span,
+.res #REScommentNavToggle div {
+    height: 24px;
+    line-height: 24px;
+    min-width: 100px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    transition: all 200ms;
+}
+
+.res #REScommentNavToggle span {
+    font-size: 0;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 0;
+}
+.res #REScommentNavToggle:not(:hover) span {
+    border-color: transparent;
+}
+.res #REScommentNavToggle:hover span {
+    background: white;
+}
+.res #REScommentNavToggle:not(:hover) div {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.res #REScommentNavToggle div {
+    position: absolute;
+    background: white;
+    border-top: 0;
+    left: 0;
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+.res #REScommentNavToggle div:not(:last-of-type) {
+    border-bottom: 0;
+}
+
+/* 24px is the height of the div, if you change the height make sure to change this too */
+#REScommentNavToggle div[index="1"]  { margin-top: calc(24px * 0); }
+#REScommentNavToggle div[index="2"]  { margin-top: calc(24px * 1); }
+#REScommentNavToggle div[index="3"]  { margin-top: calc(24px * 2); }
+#REScommentNavToggle div[index="4"]  { margin-top: calc(24px * 3); }
+#REScommentNavToggle div[index="5"]  { margin-top: calc(24px * 4); }
+#REScommentNavToggle div[index="6"]  { margin-top: calc(24px * 5); }
+#REScommentNavToggle div[index="7"]  { margin-top: calc(24px * 6); }
+#REScommentNavToggle div[index="8"]  { margin-top: calc(24px * 7); }
+#REScommentNavToggle div[index="9"]  { margin-top: calc(24px * 8); }
+#REScommentNavToggle div[index="10"] { margin-top: calc(24px * 9); }
+#REScommentNavToggle div[index="11"] { margin-top: calc(24px * 10); }
+#REScommentNavToggle div[index="12"] { margin-top: calc(24px * 11); }
+/* after 12 don't exist yet, but this should cover my ass for a bit in case
+   they decided to exist in the near future */
+#REScommentNavToggle div[index="13"] { margin-top: calc(24px * 12); }
+#REScommentNavToggle div[index="14"] { margin-top: calc(24px * 13); }
+#REScommentNavToggle div[index="15"] { margin-top: calc(24px * 14); }
+#REScommentNavToggle div[index="16"] { margin-top: calc(24px * 15); }
+#REScommentNavToggle div[index="17"] { margin-top: calc(24px * 16); }
+#REScommentNavToggle div[index="18"] { margin-top: calc(24px * 17); }
+#REScommentNavToggle div[index="19"] { margin-top: calc(24px * 18); }
+#REScommentNavToggle div[index="20"] { margin-top: calc(24px * 19); }
+
+/* borders
+--------------------------------------------------------------------------------*/
+
+.comments-page .link {
+    border: 1px solid #e2e2e2;
+    border-bottom: 0;
+}
+
+.panestack-title {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #e3e3e3;
+    border-right: 1px solid #e3e3e3;
+}
+
+.commentarea > .usertext {
+    border-bottom: 1px solid #e3e3e3;
+}
+.commentarea > .usertext, .commentarea .menuarea, .panestack-title {
+    border-right: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
 }
 
 /* comment visits box

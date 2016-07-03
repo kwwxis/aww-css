@@ -1,14 +1,13 @@
 
+/* Comment rules bg
+--------------------------------------------------------------------------------*/
 .usertext textarea:not(:focus) {
     background-image: url(%%commentrules%%);
     background-repeat: no-repeat;
     background-position: 2px 5px;
-    background-size: 85%;
-    border: 1px solid #ccc;
-    outline: 0 !important;
 }
 
-/* COMMENT USERTEXT BOX
+/* usertext main container
 --------------------------------------------------------------------------------*/
 
 .commentarea > .usertext,
@@ -17,18 +16,37 @@
     overflow: visible;
     margin: 0;
     margin-bottom: 10px;
-    padding-left: 25px;
+    padding-left: 15px;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .child > .usertext {
     padding-left: 10px;
     padding-bottom: 10px;
 }
+
 .child > .usertext .usertext-edit {
     border-top: 1px solid rgba(0,0,0,0.05);
 }
 
+/* usertext edit and actual textarea
+--------------------------------------------------------------------------------*/
+
+.usertext .usertext-edit {
+    padding-top: 20px;
+    margin-top: 0;
+    width: 100% !important;
+    max-width: 508px;
+}
+
+.usertext-edit textarea {
+    min-width: 508px;
+    border: 1px solid #c8ccd0;
+}
+
+/* Bottom area (where the submit buttons and help buttons area)
+--------------------------------------------------------------------------------*/
 .usertext .bottom-area {
     display: flex;
     justify-content: space-between;
@@ -36,42 +54,26 @@
     flex-direction: row-reverse;
 }
 
-.usertext .usertext-buttons {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    flex-grow: 1;
-    padding-left: 2px;
-}
-
-.usertext .help-toggle, .usertext a.reddiquette {
+/* usertext help buttons (content policy, formatting help, big editor)
+--------------------------------------------------------------------------------*/
+.usertext .help-toggle, .usertext a.reddiquette, .res .RESBigEditorPop {
     margin: 0;
     line-height: 20px;
-    border: 1px solid #d6d6d6;
-    background: #fdfdfd;
     padding: 0 8px;
+    border: 0;
+    background: transparent;
 }
 
-
-.usertext .help-toggle a, .usertext a.reddiquette {
+.usertext .help-toggle a, .usertext a.reddiquette, .res .RESBigEditorPop {
     color: rgba(0,0,0,0.6);
 }
 
-.usertext a.reddiquette {
-    border-right: 0;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+.usertext .help-toggle:hover, .usertext a.reddiquette:hover, .res .RESBigEditorPop:hover {
+    background: #f5f5f5;
 }
 
-.usertext .help-toggle {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-
-.usertext-edit textarea {
-    max-width: 518px;
-}
-
+/* Markdown help
+--------------------------------------------------------------------------------*/
 .usertext .markhelp {
     border-top: 1px solid rgba(0,0,0,0.06);
     padding-top: 10px;
@@ -82,9 +84,21 @@
     margin-top: 10px;
 }
 
+/* Submit buttons
+--------------------------------------------------------------------------------*/
+
+/* submit button container */
+.usertext .usertext-buttons {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+    padding-left: 2px;
+}
 
 .usertext button[type=submit], .usertext button.cancel {
-    border: 0;
+    border: 1px solid;
+    border-radius: 3px;
     color: white;
     line-height: 29px;
     padding: 0 10px;
@@ -94,52 +108,60 @@
     margin-right: 5px;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 15px;
+    margin-bottom: 1px;
+}
+.usertext button[type=submit]:active, .usertext button.cancel:active {
+    margin-top: 1px;
+    margin-bottom: 0;
 }
 
 .usertext button[type=submit] {
-    background: #6DC981;
+    background-color: #4BAFEA;
+    border-color: #45A0C1;
+    box-shadow: inset 0 1px 0 #9EDCF7;
 }
 
 .usertext button.cancel {
-    background: rgba(0,0,0,0.23);
+    background-color: rgba(0,0,0,0.3);
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
 }
 
 /* RES EDITOR
 --------------------------------------------------------------------------------*/
 
-.usertext .usertext-edit {
-    padding-top: 20px;
-    margin-top: 0;
-    width: 100% !important;
-    max-width: 508px;
-}
-
+/* padding top for "speaking as" and "macros" which are both absolute */
 .res .usertext .usertext-edit {
     padding-top: 40px;
 }
 
+/* wrapper */
 .res .markdownEditor-wrapper {
     position: relative;
     width: auto;
 }
 
+/* edit button bar */
 .res .markdownEditor {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(0,0,0,0.05);
     padding: 5px 5px 2px 0;
     background: white;
+    border: 1px solid #c8ccd0;
+    border-bottom: 0;
 }
 
+/* edit button - no borders */
 .res .markdownEditor .edit-btn:not(.btn-macro) {
     border: 0;
 }
 
+/* char count */
 .res .RESCharCounter {
     font-size: 12px;
     height: 20px;
     line-height: 20px;
 }
 
+/* speaking as */
 .res .commentingAs {
     position: absolute;
     bottom: 100%;
@@ -151,21 +173,13 @@
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
+/* macro thing */
 .RESMacroWrappingSpan {
     position: absolute;
     bottom: 100%;
     right: 0;
     margin: 0 0 10px 0 !important;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
-
-.res .markdownEditor-wrapper + .md {
-    margin-top: -2px;
-    padding: 0;
-}
-
-.res .markdownEditor-wrapper + .md textarea {
-    padding-top: 3px;
 }
 
 .res .RESMacroDropdownTitle {
@@ -187,22 +201,17 @@
     margin-left: 5px;
 }
 
-.res .RESBigEditorPop {
-    margin: 0;
-    line-height: 20px;
-    border: 1px solid #d6d6d6;
-    background: #fdfdfd;
-    color: rgba(0,0,0,0.6);
-    padding: 0 8px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+/* md edit area */
+.res .markdownEditor-wrapper + .md {
+    margin-top: 0;
+    padding: 0;
 }
 
-.res .usertext .help-toggle {
-    border-right: 0;
-    border-radius: 0 !important;
+.res .markdownEditor-wrapper + .md textarea {
+    padding-top: 3px;
 }
 
+/* live preview */
 .res .RESDialogSmall.livePreview {
     margin-top: 10px;
 }
