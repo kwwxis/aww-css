@@ -1,30 +1,28 @@
 
-/* site table
+/* comment left stripe
 --------------------------------------------------------------------------------*/
 
-.res .comment.RES-keyNav-activeThing > .entry:after {
-    content: "";
+.commentarea > .sitetable > .comment:before,
+.comment-permalink-page.comments-page .commentarea > .infobar:before {
+    content: '';
     display: block;
     position: absolute;
-    right: -1px;
-    top: 10px;
-    bottom: 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
     width: 2px;
-    background: #bcddff;
+    background: #9edcf7;
+    opacity: 0.8;
 }
 
-/* link thing
---------------------------------------------------------------------------------*/
-
-.comments-page .link .entry {
-    padding-left: 10px;
+/* stickied-comment left stripe */
+.commentarea > .sitetable > .comment.stickied:before {
+    background: #71E096;
 }
 
-/* position expando button at bottom right of thumbnail */
-.comments-page .link .expando-button {
-    position: absolute;
-    right: 100%;
-    top: 56px;
+/* spam-comment left stripe */
+.commentarea > .sitetable > .comment.spam:before {
+    background: #FF8B94;
 }
 
 /* comments
@@ -60,20 +58,6 @@
     margin-left: 0 !important;
 }
 
-/* left colored border */
-.commentarea > .sitetable > .comment:before,
-.comment-permalink-page.comments-page .commentarea > .infobar:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 2px;
-    background: #9edcf7;
-    opacity: 0.8;
-}
-
 .comments-page .link:before {
     left: -1px;
 }
@@ -96,7 +80,8 @@
 .comment .entry .buttons li a {
     font-weight: normal;
 }
-.comment .entry .buttons li.reply-button a:before {
+.comment .entry .buttons li.reply-button a:before,
+.comment .entry .buttons li a[onclick*="return reply"]:before {
     content: 'reply';
     position: absolute;
     left: 0;
@@ -105,7 +90,8 @@
     font-weight: bold;
     letter-spacing: 0.25px
 }
-.comment .entry .buttons li.reply-button a:hover:before {
+.comment .entry .buttons li.reply-button a:hover:before,
+.comment .entry .buttons li a[onclick*="return reply"]:hover:before {
     text-decoration: underline;
 }
 

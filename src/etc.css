@@ -27,5 +27,4 @@ body {
 
 .content[role=main] {
     margin-right: 323px;
-    margin-top: 13px; /* 7px (reddit original) + 6px (tabmenu bottom stripe height) */
 }

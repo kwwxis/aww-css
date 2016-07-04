@@ -1,0 +1,75 @@
+
+/* link thing
+--------------------------------------------------------------------------------*/
+
+.comments-page .link .entry {
+    padding-left: 10px;
+}
+
+/* position expando button at bottom right of thumbnail */
+.comments-page .link .expando-button {
+    position: absolute;
+    right: 100%;
+    top: 56px;
+}
+
+/* report button thank you
+--------------------------------------------------------------------------------*/
+
+li.report-button {
+    position: relative;
+}
+
+li.report-button:before, li.report-button a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+li.report-button:before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #c8ccd0;
+    margin-bottom: 1px;
+}
+li.report-button a:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid white;
+    margin-bottom: 3px;
+    z-index: 5;
+}
+
+li.report-button:after {
+    content: 'Thanks for helping out the mods!';
+    display: block;
+    position: absolute;
+    background: black;
+    color: white;
+    bottom: 100%;
+    margin-bottom: 6px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 2px 5px;
+    background: white;
+    color: rgba(230,69,72,0.8);
+    border: 1px solid #c8ccd0;
+}
+
+li.report-button:before, li.report-button:after, li.report-button:after {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms;
+    pointer-events: none;
+}
+li.report-button:hover:before, li.report-button:hover:after, li.report-button:hover:after {
+    visibility: visible;
+    opacity: 1;
+}

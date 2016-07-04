@@ -9,3 +9,8 @@
     left: 10px !important;
     right: 320px !important;
 }
+
+.mod-toolbox .comment-nest-info {
+    padding: 3px 0 5px 3px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}

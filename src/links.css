@@ -1,3 +1,13 @@
+
+/* site table
+--------------------------------------------------------------------------------*/
+
+.listing-page #siteTable {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.16);
+    padding-bottom: 20px;
+    background: white;
+}
+
 /* Link listing
 --------------------------------------------------------------------------------*/
 
@@ -10,7 +20,8 @@
 
 /* normal separator border */
 .link:not(:first-child) {
-    border-top: 1px solid #E2E2E2;
+    /* border-top: 1px solid #E2E2E2; */
+    border-top: 1px solid rgba(0,0,0,0.06);
 }
 
 .link .thumbnail {
@@ -53,7 +64,7 @@
 
 .expando-button {
     float: left;
-	margin: 2px 5px 0px 0px !important;
+	margin: 5px 5px 0px 0px !important;
 	width: 23px !important;
 	height: 23px !important;
 	background-color: transparent !important;

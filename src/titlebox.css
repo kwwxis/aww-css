@@ -7,20 +7,18 @@
 }
 
 .titlebox {
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 2px dashed #e2e2e2;
+    padding-top: 10px;
+    margin-top: 20px;
 }
 
 /* submit text button - moderators
 --------------------------------------------------------------------------------*/
 
 .submit-text {
-    border-top: 1px solid rgba(0,0,0,0.1);
-    margin-bottom: -12px;
 }
 
 .submit-text .morelink {
-    background: #f7f7f7;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 15px;
     font-weight: normal;
 }
@@ -38,8 +36,7 @@
 }
 
 form.toggle.flairtoggle {
-    height: 0;
-    visibility: hidden;
+    display: none;
 }
 
 .titlebox > .tagline {
@@ -54,7 +51,14 @@ form.toggle.flairtoggle {
 
 .titlebox form.toggle:not(.res-sr-style-toggle),
 .titlebox .leavemoderator {
-    margin-left: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: repeating-linear-gradient(45deg,#DFF4FE,#DFF4FE 3px,#fff 3px,#fff 6px);
+    padding: 10px;
+    margin-top: 10px;
+    color: rgba(0,0,0,0.9);
+    font-size: 13px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 /* subreddit style toggle
@@ -133,7 +137,6 @@ form.toggle.flairtoggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
 }
 
 /* margin top/bottom */
@@ -206,14 +209,14 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     display: block;
     position: absolute;
     background: #eef2f9;
-    width: 100%;
     height: 75px;
-    left: 0;
-    right: 0;
+    left: 20px;
+    right: 20px;
     margin-top: -20px;
     opacity: 0.7;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    /* border-top: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);*/
+    background: repeating-linear-gradient(45deg,#DFF4FE,#DFF4FE 3px,#fff 3px,#fff 6px);
 }
 
 .subscribers .word, .subscribers .number, .users-online .word, .users-online .number {
@@ -228,7 +231,7 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     position: absolute;
     height: 35px;
     width: 1px;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.06);
 }
 
 /* count box space */
@@ -244,48 +247,18 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 48px;
+    min-height: 30px;
     margin: 0;
     position: relative;
+    background: repeating-linear-gradient(45deg,#DFF4FE,#DFF4FE 3px,#fff 3px,#fff 6px);
+    margin: 10px  20px 20px 20px;
 }
 
-/* tagline box */
-.titlebox > .tagline:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 48px;
-    top: 0;
-    left: 0;
-    background: url(%%overlay-1%%);
-    z-index: 1;
-    opacity: 0.7;
-}
+/* bottom "border" before md
+--------------------------------------------------------------------------------*/
 
-.titlebox > .tagline > *:not(.flairselector) {
-    z-index: 5;
-    position: relative;
-}
-
-/* if mod or approved submitter: margin between sub count box and flair count box */
-.users-online + .leavemoderator, .users-online + .toggle {
-    margin-top: 10px;
-}
-
-.leavemoderator + form.toggle.flairtoggle, .toggle + form.toggle.flairtoggle {
-    margin-top: 20px;
-}
-
-/* border top if mod and/or approved submitter, no border top otherwise because this
-tagline box will touch the sub count box which already has a border bottom */
-.leavemoderator + form.toggle.flairtoggle ~ .tagline:before,
-.toggle + form.toggle.flairtoggle ~ .tagline:before {
-    border-top: 1px solid rgba(0,0,0,0.1);
-    height: 47px;
-}
-
-/* "bottom" border */
 .side .md hr:first-of-type {
     margin-top: 0;
+    border-style: dashed;
+    border-width: 2px;
 }

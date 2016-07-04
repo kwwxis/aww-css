@@ -16,7 +16,6 @@
     height: auto;
     overflow: visible;
     margin: 0;
-    margin-bottom: 10px;
     padding-left: 15px;
     padding-bottom: 20px;
     position: relative;
@@ -215,6 +214,16 @@
 /* live preview */
 .res .RESDialogSmall.livePreview {
     margin-top: 10px;
+}
+
+/* big editor stuff */
+.res #BigText {
+    box-sizing: border-box;
+}
+
+.res.RESScrollLock #NREFloat {
+    right: 80px;
+    top: 23px;
 }
 
 /* MARKDOWN STYLES

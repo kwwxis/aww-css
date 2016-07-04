@@ -75,7 +75,7 @@
     display: none;
 }
 
-.side .md blockquote:first-of-type {
+.side .md > blockquote:first-of-type {
     position: absolute;
     top: 90px;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -86,8 +86,8 @@
 }
 
 /* paw prints at top left and bottom right of sub description */
-.side .md blockquote:first-of-type:before,
-.side .md blockquote:first-of-type:after {
+.side .md > blockquote:first-of-type:before,
+.side .md > blockquote:first-of-type:after {
     content: '';
     display: block;
     position: absolute;
@@ -99,20 +99,20 @@
     pointer-events: none;
 }
 
-.side .md blockquote:first-of-type:before {
+.side .md > blockquote:first-of-type:before {
     top: -25px;
     left: 0;
     transform: scale(0.5) rotateZ(-35deg);
 }
 
 
-.side .md blockquote:first-of-type:after {
+.side .md > blockquote:first-of-type:after {
     right: 0;
     bottom: 0px;
     transform: scale(0.5) rotateZ(35deg);
 }
 
-.side .md blockquote:first-of-type p {
+.side .md > blockquote:first-of-type p {
     position: relative;
     z-index: 1;
 }
@@ -134,7 +134,7 @@
     font-weight: inherit;
 }
 
-.submit-link .morelink, .side .md h5 + ul li a {
+.submit-link .morelink, .side .md h5 + ul li a, .submit-text .morelink {
     display: block;
     position: relative;
     border: 0;
@@ -154,7 +154,7 @@
 }
 
 /* button dark bottom edge (LIGHT COMES FROM THE SKY, SON) */
-.submit-link .morelink:after, .side .md h5 + ul li a:after {
+.submit-link .morelink:after, .side .md h5 + ul li a:after, .submit-text .morelink:after {
     content: '';
     display: block;
     position: absolute;
@@ -167,12 +167,12 @@
 }
 
 /* button active */
-.submit-link .morelink:active, .side .md h5 + ul li a:active {
+.submit-link .morelink:active, .side .md h5 + ul li a:active, .submit-text .morelink:active {
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* button active - hide bottom edge */
-.submit-link .morelink:active:after, .side .md h5+ul li a:active:after {
+.submit-link .morelink:active:after, .side .md h5+ul li a:active:after, .submit-text .morelink:active:after {
     display: none;
 }
 

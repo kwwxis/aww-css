@@ -1,6 +1,7 @@
 
 .commentarea {
     position: relative;
+    margin-top: 10px;
 }
 
 .commentarea > .panestack-title, .commentarea > .usertext {
@@ -92,7 +93,7 @@
 }
 
 .res #REScommentNavToggle span:before {
-    content: 'navigate by.';
+    content: 'navigate by';
     font-size: 12px;
     color: rgba(0,0,0,0.55);
 }
@@ -169,31 +170,25 @@
 #REScommentNavToggle div[index="19"] { margin-top: calc(24px * 18); }
 #REScommentNavToggle div[index="20"] { margin-top: calc(24px * 19); }
 
-/* borders
---------------------------------------------------------------------------------*/
-
-.comments-page .link {
-    border: 1px solid #e2e2e2;
-    border-bottom: 0;
-}
-
-.panestack-title {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    border-left: 1px solid #e3e3e3;
-    border-right: 1px solid #e3e3e3;
-}
-
-.commentarea > .usertext {
-    border-bottom: 1px solid #e3e3e3;
-}
-.commentarea > .usertext, .commentarea .menuarea, .panestack-title {
-    border-right: 1px solid #e3e3e3;
-    border-left: 1px solid #e3e3e3;
-}
-
 /* comment visits box
 --------------------------------------------------------------------------------*/
+
+.gold-accent.comment-visits-box {
+    border: 0;
+    background: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    max-width: none !important;
+    box-sizing: border-box;
+}
+
+.gold-accent.comment-visits-box .title {
+    background: #fbefb9;
+    padding: 7px 10px;
+    max-width: 650px;
+}
 
 select#comment-visits {
     background: rgba(255,255,255,0.6);
@@ -207,297 +202,21 @@ select#comment-visits {
     border: 0;
 }
 
-.gold-accent.comment-visits-box {
-    border: 0;
-    background: #fbefb9;
-}
-
-/* link entry buttons icons
+/* borders
 --------------------------------------------------------------------------------*/
 
-.comments-page .link .entry .buttons {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 11px;
-    position: relative;
-    margin-top: 5px;
+.comments-page .link {
+    border: 1px solid #e2e2e2;
 }
 
-.comments-page .link .entry .buttons li {
-    margin-left: 0;
-    padding: 0 2px;
-    order: 0;
+.panestack-title {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #e3e3e3;
+    border-right: 1px solid #e3e3e3;
 }
 
-.comments-page .link .entry .buttons li + li {
-    margin-right: 4px;
-}
-.comments-page.moderator .link .entry .buttons li + li {
-    margin-right: 2px;
-}
-
-.comments-page .link .entry .buttons li,
-.comments-page .link .entry .buttons li > a,
-.comments-page .link .entry .buttons li > form {
-    min-height: 24px;
-    display: flex;
-    align-items: center;
-}
-
-/* first item */
-.comments-page .link .entry .buttons li.first:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 100%;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    margin-left: 5px;
-    height: 12px;
-    width: 1px;
-    background: rgba(0,0,0,0.1);
-}
-.comments-page .link .entry .buttons li.first {
-    position: relative;
-    margin-right: 10px;
-}
-
-/* icon items */
-.comments-page .link .entry .buttons li a.global-mod-button:before,
-.comments-page .link .entry .buttons li.viewSource a:before,
-.comments-page .link .entry .buttons li a.edit-usertext:before,
-.comments-page .link .entry .buttons li a.post-sharing-button:before,
-.comments-page .link .entry .buttons li.save-button.link-save-button a:before,
-.comments-page .link .entry .buttons li.give-gold-button a:before,
-.comments-page .link .entry .buttons li form.hide-button:before,
-.comments-page .link .entry .buttons li form.del-button:before,
-.comments-page .link .entry .buttons li form.unlock-button:before,
-.comments-page .link .entry .buttons li form.lock-button:before,
-.comments-page .link .entry .buttons li.report-button a:before,
-.comments-page .link .entry .buttons li a.flairselectbtn:before {
-    content: '';
-    display: inline-block;
-    background-image: url(%%spritesheet%%);
-    width: 20px;
-    height: 22px;
-}
-
-/* mod button */
-.comments-page .link .entry .buttons li a.global-mod-button:before {
-    background-position: -75px -243px;
-}
-.comments-page .link .entry .buttons li a.global-mod-button {
-    color: #4DB5E0;
-}
-
-/* source button */
-.comments-page .link .entry .buttons li.viewSource a:after {
-    content: 'source';
-}
-.comments-page .link .entry .buttons li.viewSource a:before {
-    background-position: -141px -243px;
-    margin-right: 5px;
-}
-.comments-page .link .entry .buttons li.viewSource a {
-    color: #666;
-}
-.comments-page .link:not(.self) .entry .buttons li.viewSource {
-    display: none;
-}
-
-/* edit button */
-.comments-page .link .entry .buttons li a.edit-usertext:before {
-    background-position: -77px -268px;
-}
-.comments-page .link .entry .buttons li a.edit-usertext {
-    color: #f28aa8;
-}
-
-/* share button */
-.comments-page .link .entry .buttons li a.post-sharing-button:before {
-    background-position: -242px -243px;
-}
-.comments-page .link .entry .buttons li a.post-sharing-button {
-    color: #29ABE2;
-}
-
-/* save button */
-.comments-page .link .entry .buttons li.save-button.link-save-button a:before {
-    background-position: -108px -243px;
-    margin-right: 5px;
-}
-.comments-page .link .entry .buttons li.save-button.link-save-button a {
-    color: #F3AE57;
-}
-
-/* hide button */
-.comments-page .link .entry .buttons li form.hide-button:before {
-    background-position: -274px -243px;
-}
-.comments-page .link .entry .buttons li form.hide-button a {
-    color: #AACF6D;
-}
-
-/* give gold button */
-.comments-page .link .entry .buttons li.give-gold-button a:before {
-    background-position: -175px -243px;
-}
-.comments-page .link .entry .buttons li.give-gold-button a {
-    color: #FFD634;
-}
-
-/* delete button */
-.comments-page .link .entry .buttons li form.del-button:before {
-    background-position: -340px -243px;
-}
-.comments-page .link .entry .buttons li form.del-button a {
-    color: #AACF6D;
-}
-
-/* lock button*/
-.comments-page .link .entry .buttons li form.unlock-button:before,
-.comments-page .link .entry .buttons li form.lock-button:before {
-    background-position: -307px -243px;
-}
-.comments-page .link .entry .buttons li form.unlock-button a,
-.comments-page .link .entry .buttons li form.lock-button a {
-    color: #FFD634;
-}
-
-/* report button */
-.comments-page .link .entry .buttons li.report-button a:before {
-    background-position: -208px -243px;
-}
-.comments-page .link .entry .buttons li.report-button a {
-    color: #E99170;
-}
-
-/* distinguish button */
-.comments-page .link .entry .buttons li form[action*="distinguish"]:before {
-    content: 'M';
-    color: #4EA04E;
-    background: #daecda;
-    box-sizing: border-box;
-    display: inline-block;
-    height: 17px;
-    width: 16px;
-    line-height: 17px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 3px;
-}
-.comments-page .link .entry .buttons li form[action*="distinguish"] a {
-    color: #4EA04E;
-}
-
-/* nsfw button */
-.comments-page .link .entry .buttons li form[action*="distinguish"]:before {
-    content: 'M';
-    color: #4EA04E;
-    background: #daecda;
-    box-sizing: border-box;
-    display: inline-block;
-    height: 17px;
-    width: 16px;
-    line-height: 17px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 3px;
-}
-.comments-page .link .entry .buttons li form[action*="distinguish"] a {
-    color: #4EA04E;
-}
-
-/* flair select button */
-.comments-page .link .entry .buttons li a.flairselectbtn:before {
-    background-position: -373px -243px;
-}
-.comments-page .link .entry .buttons li a.flairselectbtn {
-    color: #f28aa8;
-}
-
-/* nsfw button */
-.comments-page .link .entry .buttons li form.marknsfw-button:before {
-    content: '18';
-    color: rgba(230,69,72,0.8);
-    background: rgba(230,69,72,0.2);
-    box-sizing: border-box;
-    display: inline-block;
-    height: 17px;
-    width: 16px;
-    line-height: 17px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 3px;
-    font-weight: bold;
-}
-.comments-page .link .entry .buttons li form.marknsfw-button a {
-    color: rgba(230,69,72,0.8);
-}
-
-/* abbreviate "show/hide all children comments" if moderator because it takes up too much space */
-.moderator.comments-page .link .entry .buttons li > a[action="hide"][href="#"][title*="Show"],
-.moderator.comments-page .link .entry .buttons li > a[action="show"][href="#"][title*="Show"] {
-    font-size: 0;
-}
-
-.moderator.comments-page .link .entry .buttons li > a[action="hide"][href="#"][title*="Show"]:before {
-    font-size: 11px;
-    content: 'hide childs';
-}
-.moderator.comments-page .link .entry .buttons li > a[action="show"][href="#"][title*="Show"]:before {
-    font-size: 11px;
-    content: 'show childs';
-}
-
-/* link mod actions
---------------------------------------------------------------------------------*/
-
-.comments-page .link.reported .entry .buttons {
-    margin-bottom: 40px;
-}
-.comments-page .link.reported .entry .buttons ul.report-reasons {
-    margin-top: 35px;
-    margin-bottom: -30px;
-}
-
-.comments-page .link.reported .entry .buttons li.reported-stamp,
-.comments-page .link.reported .entry .buttons span.big-mod-buttons,
-.comments-page .link.reported .entry .buttons ul.report-reasons {
-    order: 1;
-}
-
-.comments-page .link.reported .entry .buttons li.reported-stamp {
-    position: absolute;
-    min-height: initial;
-    top: 35px;
-    left: 0;
-    min-width: 55px;
-    margin-left: 0;
-}
-.comments-page .link.reported .entry .buttons span.big-mod-buttons {
-    position: absolute;
-    top: 35px;
-    left: 60px;
-}
-.comments-page .link.reported .entry .buttons span.big-mod-buttons:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    padding-right: 100px;
-    box-sizing: content-box;
-    height: 1px;
-    background: #eee;
-    margin-top: -8px;
-    left: -60px;
-}
-
-.comments-page .link .entry .buttons > .pretty-button {
-    margin: 0;
-    margin-left: 5px
+.commentarea > .usertext, .commentarea .menuarea, .panestack-title, .gold-accent.comment-visits-box {
+    border-right: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
 }

@@ -33,14 +33,23 @@
     font-size: 120%
 }
 
-.wiki-page-index.wiki-page .wiki.md h4,
-.wiki-page-index.wiki-page .wiki.md h4 + ul {
+/* hide real rule header (only used for linking) */
+.wiki-page-index.wiki-page .wiki.md h4 {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* fake rule header + contetns */
+.wiki-page-index.wiki-page .wiki.md h4 + p,
+.wiki-page-index.wiki-page .wiki.md h4 + p + ul {
     background: white;
     padding: 10px 20px;
 }
 
-
-.wiki-page-index.wiki-page .wiki.md h4 {
+/* fake rule header */
+.wiki-page-index.wiki-page .wiki.md h4 + p {
     margin-bottom: 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     margin-top: 20px;
@@ -48,12 +57,13 @@
     background: #FFBDBD;
     text-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
-.wiki-page-index.wiki-page .wiki.md h4,
-.wiki-page-index.wiki-page .wiki.md h4 a {
+.wiki-page-index.wiki-page .wiki.md h4 + p,
+.wiki-page-index.wiki-page .wiki.md h4 + p a {
     color: white;
 }
 
-.wiki-page-index.wiki-page .wiki.md h4 + ul {
+/* rule contents */
+.wiki-page-index.wiki-page .wiki.md h4 + p + ul {
     border-top: 0;
     margin-top: 0;
     margin-left: 10px;
@@ -61,7 +71,7 @@
     padding-left: 40px;
     font-size: 110%;
 }
-.wiki-page-index.wiki-page .wiki.md h4 + ul li p {
+.wiki-page-index.wiki-page .wiki.md h4 + p + ul li p {
     line-height: 1.7em;
     color: rgba(0,0,0,0.85);
 }
