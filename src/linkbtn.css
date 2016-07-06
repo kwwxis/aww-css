@@ -1,6 +1,6 @@
 
 
-/* link entry buttons icons
+/* link entry buttons
 --------------------------------------------------------------------------------*/
 
 .link .entry .buttons {
@@ -10,8 +10,8 @@
     align-items: center;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 11px;
-    position: relative;
     margin-top: 5px;
+    position: relative;
 }
 
 .listing-page .link .entry .buttons {
@@ -39,7 +39,9 @@
     align-items: center;
 }
 
-/* first item */
+/* first item
+--------------------------------------------------------------------------------*/
+
 .link .entry .buttons li.first:after {
     content: '';
     display: block;
@@ -58,7 +60,9 @@
     margin-right: 10px;
 }
 
-/* icon items */
+/* icon items
+--------------------------------------------------------------------------------*/
+
 .link .entry .buttons li a.global-mod-button:before,
 .link .entry .buttons li.viewSource a:before,
 .link .entry .buttons li a.edit-usertext:before,
@@ -157,7 +161,7 @@
 }
 .link .entry .buttons li form.unlock-button a,
 .link .entry .buttons li form.lock-button a {
-    color: #FFD634;
+    color: #e8be17;
 }
 
 /* report button */
@@ -209,7 +213,7 @@
     background-position: -373px -243px;
 }
 .link .entry .buttons li a.flairselectbtn {
-    color: #f28aa8;
+    color: #90d4f7;
 }
 
 /* nsfw button */
@@ -249,14 +253,6 @@
 /* link mod actions
 --------------------------------------------------------------------------------*/
 
-.link.reported .entry .buttons {
-    margin-bottom: 40px;
-}
-.link.reported .entry .buttons ul.report-reasons {
-    margin-top: 35px;
-    margin-bottom: -30px;
-}
-
 .link.reported .entry .buttons li.reported-stamp,
 .link.reported .entry .buttons span.big-mod-buttons,
 .link.reported .entry .buttons ul.report-reasons {
@@ -264,32 +260,75 @@
 }
 
 .link.reported .entry .buttons li.reported-stamp {
-    position: absolute;
     min-height: initial;
-    top: 35px;
-    left: 0;
-    min-width: 55px;
-    margin-left: 0;
-}
-.link.reported .entry .buttons span.big-mod-buttons {
-    position: absolute;
-    top: 35px;
-    left: 60px;
-}
-.link.reported .entry .buttons span.big-mod-buttons:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    padding-right: 100px;
-    box-sizing: content-box;
-    height: 1px;
-    background: #eee;
-    margin-top: -8px;
-    left: -60px;
+    margin-left: 5px;
 }
 
+.link.reported .entry .buttons span.big-mod-buttons {
+    margin-bottom: -5px;
+}
+
+/* unignore report button on its own */
 .link .entry .buttons > .pretty-button {
     margin: 0;
     margin-left: 5px
+}
+
+/* report reasons */
+.link.reported .entry .buttons ul.report-reasons {
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid #e1b000;
+    border-left: 1px solid #e1b000;
+    width: 100%;
+    margin-left: -11px;
+    padding-right: 20px;
+    box-sizing: content-box;
+}
+
+/* report reasons - add bottom border to report reasons when expando is open */
+.link.reported .entry .expando-button.expanded ~ .buttons ul.report-reasons {
+    border-bottom: 1px solid #e1b000;
+}
+
+/* hide icons */
+.link.reported .entry .buttons li a.global-mod-button:before,
+.link.reported .entry .buttons li.viewSource a:before,
+.link.reported .entry .buttons li a.edit-usertext:before,
+.link.reported .entry .buttons li a.post-sharing-button:before,
+.link.reported .entry .buttons li.save-button.link-save-button a:before,
+.link.reported .entry .buttons li.give-gold-button a:before,
+.link.reported .entry .buttons li form.hide-button:before,
+.link.reported .entry .buttons li form.del-button:before,
+.link.reported .entry .buttons li form.unlock-button:before,
+.link.reported .entry .buttons li form.lock-button:before,
+.link.reported .entry .buttons li.report-button a:before,
+.link.reported .entry .buttons li a.flairselectbtn:before,
+.link.reported .entry .buttons li form.marknsfw-button:before {
+    display: none;
+}
+
+/* listing page link buttons
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .entry .buttons {
+    display: inline-flex;
+    background: #f7f8f9;
+    margin-top: 20px;
+    margin-bottom: -1px;
+    margin-left: 10px;
+    padding: 0;
+}
+.listing-page .link .entry .buttons li.first {
+    background: rgba(0,0,0,0.02);
+    padding: 0 4px 0 5px;
+    margin-right: 5px;
+    line-height: 26px;
+}
+.listing-page .link .entry .buttons li.first:after {
+    display: none;
+}
+
+.listing-page .link.reported .entry .buttons {
+    width: calc(100% - 10px);
 }

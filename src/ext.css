@@ -2,15 +2,44 @@
     margin: 5px !important;
 }
 
-.comments-page.mod-toolbox .menuarea.modtools,
-.listing-page.mod-toolbox .menuarea.modtools {
+.comments-page.mod-toolbox.res .menuarea.modtools,
+.listing-page.mod-toolbox.res .menuarea.modtools {
     position: fixed !important;
     top: 5px !important;
-    left: 10px !important;
-    right: 320px !important;
 }
 
 .mod-toolbox .comment-nest-info {
     padding: 3px 0 5px 3px;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+/* queue tools - checkbox margin */
+.thing > input[type=checkbox][tabindex] {
+    margin: 5px 0 0 2px !important;
+}
+
+.thing.comment > input[type=checkbox][tabindex] {
+    margin: 5px 10px 0 -2px !important;
+}
+
+.commentarea > .sitetable > .thing.comment > input[type=checkbox][tabindex] {
+    margin: 5px 10px 0 -7px !important;
+}
+
+/* easy check area (Chrome only)
+:after isn't supposed to be usable on inputs, but this works in Chrome for some reason */
+.thing > input[type=checkbox][tabindex]:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 25px;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.thing > input[type=checkbox][tabindex]:hover:after {
+    border: 1px solid #27A4DD;
 }

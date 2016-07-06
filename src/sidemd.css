@@ -51,10 +51,29 @@
     margin: auto 0;
     margin-right: -13px;
     z-index: 3;
-    background: white;
     border-radius: 50%;
+    background: white;
     background: #CFDAF0;
+    background: transparent;
     color: white;
+    text-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* li number paw */
+.side .md h3 + ol > li > p:first-child:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -11px;
+    bottom: 0;
+    right: 100%;
+    margin: auto 0;
+    background-image: url(%%spritesheet%%);
+    background-position: -215px -178px;
+    width: 56px;
+    height: 56px;
+    pointer-events: none;
+    transform: rotateZ(20deg) scale(0.65);
 }
 
 /* li background */

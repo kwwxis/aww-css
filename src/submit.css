@@ -44,7 +44,7 @@
 .submit-page .content > h1:after {
     content: "If you haven't already, please read our community's rules before posting. Thank you!";
     display: block;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0 auto;
     margin-top: 10px;
     max-width: 280px;
@@ -60,7 +60,8 @@
 
 .submit-page .submit.content {
     margin: 0 auto;
-    width: 500px;
+    max-width: 520px;
+    width: 100%;
 }
 
 /* Input elements
@@ -94,6 +95,7 @@
     position: relative;
     margin-bottom: 20px; /* distance between main form and info notice box */
     padding-top: 0;
+    max-width: 520px;
 }
 
 /* Tab menu

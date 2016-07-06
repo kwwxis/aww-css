@@ -19,9 +19,9 @@ order       = [ 'etc.css',      # general layout, common margins, and whatever c
                 'titlebox.css', # sidebar titlebox except for the usertext md
                 'thing.css',    # style for .thing elements (links and comments alike)
                 'links.css',    # links within linklisting and linklisting page
+                'linkbtn.css',  # link buttons
                 'cpage.css',    # comments page page layout & top area (panestack-title, menuarea)
                 'clink.css',    # comment page link thing
-                'cicons.css',   # comment page link entry flat list icons
                 'ctable.css',   # sitetable and comments in comments page
                 'usertext.css', # usertext editor input
                 'search.css',   # search page (does not include search input in sidebar, which is in sidebar.css)

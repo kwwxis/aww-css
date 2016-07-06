@@ -27,4 +27,27 @@ body {
 
 .content[role=main] {
     margin-right: 323px;
+    position: relative;
+    z-index: 5; /* position above .side */
+}
+
+/* if both RES and Mod Toolbox, position main content above .side and #header
+   so that queue tools can be above both */
+.res.mod-toolbox .content[role=main] {
+    z-index: 100;
+}
+
+/* a cool CSS3 "flair" for myself because I think I'm cool */
+
+.thing[data-author="kwwxis"] .author:after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 12px;
+    background-image: url(%%spritesheet%%);
+    background-position: -111px -273px;
+    margin-bottom: -2px;
+    margin-left: 1px;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
 }

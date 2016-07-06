@@ -17,9 +17,9 @@ Not yet complete
 | titlebox.css  | everything in the sidebar titlebox except for usertext md                                             |
 | thing.css     | style for .thing elements common to both links and comments                                           |
 | links.css     | linklisting links and page                                                                            |
+| linkbtn.css   | link buttons                                                                                          |
 | cpage.css     | comments page page layout & top area (panestack-title, menuarea)                                      |
 | clink.css     | comment page link thing                                                                               |
-| cicons.css    | comment page link entry flat list icons                                                               |
 | ctable.css    | sitetable and comments in comments page                                                               |
 | usertext.css  | usertext editor and common md styles                                                                  |
 | search.css    | search page (does not include search input in sidebar - sidebar.css)                                  |

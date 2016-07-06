@@ -8,20 +8,21 @@
     background: white;
 }
 
-/* Link listing
+/* Link
 --------------------------------------------------------------------------------*/
 
 .link {
-    padding: 22px 10px 20px 5px;
-    border: 1px solid transparent;
+    align-items: stretch;
+    padding: 0 0 0 5px;
+    border: 0;
+    border-top: 1px solid transparent;
     background: white;
     margin: 0;
 }
 
 /* normal separator border */
 .link:not(:first-child) {
-    /* border-top: 1px solid #E2E2E2; */
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid #c8ccd0;
 }
 
 .link .thumbnail {
@@ -29,35 +30,84 @@
     margin-right: 15px;
 }
 
+.link .entry, .link .midcol, .link .rank {
+    padding-top: 22px;
+}
+.link .thumbnail {
+    margin-top: 22px;
+}
+
+/* Link entry
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .entry {
+    border-left: 1px solid rgba(0,0,0,0.1);
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+/* link rank
+--------------------------------------------------------------------------------*/
+
+.link .rank {
+    text-align: center;
+}
+
+/* Listing page link midcol
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .midcol {
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    background: #fafafa;
+    min-width: 50px;
+}
+
+/* Listing page link thumbnail
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .thumbnail {
+    border-color: white !important
+}
+
+/* Link tagline and title
+--------------------------------------------------------------------------------*/
+
+.link .tagline, .link .title {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
 .link .title {
+    font-size: large;
     margin-bottom: 5px;
+}
+
+.link .tagline {
+    font-size: small;
+}
+
+.listing-page .link .tagline {
+    margin-left: 10px;
+}
+
+.listing-page .link .entry > .title {
+    margin-left: 10px;
+}
+
+.link .tagline:after {
+    content: '';
+    display: table;
+    clear: left;
 }
 
 /* Last clicked
 --------------------------------------------------------------------------------*/
 .link.last-clicked, .link.last-clicked:not(:first-child):not(.RES-keyNav-activeThing) {
-    border: 1px dashed #BCDDFF;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
 }
-.link.last-clicked + .clearleft + .link {
-    border-top: 0;
-}
-
-/* space between last stickied link and following non-stickied link
---------------------------------------------------------------------------------*/
-/*.link.stickied + .clearleft + .link:not(.stickied) {
-    margin-top: 15px;
-}
-
-.link.stickied + .clearleft + .link:not(.stickied):before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    border-top: 1px solid #E2E2E2;
-}*/
 
 /* Expando Buttons
 --------------------------------------------------------------------------------*/
@@ -92,11 +142,59 @@
     background-position: -42px -95px !important;
 }
 
+/* Link listing link - expando button
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .expando-button {
+    position: static;
+    margin: -2px 5px 0 10px !important;
+}
+
+/* Listing page - expando open
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .entry > .madeVisible,
+.listing-page .link .entry > .usertext,
+.listing-page .link .entry > .expando {
+    margin-top: 1px;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f4f8ff;
+}
+
+.listing-page .link .entry > .expando-button.collapsed ~ .madeVisible,
+.listing-page .link .entry > .expando-button.collapsed ~ .usertext,
+.listing-page .link .entry > .expando-button.collapsed ~ .expando {
+    display: none
+}
+
+.res .RESImagePlaceholder {
+    width: 100% !important;
+}
+
+/* Listing page - .buttons bottom stripe when expando open 
+--------------------------------------------------------------------------------*/
+
+.listing-page .link .entry .expando-button.expanded ~ .buttons:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #EAEEF5;
+    z-index: 5;
+}
+
 /* Nav Buttons
 --------------------------------------------------------------------------------*/
 #siteTable > .nav-buttons {
     border-top: 1px solid #E2E2E2;
     padding-top: 20px;
+    position: relative;
 }
 
 .nav-buttons {
@@ -163,4 +261,17 @@
     background: rgba(0,0,0,0.1);
     display: inline-block;
     border: 0;
+}
+
+
+/* no results
+--------------------------------------------------------------------------------*/
+#noresults {
+    font-size: 0;
+    width: 450px;
+    height: 70px;
+    background-image: url(%%nothing-here%%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 80px auto;
 }

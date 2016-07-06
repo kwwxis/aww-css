@@ -10,7 +10,7 @@
 
 #header-bottom-left {
     position: relative;
-    min-height: 80px; /* height between tabmenu and sr header area */
+    min-height: 100px; /* height between tabmenu and sr header area */
     padding-bottom: 29px; /* bottom padding because tabmenu is absolute
                              tabmenu height (24px) + tabmenu top margin (5px) */
 }
@@ -19,7 +19,7 @@
     width: 112px;
     height: 75px;
     margin: 0;
-    margin-top: 10px;
+    margin-top: 25px;
     float: left;
 }
 
@@ -33,15 +33,15 @@ body #header:after {
     bottom: 0;
     right: 0;
     /* background: url(%%overlay-0%%), repeating-linear-gradient(45deg, #B2D9D8, #B2D9D8 10px, #DDE2CB 10px, #DDE2CB 20px);*/
-    background: url(%%header-bg-01%%);
+    background-color: #e9f2fb;
+    background-image: url(%%header-bg-01%%);
     z-index: -1;
-    opacity: 0.5;
 }
 
 /* comments page */
-/*body.comments-page #header:after {
-    background: url(%%overlay-0%%), repeating-linear-gradient(45deg,#EBA697,#EBA697 8px,#F1C6B8 8px,#F1C6B8 16px);
-}*/
+body.comments-page #header:after {
+    background-color: #f2f5df;
+}
 
 /* SR header area
 --------------------------------------------------------------------------------*/
@@ -122,7 +122,7 @@ body #header:after {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
     font-size: 0;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .pagename a {
@@ -171,7 +171,6 @@ body #header:after {
 
 .tabmenu li a {
     background: transparent;
-    color: white;
     display: inline-block;
     line-height: 23px;
     padding: 0 8px;
@@ -179,25 +178,28 @@ body #header:after {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: normal;
     font-size: 17px;
-    text-shadow: 0 0 2px rgba(0,0,0,0.2);
+    /* color: rgba(28,17,13,0.5); */
+    color: white;
+    /* text-shadow: 0 0 2px rgba(0,0,0,0.2); */
 }
 
 .tabmenu li.selected a {
-    /*
     color: inherit;
     box-shadow: 0 -2px 8px -1px rgba(0,0,0,0.1);
-    */
+    background: white;
     border-color: transparent;
+    
+    /*
     background: transparent;
-    color: white;
-    border-top: 1px solid white;
+    color: rgba(28,17,13,0.8);
+    border-top: 1px solid white; */
 }
-/*
+
 .tabmenu li.selected a {
     top: -3px;
     height: 27px;
     position: relative;
-}*/
+}
 
 .tabmenu li:not(.selected):hover {
     background: rgba(0,0,0,0.06);
@@ -232,11 +234,14 @@ body #header:after {
     line-height: 24px;
     padding-left: 20px;
     /* box-shadow: 0 0 5px -1px rgba(0,0,0,0.35),inset 0 -1px 2px -1px rgba(0,0,0,0.2); */
+    opacity: 0.85;
     background: #97b8d4;
-    background: #AEE5EC;
+    /* background: #AEE5EC;
     background: #EEB3C0;
     background: #f5bcc8;
-    opacity: 0.6;
+    background: repeating-linear-gradient(45deg,#dff4fe,#dff4fe 3px,#fff 3px,#fff 6px);
+    box-shadow: 1px -9px 6px -9px rgba(0,0,0,0.1);
+    background: #f5f6f7; */
 }
 
 /* tabmenu bottom stripe */
@@ -333,14 +338,16 @@ body #header:after {
 #header-bottom-right, .res #userbarToggle {
     background-color: transparent;
     border-color: transparent;
+    /* color: rgba(28,17,13,0.8); */
     color: white;
 }
 
 #header-bottom-right a, .user {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 12px;
+    /* text-shadow: 0 0 2px rgba(0,0,0,0.2); */
+    /* color: rgba(28,17,13,0.8); */
     color: white;
-    text-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
 
 #header-bottom-right .separator {
@@ -392,6 +399,7 @@ body #header:after {
     display: block;
     background-image: url(%%spritesheet%%);
     background-position: -8px -56px;
+    /*background-position: -367px -56px; -- black icon version */
     width: 24px;
     height: 23px;
     -webkit-transform: scale(0.7);
@@ -418,6 +426,7 @@ body #header:after {
     position: absolute;
     background-image: url(%%spritesheet%%);
     background-position: -8px -31px;
+    /* background-position: -367px -31px; -- black icon version */
     width: 25px;
     height: 14px;
     -webkit-transform: scale(0.7);
@@ -428,6 +437,9 @@ body #header:after {
     bottom: 0;
     left: 0;
     margin: auto;
+}
+#mail.havemail:after {
+    background-position: -8px -31px;
 }
 
 #mail, #mail.nohavemail, #mail.havemail {
@@ -472,6 +484,7 @@ body #header:after {
     display: block;
     background-image: url(%%spritesheet%%);
     background-position: -9px -116px;
+    /* background-position: -367px -116px; -- black icon version */
     height: 23px;
     width: 24px;
     position: absolute;
@@ -480,6 +493,9 @@ body #header:after {
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
     transform: scale(0.7);
+}
+#modmail.havemail:after {
+    background-position: -9px -116px;
 }
 
 #modmail:not(.havemail):hover {
@@ -494,6 +510,7 @@ body #header:after {
     display: block;
     background-image: url(%%spritesheet%%);
     background-position: -8px -146px;
+    /* background-position: -367px -146px; -- black icon version */
     width: 24px;
     height: 23px;
     position: absolute;
@@ -527,6 +544,7 @@ body #header:after {
 
 .res .gearIcon:after {
     text-shadow: none;
+    /* color: rgba(28,17,13,0.8); */
     color: white;
 }
 

@@ -10,7 +10,7 @@
 .comments-page .link .expando-button {
     position: absolute;
     right: 100%;
-    top: 56px;
+    top: 76px;
 }
 
 /* report button thank you
@@ -63,13 +63,13 @@ li.report-button:after {
     border: 1px solid #c8ccd0;
 }
 
-li.report-button:before, li.report-button:after, li.report-button:after {
+li.report-button:before, li.report-button a:after, li.report-button:after {
     visibility: hidden;
     opacity: 0;
     transition: opacity 200ms;
     pointer-events: none;
 }
-li.report-button:hover:before, li.report-button:hover:after, li.report-button:hover:after {
+li.report-button:hover:before, li.report-button:hover a:after, li.report-button:hover:after {
     visibility: visible;
     opacity: 1;
 }

@@ -7,6 +7,7 @@
     position: relative;
     padding-top: 314px;
     margin-right: 8px;
+    /* margin-top: 10px; */
 }
 
 .sidecontentbox {
@@ -92,10 +93,9 @@
     display: block;
     position: absolute;
     background-image: url(%%spritesheet%%);
-    background-position: -266px -178px;
+    background-position: -154px -178px;
     width: 56px;
     height: 56px;
-    background-color: #f3f3f3;
     pointer-events: none;
 }
 
@@ -421,10 +421,9 @@
     display: block;
     position: absolute;
     background-image: url(%%spritesheet%%);
-    background-position: -266px -178px;
+    background-position: -154px -178px;
     width: 56px;
     height: 56px;
-    background-color: #f3f3f3;
     pointer-events: none;
     transform: rotateZ(25deg) scale(0.7);
     top: 28px;

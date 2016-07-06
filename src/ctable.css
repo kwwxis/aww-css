@@ -25,6 +25,12 @@
     background: #FF8B94;
 }
 
+/* single comment thread left stripe */
+.comment-permalink-page .commentarea > .sitetable > .comment:before,
+.comment-permalink-page.comments-page .commentarea>.infobar:before {
+    background: #FFDC89;
+}
+
 /* comments
 --------------------------------------------------------------------------------*/
 .comment.thing, .comment .entry {
@@ -56,10 +62,6 @@
     padding-left: 15px;
     border-radius: 0;
     margin-left: 0 !important;
-}
-
-.comments-page .link:before {
-    left: -1px;
 }
 
 /* comments - tagline

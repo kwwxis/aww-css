@@ -1,9 +1,12 @@
 
-/* Thing - inner positioning
+/* Thing
 --------------------------------------------------------------------------------*/
 .thing, .entry {
-    position: relative;
     overflow: visible !important;
+}
+
+.thing, body:not(.listing-page) .entry {
+    position: relative;
 }
 
 .thing {
@@ -13,6 +16,8 @@
     justify-content: flex-start;
 }
 
+/* Entry fill
+--------------------------------------------------------------------------------*/
 .entry {
     float: left;
     max-width: none;
@@ -20,36 +25,42 @@
     flex-grow: 1;
     box-sizing: border-box;
 }
+
+/* link entry */
 .link .entry {
-    flex-basis: calc(100% - 160px);
-    max-width: calc(100% - 160px);
+    flex-basis: calc(100% - 185px);
+    max-width: calc(100% - 184px);
 }
 
+.res .link .entry {
+    flex-basis: calc(100% - 184px);
+    max-width: calc(100% - 183px);
+}
+
+.comments-page .link .entry {
+    flex-basis: calc(100% - 136px);
+    max-width: calc(100% - 135px);
+}
+
+.comments-page .menuarea.modtools ~ #siteTable .link .entry {
+    flex-basis: calc(100% - 151px);
+    max-width: calc(100% - 150px);
+}
+
+/* comment entry */
 .comment .entry {
     flex-basis: calc(100% - 40px);
 }
+
+/* comment entry with queue tools */
 .comments-page.mod-toolbox .menuarea.modtools ~ .commentarea > .sitetable .thing.comment .entry {
     flex-basis: calc(100% - 50px);
 }
 
+/* child - ensure full width on own row */
 .child {
     width: 100%;
     flex-basis: 100%;
-}
-
-/* Link tagline and title
---------------------------------------------------------------------------------*/
-
-.link .tagline, .link .title {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
-
-.link .title {
-    font-size: large;
-}
-
-.link .tagline {
-    font-size: small;
 }
 
 /* Thumbnail - ones with images are always 70px by 70px
@@ -76,7 +87,7 @@
 .search-result.has-thumbnail > .thumbnail.self,
 .search-result.has-thumbnail > .thumbnail.default {
     background: url(%%spritesheet%%) no-repeat;
-    border: 0;
+    border-color: transparent;
     height: 50px;
 }
 
@@ -92,8 +103,8 @@
 .thumbnail.default,
 .search-result.has-thumbnail > .thumbnail.default {
     border: 3px solid #9edef5;
-    height: 55px;
-    background-position: -74px -123px;
+    height: 70px;
+    background-position: -77px -130px;
 }
 
 /* Special colors
@@ -106,6 +117,28 @@
     background: transparent;
     padding-bottom: 5px;
     padding-right: 2px
+}
+
+/* Vote arrows
+--------------------------------------------------------------------------------*/
+
+.arrow, .arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
+    background-image: url(%%spritesheet%%);
+    height: 15px;
+    width: 15px;
+}
+
+.arrow.down {
+    background-position: -144px -272px;
+}
+.arrow.up {
+    background-position: -177px -272px;
+}
+.arrow.downmod {
+    background-position: -210px -272px;
+}
+.arrow.upmod {
+    background-position: -243px -272px;
 }
 
 /* Active Element
@@ -129,8 +162,18 @@
     right: 0;
 }
 
-/* Expandos
---------------------------------------------------------------------------------*/
-.entry > .madeVisible, .entry > .expando {
-    margin-top: 10px;
+/* active element triangle - listing page only */
+.res.listing-page .link.RES-keyNav-activeThing:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 8px solid #bcddff;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
 }
