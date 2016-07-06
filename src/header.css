@@ -38,11 +38,6 @@ body #header:after {
     z-index: -1;
 }
 
-/* comments page */
-body.comments-page #header:after {
-    background-color: #f2f5df;
-}
-
 /* SR header area
 --------------------------------------------------------------------------------*/
 #sr-header-area {
@@ -148,8 +143,8 @@ body.comments-page #header:after {
 
 .tabmenu {
     display: block;
-    background-color: transparent;
     padding-left: 12px;
+    background: #A7DBD8;
 }
 
 #header-bottom-left .tabmenu {
@@ -236,6 +231,7 @@ body.comments-page #header:after {
     /* box-shadow: 0 0 5px -1px rgba(0,0,0,0.35),inset 0 -1px 2px -1px rgba(0,0,0,0.2); */
     opacity: 0.85;
     background: #97b8d4;
+    background: #A7DBD8;
     /* background: #AEE5EC;
     background: #EEB3C0;
     background: #f5bcc8;

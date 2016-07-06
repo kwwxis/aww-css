@@ -1,4 +1,11 @@
 
+/* comments sitetable
+--------------------------------------------------------------------------------*/
+
+.commentarea > .sitetable {
+    border-top: 1px solid #e3e3e3;
+}
+
 /* comment left stripe
 --------------------------------------------------------------------------------*/
 
@@ -62,6 +69,10 @@
     padding-left: 15px;
     border-radius: 0;
     margin-left: 0 !important;
+}
+
+.commentarea > .sitetable > .comment:first-child {
+    border-top: 0;
 }
 
 /* comments - tagline

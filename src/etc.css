@@ -6,7 +6,8 @@ body > .debuginfo:before {
 }
 
 body {
-    background: #F5F6F7;
+    /* background: #F5F6F7; */
+    background: #FCFCF9;
     min-width: 780px; /* body min width */
 }
 

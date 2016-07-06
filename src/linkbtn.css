@@ -250,6 +250,39 @@
     content: 'show childs';
 }
 
+/* hide some icons for mods on smaller screens
+--------------------------------------------------------------------------------*/
+
+
+@media all and (max-width: 1190px) {
+
+    .link .entry .buttons li form.unlock-button:before,
+    .link .entry .buttons li form.lock-button:before,
+    .link .entry .buttons li a.flairselectbtn:before,
+    .link .entry .buttons li form.marknsfw-button:before {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1135px) {
+
+    body.moderator .link .entry .buttons li form.hide-button:before,
+    body.moderator .link .entry .buttons li form.del-button:before {
+        display: none;
+    }
+}
+
+@media all and (max-width: 1090px) {
+
+    body.moderator .link .entry .buttons li a.global-mod-button:before,
+    body.moderator .link .entry .buttons li.viewSource a:before,
+    body.moderator .link .entry .buttons li a.edit-usertext:before,
+    body.moderator .link .entry .buttons li a.post-sharing-button:before,
+    body.moderator .link .entry .buttons li.save-button.link-save-button a:before {
+        display: none;
+    }
+}
+
 /* link mod actions
 --------------------------------------------------------------------------------*/
 

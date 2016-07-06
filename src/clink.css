@@ -13,6 +13,12 @@
     top: 76px;
 }
 
+.link .usertext-body .md {
+    background: transparent;
+    border: none;
+    padding: 5px 0;
+}
+
 /* report button thank you
 --------------------------------------------------------------------------------*/
 

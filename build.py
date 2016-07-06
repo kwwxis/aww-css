@@ -27,6 +27,7 @@ order       = [ 'etc.css',      # general layout, common margins, and whatever c
                 'search.css',   # search page (does not include search input in sidebar, which is in sidebar.css)
                 'footer.css',   # subreddit footer
                 'wiki.css',     # subreddit wiki
+                'modpages.css', # any moderator pages that required additional CSS
                 'ext.css']      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
                 
 # input/output variables
@@ -46,7 +47,7 @@ def top(build_ver):
 
 def run():
     with open(r'build.dat','r+') as build:
-        build_ver = int(build.read())
+        build_ver = int(build.read()) + 1
         print('\nBUILD #' + str(build_ver))
         
         if not os.path.isdir(src_dir):
@@ -77,7 +78,7 @@ def run():
             
         # Increment build version in build.dat afterwards in case of failure
         build.seek(0)
-        build.write(str(build_ver + 1))
+        build.write(str(build_ver))
         
         print('\nDone!')
 

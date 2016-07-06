@@ -1,5 +1,6 @@
 .tabmenu + .tabpane-content {
     border-top: 0;
+    border-color: #A7DBD8;
 }
 
 .sheets { margin: 0; }

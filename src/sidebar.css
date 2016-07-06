@@ -138,7 +138,8 @@
     display: block;
     position: relative;
     border: 0;
-    background: #90D4F7;
+    /* background: #90D4F7; */
+    background: #B2D8D7;
     color: white;
     font-weight: normal;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -219,13 +220,13 @@
 }
 
 .side .md h5 + ul li:nth-of-type(1) a {
-    background-color: #CDC6FF;
+    background-color: #DDDDCE;
 }
 .side .md h5 + ul li:nth-of-type(2) a {
-    background-color: #CDC6FF;
+    background-color: #DDDDCE;
 }
 .side .md h5 + ul li:nth-of-type(3) a {
-    background-color: #BCD3FE;
+    background-color: #F3BD92;
 }
 
 /* submit link hover -> read rules
