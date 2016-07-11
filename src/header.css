@@ -17,10 +17,12 @@
 
 #header-img, #header-img.default-header {
     width: 112px;
-    height: 75px;
+    height: 112px;
     margin: 0;
-    margin-top: 25px;
+    margin-top: 0;
     float: left;
+    position: relative;
+    z-index: 10;
 }
 
 /* Header BG
@@ -28,21 +30,27 @@
 body #header:after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 18px;
     left: 0;
-    bottom: 0;
+    bottom: 24px;
     right: 0;
-    /* background: url(%%overlay-0%%), repeating-linear-gradient(45deg, #B2D9D8, #B2D9D8 10px, #DDE2CB 10px, #DDE2CB 20px);*/
-    background-color: #e9f2fb;
-    background-image: url(%%header-bg-01%%);
     z-index: -1;
+    /* background: url(%%overlay-0%%), repeating-linear-gradient(45deg, #B2D9D8, #B2D9D8 10px, #DDE2CB 10px, #DDE2CB 20px);*/
+    /* background-image: url(%%header-bg-01%%); */
+    background-color: #e9f2fb;
+    background-image: url(%%awwbanner%%);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
 }
 
 /* SR header area
 --------------------------------------------------------------------------------*/
 #sr-header-area {
-    background-color: rgba(0,0,0,0.025);
+    /* background-color: rgba(0,0,0,0.025); */
+    background-color: white;
     border: 0;
+    border-top: 1px solid #a7dbd8;
 }
 
 .res #RESShortcutsEditContainer,
@@ -117,7 +125,8 @@ body #header:after {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
     font-size: 0;
-    margin-top: 18px;
+    margin-top: 0;
+    width: 100%;
 }
 
 .pagename a {
@@ -127,15 +136,14 @@ body #header:after {
 .pagename a {
     background: url(%%awwlogo%%) no-repeat;
     background-size: contain;
-    width: 228px;
-    height: 74px;
+    background-position: center center;
+    width: 205px;
+    height: 105px;
     display: inline-block;
-    float: left;
+    margin: 0 auto;
 }
-
-.pagename a:before {
-    content: 'r/aww';
-    letter-spacing: 0.5px;
+.pagename a:active {
+    margin-top: 1px;
 }
 
 /* Tab menu
@@ -155,6 +163,7 @@ body #header:after {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 15;
 }
 
 /* tabmenu items */
@@ -240,19 +249,6 @@ body #header:after {
     background: #f5f6f7; */
 }
 
-/* tabmenu bottom stripe */
-/*#header-bottom-left .tabmenu:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    height: 5px;
-    background: white;
-    border-bottom: 1px solid #e2e2e2;
-}*/
-
 /* SR DROP CHOICES
 --------------------------------------------------------------------------------*/
 
@@ -326,9 +322,11 @@ body #header:after {
     padding: 0 4px 0 0;
     height: 24px;
     line-height: 24px;
+    position: absolute;
     /* RES can really do some annoying shit sometimes */
     top: initial !important;
     bottom: 0 !important;
+    z-index: 20;
 }
 
 #header-bottom-right, .res #userbarToggle {

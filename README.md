@@ -27,13 +27,16 @@ Not yet complete
 | wiki.css      | subreddit wiki                                                                                        |
 | modpages.css  | any moderator pages that required additional CSS                                                      |
 | ext.css       | misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files   |
+| nightmode.css | nightmode - pretty self explanatory                                                                   |
 
 ## Images in use
 
-  - assets/header-bg-01.png
+  - assets/snoo.png (for header image upload, not stylesheet)
   - assets/awwlogo.png
+  - assets/awwbanner.png
   - assets/spritesheet.png
   - assets/commentrules.png
   - assets/nothing-here.png
   - assets/bg/overlay-0.png
   - assets/bg/overlay-1.png
+  - assets/inherit/kitteh.png

@@ -13,7 +13,7 @@
 
 .link {
     align-items: stretch;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 4px;
     border: 0;
     border-top: 1px solid transparent;
     background: white;
@@ -22,19 +22,24 @@
 
 /* normal separator border */
 .link:not(:first-child) {
-    border-top: 1px solid #c8ccd0;
+    border-top: 1px solid #e1e4e5;
 }
 
 .link .thumbnail {
-    margin-left: 5px;
-    margin-right: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.link .entry, .link .midcol {
+    margin-right: 0;
 }
 
 .link .entry, .link .midcol, .link .rank {
-    padding-top: 22px;
+    padding-top: 14px;
 }
 .link .thumbnail {
-    margin-top: 22px;
+    margin-top: 14px;
 }
 
 /* Link entry
@@ -45,6 +50,7 @@
     padding-left: 0;
     padding-bottom: 0;
     padding-right: 0;
+    margin-left: 0;
 }
 
 /* link rank
@@ -52,6 +58,9 @@
 
 .link .rank {
     text-align: center;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 16px;
+    min-width: 18.25px;
 }
 
 /* Listing page link midcol
@@ -62,6 +71,7 @@
     border-right: 1px solid rgba(0,0,0,0.1);
     background: #fafafa;
     min-width: 50px;
+    margin-left: 4px;
 }
 
 /* Listing page link thumbnail
@@ -81,6 +91,8 @@
 .link .title {
     font-size: large;
     margin-bottom: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .link .tagline {
@@ -109,6 +121,10 @@
     border-right: 0;
 }
 
+.link.last-clicked:first-child {
+    border-top: 1px solid transparent;
+}
+
 /* Expando Buttons
 --------------------------------------------------------------------------------*/
 
@@ -124,22 +140,22 @@
 
 .expando-button.collapsed,
 .res .expando-button.collapsed {
-    background-position: -42px -26px !important;
+    background-position: -41px -25px !important;
 }
 
 .expando-button.collapsed:hover,
 .res .expando-button.collapsed:hover {
-    background-position: -42px -49px !important;
+    background-position: -41px -48px !important;
 }
 
 .expando-button.expanded,
 .res .expando-button.expanded {
-    background-position: -42px -72px !important;
+    background-position: -41px -71px !important;
 }
 
 .expando-button.expanded:hover,
 .res .expando-button.expanded:hover {
-    background-position: -42px -95px !important;
+    background-position: -41px -94px !important;
 }
 
 /* Link listing link - expando button

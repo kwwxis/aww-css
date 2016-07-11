@@ -40,7 +40,7 @@ body {
 
 /* a cool CSS3 "flair" for myself because I think I'm cool */
 
-.thing[data-author="kwwxis"] .author:after {
+.author[href$="/user/kwwxis"]:after, .author[href$="/user/kwwxis/"]:after {
     content: '';
     display: inline-block;
     width: 15px;

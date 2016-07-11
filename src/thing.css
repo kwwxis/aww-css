@@ -16,6 +16,12 @@
     justify-content: flex-start;
 }
 
+/* Thing title color
+--------------------------------------------------------------------------------*/
+.thing .title:visited, .thing.visited .title {
+    color: #423d56;
+}
+
 /* Entry fill
 --------------------------------------------------------------------------------*/
 .entry {

@@ -7,10 +7,10 @@
 }
 
 /* position expando button at bottom right of thumbnail */
-.comments-page .link .expando-button {
+.comments-page .link .entry > .expando-button {
     position: absolute;
-    right: 100%;
-    top: 76px;
+    right: calc(100% - 6px);
+    top: 66px;
 }
 
 .link .usertext-body .md {

@@ -1,3 +1,6 @@
+/* mod toolbox - queue tools
+--------------------------------------------------------------------------------*/
+
 .mod-toolbox .menuarea.modtools {
     margin: 5px !important;
 }
@@ -13,7 +16,16 @@
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
-/* queue tools - checkbox margin */
+/* mod toolbox - mod popup
+--------------------------------------------------------------------------------*/
+
+.mod-popup input[type="text"], .mod-popup input[type="number"], .mod-popup textarea {
+    border: 1px solid #d3d3d3;
+    padding: 2px;
+}
+
+/* queue tools - checkbox margin
+--------------------------------------------------------------------------------*/
 .thing > input[type=checkbox][tabindex] {
     margin: 5px 0 0 2px !important;
 }
@@ -27,14 +39,15 @@
 }
 
 /* easy check area (Chrome only)
-:after isn't supposed to be usable on inputs, but this works in Chrome for some reason */
+-------------------------------------------------------------------------------- */
+/* :after isn't supposed to be usable on inputs, but this works in Chrome for some reason */
 .thing > input[type=checkbox][tabindex]:after {
     content: '';
     position: absolute;
     display: block;
     top: 0;
     left: 0;
-    width: 25px;
+    width: 22px;
     bottom: 0;
     cursor: pointer;
     z-index: 5;

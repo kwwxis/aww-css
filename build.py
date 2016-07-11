@@ -28,7 +28,9 @@ order       = [ 'etc.css',      # general layout, common margins, and whatever c
                 'footer.css',   # subreddit footer
                 'wiki.css',     # subreddit wiki
                 'modpages.css', # any moderator pages that required additional CSS
-                'ext.css']      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
+                'ext.css',      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
+                'nightmode.css' # nightmode
+              ]      
                 
 # input/output variables
 src_dir     = 'src'
@@ -67,7 +69,7 @@ def run():
                     print('\nFailed: target file not found: ' + path + ';\n' +
                     'if this file is no longer in use then you must remove it from the "order" variable in build.py')
                     return
-
+                    
         # Compress
         with open(dist_dir + '\\' + dist_file, 'r+') as outfile:
             raw  = outfile.read()

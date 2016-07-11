@@ -71,10 +71,6 @@
     margin-left: 0 !important;
 }
 
-.commentarea > .sitetable > .comment:first-child {
-    border-top: 0;
-}
-
 /* comments - tagline
 --------------------------------------------------------------------------------*/
 .comment .tagline {
