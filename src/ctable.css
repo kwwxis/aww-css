@@ -94,6 +94,8 @@
 .comment .entry .buttons li a {
     font-weight: normal;
 }
+
+/* extra reply "button" */
 .comment .entry .buttons li.reply-button a:before,
 .comment .entry .buttons li a[onclick*="return reply"]:before {
     content: 'reply';
@@ -107,6 +109,16 @@
 .comment .entry .buttons li.reply-button a:hover:before,
 .comment .entry .buttons li a[onclick*="return reply"]:hover:before {
     text-decoration: underline;
+}
+
+.archived-infobar ~ .commentarea .comment .buttons,
+body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons {
+    padding-left: 0;
+}
+
+
+body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-button {
+    display: none;
 }
 
 /* comments - single thread infobar

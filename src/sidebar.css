@@ -381,6 +381,10 @@
     color: rgba(0,0,0,0.3);
 }
 
+.sidecontentbox a.helplink[data-event-action="compose"] ~ .title {
+    display: block;
+}
+
 /* linkinfo
 --------------------------------------------------------------------------------*/
 

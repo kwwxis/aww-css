@@ -415,7 +415,7 @@ body.moderator .link .entry .buttons li > a[action="show"][href="#"][title*="Sho
 .listing-page .link .entry .buttons {
     display: inline-flex;
     background: #fdfdfd;
-    margin-top: 10px;
+    margin-top: 6px;
     margin-bottom: -1px;
     margin-left: 10px;
     padding: 0;

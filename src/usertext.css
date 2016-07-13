@@ -54,6 +54,11 @@
     flex-direction: row-reverse;
 }
 
+.usertext .bottom-area .error, .usertext .bottom-area .status {
+    font-size: 13px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
 /* usertext help buttons (content policy, formatting help, big editor)
 --------------------------------------------------------------------------------*/
 .usertext .help-toggle, .usertext a.reddiquette, .res .RESBigEditorPop {

@@ -165,7 +165,8 @@
 
 .listing-page .link .expando-button {
     position: static;
-    margin: -2px 5px 0 10px !important;
+    margin: -3px 3px 0 10px !important;
+    transform: scale(0.9);
 }
 
 /* Listing page - expando open
