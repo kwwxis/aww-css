@@ -100,10 +100,31 @@ body.res.res-nightmode,
     background: #303842 !important;
 }
 
+.res.res-nightmode .submit-link .morelink a:before {
+    background: #3F4754 !important;
+}
+.res.res-nightmode #progressIndicator,
+.res.res-nightmode .hover-bubble,
+.res.res-nightmode .side .side-message,
+.res.res-nightmode #editShortcutDialog,
+.res.res-nightmode #RESShortcutsAddFormContainer,
+.res.res-nightmode .RESDialogSmall,
+.res.res-nightmode .RESHover.RESHoverDropdownList.RESDropdownList {
+    background: #3F4754 !important;
+    border-color: #28303B;
+}
+.res.res-nightmode .hover-bubble:before { border-left-color: #28303B; }
+.res.res-nightmode .hover-bubble:after  { border-left-color: #3F4754; }
+.res.res-nightmode .RESHoverInfoCard:before { border-right-color: #28303B; }
+.res.res-nightmode .RESHoverInfoCard:after  { border-right-color: #3F4754; }
+
 .res.res-nightmode .nav-buttons:before,
 .res.res-nightmode .submit-link .morelink a:before,
 .res.res-nightmode .titlebox > h1:before,
-.res.res-nightmode side .md > blockquote:first-of-type p {
+.res.res-nightmode side .md > blockquote:first-of-type p,
+.res.res-nightmode .RESHover.RESHoverDropdownList.RESDropdownList li:hover,
+.res.res-nightmode .RESDropdownList a:hover,
+.res.res-nightmode .RESDropdownList a:visited:hover {
     color: white !important;
 }
 
@@ -118,7 +139,13 @@ body.res.res-nightmode,
 .res.res-nightmode .linkinfo .score,
 .res.res-nightmode.submit-page ul.tabmenu.formtab li.selected a,
 .res.res-nightmode.submit-page .roundfield > .title,
-.res.res-nightmode.submit-page #new-link-image-input > div {
+.res.res-nightmode.submit-page #new-link-image-input > div,
+.res.res-nightmode.submit-page .content > h1:after,
+.res.res-nightmode .RESDropdownList li,
+.res.res-nightmode .RESDropdownList li a,
+.res.res-nightmode .RESHover.RESHoverDropdownList.RESDropdownList li,
+.res.res-nightmode .RESDropdownList a,
+.res.res-nightmode .RESDropdownList a:visited {
     color: rgb(204, 204, 204);
 }
 
@@ -135,7 +162,8 @@ body.res.res-nightmode,
 .res.res-nightmode #srList,
 .res.res-nightmode #searchexpando,
 .res.res-nightmode .icon-menu a,
-.res.res-nightmode .usertext.grayed .usertext-body {
+.res.res-nightmode .usertext.grayed .usertext-body,
+.res.res-nightmode .hover-bubble.multi-selector label:hover {
     background-color: transparent;
 }
 
@@ -206,11 +234,18 @@ body.res.res-nightmode,
 .res.res-nightmode #siteTable > .nav-buttons {
     border-top-color: rgba(0,0,0,0.1);
 }
-.res.res-nightmode .nextprev a {
+.res.res-nightmode .nextprev a[rel*="next"] {
     color: #f28aa8;
 }
-.res.res-nightmode .nextprev a:hover {
+.res.res-nightmode .nextprev a[rel*="next"]:hover {
     background-color: #f28aa8;
+    color: white;
+}
+.res.res-nightmode .nextprev a[rel*="prev"] {
+    color: #4db5e0;
+}
+.res.res-nightmode .nextprev a[rel*="prev"]:hover {
+    background-color: #4db5e0;
     color: white;
 }
 
@@ -269,6 +304,20 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     color: #9494FF;
 }
 
+.res.res-nightmode li.report-button:after {
+    background: #3F4754;
+    color: white;
+    border-color: #28303B;
+}
+
+.res.res-nightmode li.report-button a:after {
+    border-top-color: #3F4754;
+}
+
+.res.res-nightmode li.report-button:before {
+    border-top-color: #28303B;
+}
+
 /* usertext
 --------------------------------------------------------------------------------*/
 .res.res-nightmode .usertext-edit textarea {
@@ -308,7 +357,8 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 /* tabmenu
 --------------------------------------------------------------------------------*/
 .res.res-nightmode .tabmenu li a,
-.res.res-nightmode .tabmenu li.selected a {
+.res.res-nightmode .tabmenu li.selected a,
+.res.res-nightmode #header-bottom-left:before {
     color: #2A313B;
     font-weight: bold;
 }
