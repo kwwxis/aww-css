@@ -10,7 +10,6 @@
     background-position: -154px -58px;
     height: 60px;
     margin-top: 25px;
-    opacity: 0.75;
 }
 
 .res.res-nightmode .side {
@@ -96,7 +95,8 @@ body.res.res-nightmode,
 .res.res-nightmode .commentarea > .panestack-title,
 .res.res-nightmode .commentarea > .menuarea,
 .res.res-nightmode .commentarea > .usertext,
-.res.res-nightmode .gold-accent.comment-visits-box {
+.res.res-nightmode .gold-accent.comment-visits-box,
+.res.res-nightmode.submit-page .roundfield {
     background: #303842 !important;
 }
 
@@ -115,7 +115,10 @@ body.res.res-nightmode,
 .res.res-nightmode .commentarea .menuarea .help-hoverable,
 .res.res-nightmode #REScommentNavToggle span:before,
 .res.res-nightmode .commentingAs,
-.res.res-nightmode .linkinfo .score {
+.res.res-nightmode .linkinfo .score,
+.res.res-nightmode.submit-page ul.tabmenu.formtab li.selected a,
+.res.res-nightmode.submit-page .roundfield > .title,
+.res.res-nightmode.submit-page #new-link-image-input > div {
     color: rgb(204, 204, 204);
 }
 
@@ -268,7 +271,7 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 
 /* usertext
 --------------------------------------------------------------------------------*/
-.res-nightmode .usertext-edit textarea {
+.res.res-nightmode .usertext-edit textarea {
     background-color: #3E424D;
     border: 0;
     background-image: none !important;
@@ -394,4 +397,35 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     border-top: 2px dashed rgba(255,255,255,0.1);
     padding-top: 5px;
     margin-top: 20px;
+}
+
+/* submit page
+--------------------------------------------------------------------------------*/
+
+.res.res-nightmode.submit-page .roundfield {
+    border: 0;
+}
+
+.res.res-nightmode.submit-page ul.tabmenu.formtab li.selected a {
+    border-bottom: 2px solid rgb(204,204,204);
+}
+
+
+.res.res-nightmode.submit-page #title-field:before,
+.res.res-nightmode.submit-page #url-field:before,
+.res.res-nightmode.submit-page .submit_text .md:before,
+.res.res-nightmode.submit-page #title-field .title:before,
+.res.res-nightmode.submit-page #url-field .title:before,
+.res.res-nightmode.submit-page .submit_text ul {
+    background: #303842 !important;
+    color: rgb(204,204,204);
+}
+
+.res.res-nightmode.submit-page .roundfield textarea,
+.res.res-nightmode.submit-page .roundfield input[type=text],
+.res.res-nightmode.submit-page .roundfield input[type=url],
+.res.res-nightmode.submit-page .roundfield .usertext-edit,
+.res.res-nightmode.submit-page .markdownEditor-wrapper {
+    background: #3E424D !important;
+    border: 0;
 }
