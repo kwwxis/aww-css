@@ -102,6 +102,7 @@
 .side .md > blockquote:first-of-type:before {
     top: -25px;
     left: 0;
+    -webkit-transform: scale(0.5) rotateZ(-35deg);
     transform: scale(0.5) rotateZ(-35deg);
 }
 
@@ -109,6 +110,7 @@
 .side .md > blockquote:first-of-type:after {
     right: 0;
     bottom: 0px;
+    -webkit-transform: scale(0.5) rotateZ(35deg);
     transform: scale(0.5) rotateZ(35deg);
 }
 
@@ -154,7 +156,7 @@
     margin-bottom: 6px;
 }
 
-/* button dark bottom edge (LIGHT COMES FROM THE SKY, SON) */
+/* button dark bottom edge */
 .submit-link .morelink:after, .side .md h5 + ul li a:after, .submit-text .morelink:after {
     content: '';
     display: block;
@@ -170,6 +172,7 @@
 /* button active */
 .submit-link .morelink:active, .side .md h5 + ul li a:active, .submit-text .morelink:active {
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    line-height: 36px;
 }
 
 /* button active - hide bottom edge */
@@ -232,12 +235,11 @@
 /* submit link hover -> read rules
 --------------------------------------------------------------------------------*/
 
-.submit-link .morelink:hover a:before {
-    content: 'Please read the rules before posting';
-    position: absolute;
+.submit-link .morelink a:before {
+    content: "Please read the rules before posting. Thank you :)";
+    position: fixed;
     bottom: 100%;
-    z-index: 5;
-    margin-bottom: 6px;
+    z-index: 99999;
     left: 0;
     right: 0;
     box-sizing: border-box;
@@ -245,39 +247,47 @@
     line-height: 26px;
     font-weight: bold;
     padding: 10px 40px;
-    background: #F1646C;
-    background: rgba(243, 136, 142, 0.95);
+    background: repeating-linear-gradient(-45deg, #F48F97, #F48F97 10px, #F29DA4 10px, #F29DA4 20px);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
     border-bottom: 2px solid #f1646c;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    transition: transform 200ms, visibility 200ms;
+    visibility: hidden;
 }
 
-.submit-link .morelink:hover .nub,
-.submit-link .morelink:hover .nub:before,
-.submit-link .morelink:hover .nub:after {
-    display: block;
-    content: '';
-    width: 0;
-    height: 0;
-    position: static;
+.submit-link .morelink:hover a:before {
+    animation-name: readrules-in;
+    animation-duration: 200ms;
+    animation-timing-function: ease-out;
+    /* no fill mode forwards to let the two lines below take over after the bounce animation is done
+    so that transition can be used to slide the notification out since we can't put an animation
+    on `.submit-link .morelink a:before` otherwise there's an awkward flash of the notification on
+    page load which we don' want */
+    visibility: visible;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
 }
-.submit-link .morelink:hover .nub:before,
-.submit-link .morelink:hover .nub:after {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 100%;
-}
-.submit-link .morelink:hover .nub:before {
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid white;
-    margin-bottom: -9px;
-}
-.submit-link .morelink:hover .nub:after {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #f1646c;
-    margin-bottom: -4px;
+
+@keyframes readrules-in {
+    0% {
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+        visibility: visible;
+    }
+    40% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    60% {
+        -webkit-transform: translateY(85%);
+        transform: translateY(85%);
+    }
+    100% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
 }
 
 /* sidebar search
@@ -426,6 +436,7 @@
     width: 56px;
     height: 56px;
     pointer-events: none;
+    -webkit-transform: rotateZ(25deg) scale(0.7);
     transform: rotateZ(25deg) scale(0.7);
     top: 28px;
     right: 10px;
@@ -438,7 +449,7 @@
     color: #4db5e0;
 }
 .linkinfo .score .word {
-    color: #91b0ea;
+    color: #4db5e0;
     margin-right: 5px;
 }
 
@@ -448,4 +459,45 @@
     flex-basis: calc(100% - 40px);
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+/* sidebar sign in
+--------------------------------------------------------------------------------*/
+
+.login-form-side {
+    margin: 10px 15px;
+    background: repeating-linear-gradient(45deg,#dff4fe,#dff4fe 3px,#fff 3px,#fff 6px);
+    border: 0;
+    padding: 2px 3px;
+    margin-top: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.login-form-side:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #dff4fe;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.login-form-side input[type=text], .login-form-side input[type=password] {
+    width: 125px;
+}
+
+.login-form-side .submit button[type="submit"] {
+    color: #4db5e0;
+    font-weight: bold;
+    border: 2px solid #4db5e0;
+    background: rgba(255,255,255,0.5);
+    padding: 4px 6px;
+}
+
+.login-form-side .submit button[type="submit"]:hover {
+    background: #4db5e0;
+    color: white;
 }

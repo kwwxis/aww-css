@@ -15,14 +15,59 @@
                              tabmenu height (24px) + tabmenu top margin (5px) */
 }
 
-#header-img, #header-img.default-header {
-    width: 112px;
-    height: 112px;
-    margin: 0;
+/* Snoo
+--------------------------------------------------------------------------------*/
+
+#header-img-a {
+    display: inline-block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
     margin-top: 0;
-    float: left;
-    position: relative;
-    z-index: 10;
+    margin-left: 12px;
+    z-index: 20;
+    bottom: 3px;
+}
+
+#header-img-a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 74px;
+    height: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -1px;
+    background: url(%%snoo-piece%%);
+}
+
+#header-img-a:after {
+    content: '';
+    display: block;
+    background: #a7dbd8;
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 3px;
+    border-radius: 50%;
+    background-image: url(%%snoo%%);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center center;
+    transition: background-color 100ms;
+}
+
+#header-img-a:hover:after {
+    background-color: #A5D1CB;
+}
+
+#header-img, #header-img.default-header {
+    display: none !important;
 }
 
 /* Header BG
@@ -30,7 +75,7 @@
 body #header:after {
     content: '';
     position: absolute;
-    top: 18px;
+    top: 19px;
     left: 0;
     bottom: 24px;
     right: 0;
@@ -164,6 +209,8 @@ body #header:after {
     left: 0;
     right: 0;
     z-index: 15;
+    padding-left: 90px;
+    margin: 0;
 }
 
 /* tabmenu items */
@@ -182,26 +229,13 @@ body #header:after {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: normal;
     font-size: 17px;
-    /* color: rgba(28,17,13,0.5); */
     color: white;
-    /* text-shadow: 0 0 2px rgba(0,0,0,0.2); */
 }
 
 .tabmenu li.selected a {
-    color: inherit;
-    box-shadow: 0 -2px 8px -1px rgba(0,0,0,0.1);
-    background: white;
-    border-color: transparent;
-    
-    /*
-    background: transparent;
-    color: rgba(28,17,13,0.8);
-    border-top: 1px solid white; */
-}
-
-.tabmenu li.selected a {
-    top: -3px;
-    height: 27px;
+    color: white;
+    border: 0;
+    background-color: #C3E2E1;
     position: relative;
 }
 

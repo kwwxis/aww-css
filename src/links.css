@@ -131,8 +131,10 @@
 .expando-button {
     float: left;
 	margin: 5px 5px 0px 0px !important;
-	width: 23px !important;
-	height: 23px !important;
+	width: 24px !important;
+	height: 24px !important;
+    max-width: none !important;
+    max-height: none !important;
 	background-color: transparent !important;
 	background-image: url(%%spritesheet%%) !important;
 	cursor: pointer;
@@ -140,22 +142,22 @@
 
 .expando-button.collapsed,
 .res .expando-button.collapsed {
-    background-position: -41px -25px !important;
+    background-position: -14px -244px!important;
 }
 
 .expando-button.collapsed:hover,
 .res .expando-button.collapsed:hover {
-    background-position: -41px -48px !important;
+    background-position: -14px -269px !important;
 }
 
 .expando-button.expanded,
 .res .expando-button.expanded {
-    background-position: -41px -71px !important;
+    background-position: -38px -244px !important;
 }
 
 .expando-button.expanded:hover,
 .res .expando-button.expanded:hover {
-    background-position: -41px -94px !important;
+    background-position: -38px -269px !important;
 }
 
 /* Link listing link - expando button
@@ -227,6 +229,7 @@
     text-align: center;
     font-size: 12px;
     color: rgba(0,0,0,0.5);
+    min-width: 150px;
 }
 
 .nextprev, .search-result-group footer .nav-buttons > * {
@@ -279,7 +282,6 @@
     border: 0;
 }
 
-
 /* no results
 --------------------------------------------------------------------------------*/
 #noresults {
@@ -290,4 +292,15 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin: 80px auto;
+}
+
+/* ad link
+--------------------------------------------------------------------------------*/
+
+.link.promotedlink {
+    padding: 0;
+}
+
+.listing-page .link.promotedlink .midcol {
+    background: rgba(255,255,255,0.5);
 }

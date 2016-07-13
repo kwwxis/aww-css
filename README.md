@@ -31,12 +31,12 @@ Not yet complete
 
 ## Images in use
 
-  - assets/snoo.png (for header image upload, not stylesheet)
+  - assets/inherit/snoo.png (upload to both stylesheet and sub settings)
+  - assets/snoo-piece.png
   - assets/awwlogo.png
   - assets/awwbanner.png
   - assets/spritesheet.png
   - assets/commentrules.png
   - assets/nothing-here.png
-  - assets/bg/overlay-0.png
   - assets/bg/overlay-1.png
   - assets/inherit/kitteh.png

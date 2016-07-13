@@ -84,8 +84,13 @@
 .comment .buttons {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 11px;
-    padding-left: 30px;
+    padding-left: 30px; /* padding for extra reply "button" */
 }
+/* /r/aww/comments page */
+.listing-page .comment .buttons {
+    padding-left: 0;
+}
+
 .comment .entry .buttons li a {
     font-weight: normal;
 }
