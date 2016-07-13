@@ -32,7 +32,6 @@ Not yet complete
 ## Images in use
 
   - assets/inherit/snoo.png (upload to both stylesheet and sub settings)
-  - assets/snoo-piece.png
   - assets/awwlogo.png
   - assets/awwbanner.png
   - assets/spritesheet.png

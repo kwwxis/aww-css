@@ -261,6 +261,7 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     margin-top: 0;
     border-style: dashed;
     border-width: 2px;
+    border-bottom: 0;
 }
 
 .titlebox > .usertext {

@@ -68,7 +68,7 @@
 .link .entry .buttons li.viewSource a:before,
 .link .entry .buttons li a.edit-usertext:before,
 .link .entry .buttons li a.post-sharing-button:before,
-.link .entry .buttons li.save-button.link-save-button a:before,
+.link .entry .buttons li.save-button a:before,
 .link .entry .buttons li.give-gold-button a:before,
 .link .entry .buttons li form.hide-button:before,
 .link .entry .buttons li form.del-button:before,
@@ -140,12 +140,12 @@
 
 /* save button
 --------------------------------------------------------------------------------*/
-.link .entry .buttons li.save-button.link-save-button a:before {
+.link .entry .buttons li.save-button a:before {
     background-position: -109px -243px;
     margin-right: 5px;
     width: 17px;
 }
-.link .entry .buttons li.save-button.link-save-button a {
+.link .entry .buttons li.save-button a {
     color: #F3AE57;
 }
 

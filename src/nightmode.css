@@ -1,0 +1,397 @@
+/* hide banner b/c it doesn't fit with nightmode, consider making a banner for night mode */
+.res.res-nightmode #header:after {
+    background-image: none;
+    background: #2A313B;
+}
+
+.res.res-nightmode .pagename a {
+    background-image: url(%%spritesheet%%);
+    background-size: initial;
+    background-position: -154px -58px;
+    height: 60px;
+    margin-top: 25px;
+    opacity: 0.75;
+}
+
+.res.res-nightmode .side {
+    box-shadow: none;
+}
+
+.res.res-nightmode .footer .col li:not(.title) a,
+.res.res-nightmode a {
+    color: #4C7DB8;
+}
+.res.res-nightmode .footer .col li.title {
+    color: rgba(255,255,255,0.55);
+}
+.res.res-nightmode .bottommenu,
+.res.res-nightmode .bottommenu a {
+    color: rgba(255,255,255,0.25);
+}
+
+/* sr header area text color
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .sr-bar a,
+.res.res-nightmode .sr-bar .separator,
+.res.res-nightmode .sr-list .separator,
+.res.res-nightmode .srSep,
+.res.res-nightmode .dropdown.srdrop .selected,
+.res.res-nightmode #sr-more-link,
+.res.res-nightmode #RESShortcutsEditContainer,
+.res.res-nightmode #RESShortcutsSort,
+.res.res-nightmode #RESShortcutsRight,
+.res.res-nightmode #RESShortcutsLeft,
+.res.res-nightmode #RESShortcutsAdd,
+.res.res-nightmode #RESShortcutsTrash,
+.res.res-nightmode #RESShortcuts {
+    color: rgba(255,255,255,0.15);
+    transition: color 200ms;
+}
+
+.res.res-nightmode #sr-header-area:hover .sr-bar a,
+.res.res-nightmode #sr-header-area:hover .sr-bar .separator,
+.res.res-nightmode #sr-header-area:hover .sr-list .separator,
+.res.res-nightmode #sr-header-area:hover .srSep,
+.res.res-nightmode #sr-header-area:hover .dropdown.srdrop .selected,
+.res.res-nightmode #sr-header-area:hover #sr-more-link,
+.res.res-nightmode #sr-header-area:hover #RESShortcutsEditContainer,
+.res.res-nightmode #sr-header-area:hover #RESShortcutsSort,
+.res.res-nightmode #sr-header-area:hover #RESShortcutsRight,
+.res.res-nightmode #sr-header-area:hover #RESShortcutsLeft,
+.res.res-nightmode #sr-header-area:hover #RESShortcutsAdd,
+.res.res-nightmode #sr-header-area:hover #RESShortcutsTrash,
+.res.res-nightmode #sr-header-area:hover #RESShortcuts {
+    color: #a7dbd8;
+}
+
+/* reset
+--------------------------------------------------------------------------------*/
+body.res.res-nightmode,
+.res.res-nightmode .side,
+.res.res-nightmode .side .spacer,
+.res.res-nightmode .side .sidecontentbox,
+.res.res-nightmode .side .usertext,
+.res.res-nightmode .side .titlebox,
+.res.res-nightmode .side .usertext .md,
+.res.res-nightmode .side .usertext .md ul,
+.res.res-nightmode .side .usertext .md ol,
+.res.res-nightmode .side .md h6,
+.res.res-nightmode .side .spacer .titlebox .redditname,
+.res.res-nightmode .sidebox,
+.res.res-nightmode #sr-header-area,
+.res.res-nightmode #sr-more-link,
+.res.res-nightmode body .content,
+.res.res-nightmode .linkinfo .date,
+.res.res-nightmode .linkinfo,
+.res.res-nightmode #header-img-a:before {
+    background: #2A313B;
+}
+
+.res.res-nightmode.listing-page #siteTable,
+.res.res-nightmode .link,
+.res.res-nightmode .RES-keyNav-activeElement,
+.res.res-nightmode .RES-keyNav-activeElement .md-container,
+.res.res-nightmode .listing-page .link .entry .buttons,
+.res.res-nightmode .listing-page .link .midcol,
+.res.res-nightmode .commentarea > .panestack-title,
+.res.res-nightmode .commentarea > .menuarea,
+.res.res-nightmode .commentarea > .usertext,
+.res.res-nightmode .gold-accent.comment-visits-box {
+    background: #303842 !important;
+}
+
+.res.res-nightmode .nav-buttons:before,
+.res.res-nightmode .submit-link .morelink a:before,
+.res.res-nightmode .titlebox > h1:before,
+.res.res-nightmode side .md > blockquote:first-of-type p {
+    color: white !important;
+}
+
+.res.res-nightmode .side #searchexpando p a,
+.res.res-nightmode .side .leavemoderator,
+.res.res-nightmode .subscribers .word:before,
+.res.res-nightmode .users-online .word:before,
+.res.res-nightmode .commentarea .menuarea .toggle a,
+.res.res-nightmode .commentarea .menuarea .help-hoverable,
+.res.res-nightmode #REScommentNavToggle span:before,
+.res.res-nightmode .commentingAs,
+.res.res-nightmode .linkinfo .score {
+    color: rgb(204, 204, 204);
+}
+
+.res.res-nightmode .nextprev a,
+.res.res-nightmode div#RESShortcutsEditContainer,
+.res.res-nightmode div#RESShortcutsSort,
+.res.res-nightmode div#RESShortcutsRight,
+.res.res-nightmode div#RESShortcutsLeft,
+.res.res-nightmode div#RESShortcutsAdd,
+.res.res-nightmode div#RESShortcutsTrash,
+.res.res-nightmode .tabmenu li a,
+.res.res-nightmode .tabmenu li.selected a,
+.res.res-nightmode #header-bottom-right,
+.res.res-nightmode #srList,
+.res.res-nightmode #searchexpando,
+.res.res-nightmode .icon-menu a,
+.res.res-nightmode .usertext.grayed .usertext-body {
+    background-color: transparent;
+}
+
+.res.res-nightmode .side .md>blockquote:first-of-type:before,
+.res.res-nightmode .side .md>blockquote:first-of-type:after,
+.res.res-nightmode .side .md h4+table:before,
+.res.res-nightmode .side .md h3 + ol > li:after,
+.res.res-nightmode .side .md h4+table tr td:before,
+.res.res-nightmode .side .md h4+table tr td:after,
+.res.res-nightmode .linkinfo:after {
+    display: none !important;
+}
+
+.res.res-nightmode .subscribers:before,
+.res.res-nightmode .titlebox form.toggle:not(.res-sr-style-toggle),
+.res.res-nightmode .titlebox .leavemoderator,
+.res.res-nightmode .titlebox .tagline,
+.res.res-nightmode .side .md h3 + ol > li,
+.res.res-nightmode .side .md table td,
+.res.res-nightmode .side .md h6,
+.res.res-nightmode .sidecontentbox .collapse-button,
+.res.res-nightmode .linkinfo .shortlink input {
+    background: rgba(255,255,255,0.02) !important;
+    opacity: 1;
+    border: 0;
+}
+
+/* link and commments
+--------------------------------------------------------------------------------*/
+
+.res.res-nightmode.comments-page .link,
+.res.res-nightmode .commentarea > .panestack-title,
+.res.res-nightmode .commentarea > .menuarea,
+.res.res-nightmode .commentarea > .usertext,
+.res.res-nightmode .gold-accent.comment-visits-box,
+.res.res-nightmode .commentarea > .sitetable > .comment {
+    border: 0;
+}
+
+.res.res-nightmode .commentarea > .sitetable {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.res-nightmode:not(.res-nightMode-coloredLinks) .thing:not(.stickied) .title:visited,
+.res-nightmode:not(.res-nightMode-coloredLinks) .thing.visited:not(.stickied) .title,
+.res-nightmode:not(.res-nightMode-coloredLinks).combined-search-page .search-result a:visited,
+.res-nightmode:not(.res-nightMode-coloredLinks).combined-search-page .search-result a:visited > mark,
+.res-nightmode:not(.res-nightMode-coloredLinks) .thing .title {
+    color: #A0CCFF !important;
+}
+
+.res.res-nightmode .domain,
+.res.res-nightmode .domain a,
+.res.res-nightmode .tagline,
+.res.res-nightmode .link .entry .buttons li.first a {
+    color: rgba(255,255,255,0.65);
+}
+
+.res.res-nightmode .link .entry .buttons li a.comments:before {
+    opacity: 1;
+}
+
+.res.res-nightmode.listing-page .link .thumbnail {
+    border-color: transparent !important
+}
+
+.res.res-nightmode .link:not(:first-child),
+.res.res-nightmode #siteTable > .nav-buttons {
+    border-top-color: rgba(0,0,0,0.1);
+}
+.res.res-nightmode .nextprev a {
+    color: #f28aa8;
+}
+.res.res-nightmode .nextprev a:hover {
+    background-color: #f28aa8;
+    color: white;
+}
+
+body.res.res-nightmode.mod-toolbox .tb-general-button,
+body.res.res-nightmode.mod-toolbox li a.tb-general-button,
+body.res.res-nightmode.mod-toolbox .tb-bracket-button,
+.res.res-nightmode #REScommentSubToggle {
+    background: rgba(0,0,0,0.1);
+    border: 0;
+    padding: 2px 3px;
+}
+
+.res.res-nightmode .commentarea .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+{
+    background: #2D353F
+}
+
+.res.res-nightmode .commentarea .comment,
+.res.res-nightmode .commentarea .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
+{
+    background-color: #303842;
+}
+
+.res.mod-toolbox.res-nightmode .comment.spam > .child {
+    background: transparent;
+}
+.res.res-nightmode .thing.spam {
+    background: #303842 !important;
+}
+.res.res-nightmode .thing.spam > .entry {
+    border: 2px solid #ffd6d9!important;
+    background: rgba(255,214,217,0.1);
+}
+
+.res.res-nightmode #REScommentNavToggle div {
+    background: #2A313B;
+    border-color: #3E4451;
+}
+.res.res-nightmode #REScommentNavToggle:hover span {
+    background: #3E4451;
+    border-color: #3E4451;
+}
+
+.res.res-nightmode .link .score.likes {
+    color: #FF8B60;
+}
+.res.res-nightmode .link .score.dislikes {
+    color: #9494FF;
+}
+
+/* usertext
+--------------------------------------------------------------------------------*/
+.res-nightmode .usertext-edit textarea {
+    background-color: #3E424D;
+    border: 0;
+    background-image: none !important;
+}
+
+.res.res-nightmode .markdownEditor,
+.res.res-nightmode .markdownEditor .edit-btn:not(.btn-macro) {
+    background-color: transparent;
+    border: 0;
+}
+
+.res.res-nightmode .usertext button.cancel {
+    background-color: rgba(0,0,0,0.2);
+    border-color: rgba(0,0,0,0.15);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.5);
+}
+
+.res.res-nightmode .usertext button[type=submit] {
+    border-color: rgba(42,186,192,0.4);
+    background-color: rgba(66, 198, 191, 0.45);
+    box-shadow: inset 0 1px 0 rgba(74,221,217,0.15);
+    color: rgba(255,255,255,0.75);
+}
+
+.res.res-nightmode .thing .md hr {
+    border-color: rgba(255,255,255,0.15);
+}
+
+.res.res-nightmode .md th {
+    color: inherit;
+}
+
+/* tabmenu
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .tabmenu li a,
+.res.res-nightmode .tabmenu li.selected a {
+    color: #2A313B;
+    font-weight: bold;
+}
+
+/* spay and neuter box
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .side .md h6 {
+    margin: 10px;
+}
+
+/* side hr
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .side .md hr,
+.res.res-nightmode .side .titlebox,
+.res.res-nightmode .sidecontentbox {
+    border-color: rgba(255,255,255,0.1);
+    border-top-style: dashed;
+    border-top-width: 2px;
+}
+
+/* rules list
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .side .md h3 + ol {
+    margin-right: 10px;
+    padding-left: 20px
+}
+
+.res.res-nightmode .side .md h3 + ol > li > p:first-child:before {
+    opacity: 0.1;
+}
+
+/* morelinks
+--------------------------------------------------------------------------------*/
+
+.res.res-nightmode .morelink a {
+    color: white;
+}
+
+.res.res-nightmode .submit-link .morelink,
+.res.res-nightmode .submit-text .morelink {
+    background: transparent;
+    border: 1px solid #b2d8d7;
+}
+.res.res-nightmode .submit-link .morelink a,
+.res.res-nightmode .submit-text .morelink a {
+    color: #b2d8d7;
+}
+
+.res.res-nightmode .side .md h5+ul li:nth-of-type(1) a,
+.res.res-nightmode .side .md h5+ul li:nth-of-type(2) a {
+    background: transparent;
+    border: 1px solid #ddddce;
+    color: #ddddce;
+}
+
+.res.res-nightmode .side .md h5+ul li:nth-of-type(3) a {
+    background: transparent;
+    border: 1px solid #f3bd92;
+    color: #f3bd92;
+}
+
+/* searchbox
+--------------------------------------------------------------------------------*/
+
+.res.res-nightmode #search input[type=text] {
+    background: transparent;
+    border: 1px solid white;
+    margin-top: 3px;
+    color: white;
+}
+
+/* sub buttons
+--------------------------------------------------------------------------------*/
+
+.res.res-nightmode .titlebox .fancy-toggle-button.subscribe-button .option.active,
+.res.res-nightmode .titlebox .res-fancy-toggle-button,
+.res.res-nightmode .titlebox .res-fancy-toggle-button.RESshortcut,
+.res.res-nightmode .titlebox .res-fancy-toggle-button.RESDashboardToggle {
+    border-width: 1px;
+}
+
+/* linkinfo box
+--------------------------------------------------------------------------------*/
+
+.res.res-nightmode .linkinfo {
+    border-top: 2px dashed rgba(255,255,255,0.1);
+    padding-top: 5px;
+    margin-top: 20px;
+}

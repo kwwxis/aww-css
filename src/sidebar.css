@@ -465,6 +465,11 @@
     margin-bottom: 5px;
 }
 
+.reddit-link-title {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 /* sidebar sign in
 --------------------------------------------------------------------------------*/
 

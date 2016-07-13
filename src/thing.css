@@ -129,22 +129,22 @@
 --------------------------------------------------------------------------------*/
 
 .arrow, .arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
-    background-image: url(%%spritesheet%%);
+    background-image: url(%%spritesheet%%) !important;
     height: 15px;
     width: 15px;
 }
 
 .arrow.down {
-    background-position: -144px -272px;
+    background-position: -144px -272px !important;
 }
 .arrow.up {
-    background-position: -177px -272px;
+    background-position: -177px -272px !important;
 }
 .arrow.downmod {
-    background-position: -210px -272px;
+    background-position: -210px -272px !important;
 }
 .arrow.upmod {
-    background-position: -243px -272px;
+    background-position: -243px -272px !important;
 }
 
 /* Active Element
