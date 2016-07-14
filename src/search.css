@@ -9,7 +9,9 @@ body.res.mod-toolbox.combined-search-page .tabmenu + .tabmenu {
 /* Search area wrapper
 --------------------------------------------------------------------------------*/
 .combined-search-page #previoussearch {
-    margin-top: 20px
+    margin-top: 20px;
+    border: 1px solid #e2e2e2;
+    border: 1px solid #e2e2e2;
 }
 
 .combined-search-page #previoussearch,
@@ -18,6 +20,11 @@ body.res.mod-toolbox.combined-search-page .tabmenu + .tabmenu {
     padding: 0;
     margin-left: 20px;
     max-width: 850px;
+}
+
+.combined-search-page .content[role="main"] > .search-result-listing > .search-result-group {
+    border: 1px solid #e2e2e2;
+    border-top: 0;
 }
 
 /* Search area

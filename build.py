@@ -10,26 +10,27 @@ from csscompressor import compress
 
 # -------------- FILE NAME ------ PURPOSE --------------
                
-order       = [ 'etc.css',      # general layout, common margins, and whatever can't be categorized into the other files
-                'forms.css',    # forms other than the submit post form
-                'submit.css',   # submit post form
-                'header.css',   # subreddit header
-                'sidebar.css',  # subreddit sidebar
-                'sidemd.css',   # sidebar usertext md
-                'titlebox.css', # sidebar titlebox except for the usertext md
-                'thing.css',    # style for .thing elements (links and comments alike)
-                'links.css',    # links within linklisting and linklisting page
-                'linkbtn.css',  # link buttons
-                'cpage.css',    # comments page page layout & top area (panestack-title, menuarea)
-                'clink.css',    # comment page link thing
-                'ctable.css',   # sitetable and comments in comments page
-                'usertext.css', # usertext editor input
-                'search.css',   # search page (does not include search input in sidebar, which is in sidebar.css)
-                'footer.css',   # subreddit footer
-                'wiki.css',     # subreddit wiki
-                'modpages.css', # any moderator pages that required additional CSS
-                'ext.css',      # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
-                'nightmode.css' # nightmode
+order       = [ 'etc.css',       # general layout, common margins, and whatever can't be categorized into the other files
+                'forms.css',     # forms other than the submit post form
+                'submit.css',    # submit post form
+                'header.css',    # subreddit header
+                'sidebar.css',   # subreddit sidebar
+                'sidemd.css',    # sidebar usertext md
+                'titlebox.css',  # sidebar titlebox except for the usertext md
+                'thing.css',     # style for .thing elements (links and comments alike)
+                'links.css',     # links within linklisting and linklisting page
+                'linkbtn.css',   # link buttons
+                'cpage.css',     # comments page page layout & top area (panestack-title, menuarea)
+                'clink.css',     # comment page link thing
+                'ctable.css',    # sitetable and comments in comments page
+                'usertext.css',  # usertext editor input
+                'search.css',    # search page (does not include search input in sidebar, which is in sidebar.css)
+                'footer.css',    # subreddit footer
+                'wiki.css',      # subreddit wiki
+                'modpages.css',  # any moderator pages that required additional CSS
+                'ext.css',       # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
+                'nightmode.css', # nightmode
+                'media.css'      # extra media queries for small screens and such 
               ]      
                 
 # input/output variables

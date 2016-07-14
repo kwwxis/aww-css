@@ -71,6 +71,13 @@
     margin-left: 0 !important;
 }
 
+/* comment expando button
+--------------------------------------------------------------------------------*/
+.comment .expando-button {
+    transform: scale(0.9);
+    margin: -3px 5px -1px 0 !important;
+}
+
 /* comments - tagline
 --------------------------------------------------------------------------------*/
 .comment .tagline {
@@ -124,7 +131,7 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-but
 /* comments - single thread infobar
 --------------------------------------------------------------------------------*/
 .comment-permalink-page.comments-page .commentarea > .infobar {
-    margin: 20px 0px -1px 0px;
+    margin: 0 0px -1px 0px;
     border: 0;
     padding: 10px;
     font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;

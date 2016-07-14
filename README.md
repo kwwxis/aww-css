@@ -1,10 +1,36 @@
-# CSS theme for /r/aww
+CSS theme for /r/aww
+====================
 
-**/r/aww:** Things that make you go AWW! -- like puppies, and bunnies, and so on...
+Images in use
+-------------
 
-Not yet complete
-            
-## Order of concatenation
+  - assets/inherit/snoo.png (upload to both stylesheet and sub settings)
+  - assets/awwlogo.png
+  - assets/awwbanner.png
+  - assets/spritesheet.png
+  - assets/commentrules.png
+  - assets/nothing-here.png
+  - assets/bg/overlay-1.png
+  - assets/inherit/kitteh.png
+  
+Usage
+-----
+
+(if the subreddit is compromised, follow these instructions to restore the theme)
+
+  1. See the "Images in use" section above, upload all these images to the stylesheet page
+  
+    - no need to change anything in "new image name"
+    - assets/inherit/snoo.png should be uploaded to **both** the stylesheet page and the
+      "upload header image" section under "look and feel" in the subreddit settings
+      
+  2. See the "sub/" folder, upload the contents of "sidebar_text.txt", "submission_text.txt", "wiki_index.txt"
+     to where the names of the files specify
+      
+  3. **dist/dist.css** - upload to the stylesheet page
+  
+Order of concatenation
+----------------------
              
 | File name     | Purpose                                                                                               |
 | ------------- | ----------------------------------------------------------------------------------------------------- |
@@ -28,29 +54,4 @@ Not yet complete
 | modpages.css  | any moderator pages that required additional CSS                                                      |
 | ext.css       | misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files   |
 | nightmode.css | nightmode - pretty self explanatory                                                                   |
-
-## Images in use
-
-  - assets/inherit/snoo.png (upload to both stylesheet and sub settings)
-  - assets/awwlogo.png
-  - assets/awwbanner.png
-  - assets/spritesheet.png
-  - assets/commentrules.png
-  - assets/nothing-here.png
-  - assets/bg/overlay-1.png
-  - assets/inherit/kitteh.png
-  
-## Usage
-
-(if the subreddit is compromised, follow these instructions to restore the theme)
-
-  1. See the "Images in use" section above, upload all these images to the stylesheet page
-  
-    - no need to change anything in "new image name"
-    - assets/inherit/snoo.png should be uploaded to **both** the stylesheet page and the
-      "upload header image" section under "look and feel" in the subreddit settings
-      
-  2. See the "sub/" folder, upload the contents of "sidebar_text.txt", "submission_text.txt", "wiki_index.txt"
-     to where the names of the files specify
-      
-  3. **dist/dist.css** - upload to the stylesheet page
+| media.css     | extra media queries for small screens and such                                                        |

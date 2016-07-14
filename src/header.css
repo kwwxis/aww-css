@@ -190,6 +190,19 @@ body #header:after {
     margin-top: 1px;
 }
 
+html[lang="a1"] .pagename a {
+    background-image: url(%%awwlogo-1%%);
+}
+html[lang="a2"] .pagename a {
+    background-image: url(%%awwlogo-2%%);
+}
+html[lang="a3"] .pagename a {
+    background-image: url(%%awwlogo-3%%);
+}
+html[lang="a4"] .pagename a {
+    background-image: url(%%awwlogo-4%%);
+}
+
 /* Tab menu
 --------------------------------------------------------------------------------*/
 
@@ -270,16 +283,8 @@ body #header:after {
     color: white;
     line-height: 24px;
     padding-left: 100px;
-    /* box-shadow: 0 0 5px -1px rgba(0,0,0,0.35),inset 0 -1px 2px -1px rgba(0,0,0,0.2); */
     opacity: 0.85;
-    background: #97b8d4;
     background: #A7DBD8;
-    /* background: #AEE5EC;
-    background: #EEB3C0;
-    background: #f5bcc8;
-    background: repeating-linear-gradient(45deg,#dff4fe,#dff4fe 3px,#fff 3px,#fff 6px);
-    box-shadow: 1px -9px 6px -9px rgba(0,0,0,0.1);
-    background: #f5f6f7; */
 }
 
 /* SR DROP CHOICES

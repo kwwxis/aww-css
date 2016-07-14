@@ -6,17 +6,18 @@
     padding-left: 10px;
 }
 
-/* position expando button at bottom right of thumbnail */
-.comments-page .link .entry > .expando-button {
-    position: absolute;
-    right: calc(100% - 6px);
-    top: 66px;
-}
-
 .link .usertext-body .md {
     background: transparent;
     border: none;
     padding: 5px 0;
+}
+
+/* commentpage link expando button
+--------------------------------------------------------------------------------*/
+.comments-page .link .expando-button {
+    position: static;
+    margin: -3px 3px 0 0px !important;
+    transform: scale(0.9);
 }
 
 /* report button thank you
