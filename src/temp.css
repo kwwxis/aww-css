@@ -1,0 +1,32 @@
+
+/* logo choices
+-------------------------------------------------------------------------------- */
+
+html[lang="a0"] .pagename a {
+    background-image: url(%%awwlogo%%);
+}
+html[lang="a1"] .pagename a {
+    background-image: url(%%awwlogo-1%%);
+}
+html[lang="a2"] .pagename a {
+    background-image: url(%%awwlogo-2%%);
+}
+html[lang="a3"] .pagename a {
+    background-image: url(%%awwlogo-3%%);
+}
+html[lang="a4"] .pagename a {
+    background-image: url(%%awwlogo-4%%);
+}
+
+/* c2 - no wrapper shadow
+-------------------------------------------------------------------------------- */
+
+html[lang="c2"] .listing-page #siteTable {
+    box-shadow: none;
+}
+html[lang="c2"] body {
+    background: white;
+}
+html[lang="c2"] .res .link.RES-keyNav-activeThing:after {
+    right: -14px;
+}

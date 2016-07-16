@@ -21,7 +21,6 @@ order       = [ 'etc.css',       # general layout, common margins, and whatever 
                 'links.css',     # links within linklisting and linklisting page
                 'linkbtn.css',   # link buttons
                 'cpage.css',     # comments page page layout & top area (panestack-title, menuarea)
-                'clink.css',     # comment page link thing
                 'ctable.css',    # sitetable and comments in comments page
                 'usertext.css',  # usertext editor input
                 'search.css',    # search page (does not include search input in sidebar, which is in sidebar.css)
@@ -29,8 +28,9 @@ order       = [ 'etc.css',       # general layout, common margins, and whatever 
                 'wiki.css',      # subreddit wiki
                 'modpages.css',  # any moderator pages that required additional CSS
                 'ext.css',       # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
+                'temp.css',      # temporary
                 'nightmode.css', # nightmode
-                'media.css'      # extra media queries for small screens and such 
+                'media.css'      # extra media queries for small screens and such
               ]      
                 
 # input/output variables

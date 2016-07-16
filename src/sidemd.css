@@ -14,7 +14,7 @@
 --------------------------------------------------------------------------------*/
 
 .side .md h3 {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: normal;
     font-size: 18px;
     text-align: center;
@@ -23,7 +23,7 @@
 .side .md h3 + ol {
     list-style-type: none;
     counter-reset: siderules;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     padding-left: 30px;
     padding-right: 10px;
 }
@@ -103,7 +103,7 @@
 
 /* read full rules link */
 .side .md h3 + ol + ul {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
     list-style-type: none;
     margin-top: 15px;
@@ -115,7 +115,7 @@
 --------------------------------------------------------------------------------*/
 
 .side .md h4, .side .md h4 strong {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: normal !important;
     font-size: 18px;
     text-align: center;
@@ -123,7 +123,7 @@
 
 .side .md table td {
     border: 1px solid white;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
 }
 

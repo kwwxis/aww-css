@@ -8,14 +8,14 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 11px;
-    margin-top: 5px;
+    margin-left: -4px;
+    margin-top: 0;
     position: relative;
 }
-
-.listing-page .link .entry .buttons {
-    margin-top: 0;
+.link .entry .expando-button ~ .buttons {
+    margin-left: 31px;
 }
 
 .link .entry .buttons li {
@@ -64,22 +64,8 @@
 /* icon items
 --------------------------------------------------------------------------------*/
 
-.link .entry .buttons li a.global-mod-button:before,
-.link .entry .buttons li.viewSource a:before,
-.link .entry .buttons li a.edit-usertext:before,
-.link .entry .buttons li a.post-sharing-button:before,
-.link .entry .buttons li.save-button a:before,
-.link .entry .buttons li.give-gold-button a:before,
-.link .entry .buttons li form.hide-button:before,
-.link .entry .buttons li form.del-button:before,
-.link .entry .buttons li form.unlock-button:before,
-.link .entry .buttons li form.lock-button:before,
-.link .entry .buttons li.report-button a:before,
-.link .entry .buttons li a.flairselectbtn:before,
-.link .entry .buttons li a.comments:before,
-.link .entry .buttons li form.remove-button a[data-event-action="spam"]:before,
-.link .entry .buttons li form.remove-button a[data-event-action="remove"]:before,
-.link .entry .buttons li form.approve-button a[data-event-action="approve"]:before {
+.link .entry .buttons li > a:before,
+.link .entry .buttons li form span:not(.error) a:before {
     content: '';
     display: inline-block;
     background-image: url(%%spritesheet%%);
@@ -151,7 +137,7 @@
 
 /* hide button
 --------------------------------------------------------------------------------*/
-.link .entry .buttons li form.hide-button:before {
+.link .entry .buttons li form.hide-button a:before {
     background-position: -274px -243px;
 }
 .link .entry .buttons li form.hide-button a {
@@ -169,7 +155,7 @@
 
 /* delete button
 --------------------------------------------------------------------------------*/
-.link .entry .buttons li form.del-button:before {
+.link .entry .buttons li form.del-button a:before {
     background-position: -340px -243px;
 }
 .link .entry .buttons li form.del-button a {
@@ -203,13 +189,11 @@
 
 /* lock button
 --------------------------------------------------------------------------------*/
-.link .entry .buttons li form.unlock-button:before,
-.link .entry .buttons li form.lock-button:before {
+.link .entry .buttons li form[class*=lock-button] a:before {
     background-position: -308px -244px;
     width: 17px;
 }
-.link .entry .buttons li form.unlock-button a,
-.link .entry .buttons li form.lock-button a {
+.link .entry .buttons li form[class*=lock-button] a {
     color: #e8be17;
 }
 
@@ -222,12 +206,10 @@
     color: #E99170;
 }
 
-/* distinguish button
+/* distinguish and nsfw button
 --------------------------------------------------------------------------------*/
-.link .entry .buttons li form[action*="distinguish"]:before {
-    content: 'M';
-    color: #4EA04E;
-    background: #daecda;
+.link .entry .buttons li form[action*="distinguish"] a:before,
+.link .entry .buttons li form.marknsfw-button span a:before {
     box-sizing: border-box;
     display: inline-block;
     height: 17px;
@@ -236,29 +218,22 @@
     text-align: center;
     border-radius: 50%;
     margin-right: 3px;
-}
-.link .entry .buttons li form[action*="distinguish"] a {
-    color: #4EA04E;
 }
 
-/* distinguish button
---------------------------------------------------------------------------------*/
-.link .entry .buttons li form[action*="distinguish"]:before {
+.link .entry .buttons li form[action*="distinguish"] a:before {
     content: 'M';
     color: #4EA04E;
     background: #daecda;
-    box-sizing: border-box;
-    display: inline-block;
-    height: 17px;
-    width: 16px;
-    line-height: 17px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 3px;
 }
-.link .entry .buttons li form[action*="distinguish"] a {
-    color: #4EA04E;
+.link .entry .buttons li form[action*="distinguish"] a { color: #4EA04E; }
+
+.link .entry .buttons li form.marknsfw-button span a:before {
+    content: '18';
+    color: rgba(230,69,72,0.8);
+    background: rgba(230,69,72,0.2);
+    font-weight: bold;
 }
+.link .entry .buttons li form.marknsfw-button span a { color: rgba(230,69,72,0.8); }
 
 /* flair select button
 --------------------------------------------------------------------------------*/
@@ -269,82 +244,20 @@
     color: #90d4f7;
 }
 
-/* nsfw button
---------------------------------------------------------------------------------*/
-.link .entry .buttons li form.marknsfw-button:before {
-    content: '18';
-    color: rgba(230,69,72,0.8);
-    background: rgba(230,69,72,0.2);
-    box-sizing: border-box;
-    display: inline-block;
-    height: 17px;
-    width: 16px;
-    line-height: 17px;
-    text-align: center;
-    border-radius: 50%;
-    margin-right: 3px;
-    font-weight: bold;
-}
-.link .entry .buttons li form.marknsfw-button a {
-    color: rgba(230,69,72,0.8);
-}
-
 /* abbreviate "show/hide all children comments" if moderator because it takes up too much space
 --------------------------------------------------------------------------------*/
-body.moderator .link .entry .buttons li > a[action="hide"][href="#"][title*="Show"],
-body.moderator .link .entry .buttons li > a[action="show"][href="#"][title*="Show"] {
+body.moderator .link .entry .buttons li > a[title*="Show"] {
     font-size: 0;
+    line-height: 24px;
 }
 
-body.moderator .link .entry .buttons li > a[action="hide"][href="#"][title*="Show"]:before {
+body.moderator .link .entry .buttons li > a[action="hide"][title*="Show"]:before {
     font-size: 11px;
     content: 'hide childs';
 }
-body.moderator .link .entry .buttons li > a[action="show"][href="#"][title*="Show"]:before {
+body.moderator .link .entry .buttons li > a[action="show"][title*="Show"]:before {
     font-size: 11px;
     content: 'show childs';
-}
-
-/* hide some icons for mods on smaller screens
---------------------------------------------------------------------------------*/
-
-
-@media all and (max-width: 1105px) {
-    .link .entry .buttons li form.remove-button a[data-event-action="spam"]:before,
-    .link .entry .buttons li form.remove-button a[data-event-action="remove"]:before,
-    .link .entry .buttons li form.approve-button a[data-event-action="approve"]:before {
-        display: none;
-    }
-}
-
-
-@media all and (max-width: 1190px) {
-
-    .link .entry .buttons li form.unlock-button:before,
-    .link .entry .buttons li form.lock-button:before,
-    .link .entry .buttons li a.flairselectbtn:before,
-    .link .entry .buttons li form.marknsfw-button:before {
-        display: none;
-    }
-}
-
-@media all and (max-width: 1135px) {
-
-    body.moderator .link .entry .buttons li form.hide-button:before,
-    body.moderator .link .entry .buttons li form.del-button:before {
-        display: none;
-    }
-}
-
-@media all and (max-width: 1230px) {
-
-    body.moderator .link .entry .buttons li a.global-mod-button:before,
-    body.moderator .link .entry .buttons li.viewSource a:before,
-    body.moderator .link .entry .buttons li a.edit-usertext:before,
-    body.moderator .link .entry .buttons li a.post-sharing-button:before,
-    body.moderator .link .entry .buttons li.save-button.link-save-button a:before {
-        display: none;
-    }
 }
 
 /* link mod actions
@@ -389,25 +302,9 @@ body.moderator .link .entry .buttons li > a[action="show"][href="#"][title*="Sho
 }
 
 /* hide icons except comments if post is reported */
-
-.link.reported .entry .buttons li a.global-mod-button:before,
-.link.reported .entry .buttons li.viewSource a:before,
-.link.reported .entry .buttons li a.edit-usertext:before,
-.link.reported .entry .buttons li a.post-sharing-button:before,
-.link.reported .entry .buttons li.save-button.link-save-button a:before,
-.link.reported .entry .buttons li.give-gold-button a:before,
-.link.reported .entry .buttons li form.hide-button:before,
-.link.reported .entry .buttons li form.del-button:before,
-.link.reported .entry .buttons li form.unlock-button:before,
-.link.reported .entry .buttons li form.lock-button:before,
-.link.reported .entry .buttons li.report-button a:before,
-.link.reported .entry .buttons li a.flairselectbtn:before,
-.link.reported .entry .buttons li form.remove-button a[data-event-action="spam"]:before,
-.link.reported .entry .buttons li form.remove-button a[data-event-action="remove"]:before,
-.link.reported .entry .buttons li form.approve-button a[data-event-action="approve"]:before {
-    display: none;
+.link.reported .entry .buttons li a:not(.comments):not([title*="Show"]):before {
+    display: none !important;
 }
-
 
 /* listing page link buttons
 --------------------------------------------------------------------------------*/
@@ -415,9 +312,6 @@ body.moderator .link .entry .buttons li > a[action="show"][href="#"][title*="Sho
 .listing-page .link .entry .buttons {
     display: inline-flex;
     background: #fdfdfd;
-    margin-top: 6px;
-    margin-bottom: -1px;
-    margin-left: 10px;
     padding: 0;
 }
 .listing-page .link .entry .buttons li.first {
@@ -431,4 +325,65 @@ body.moderator .link .entry .buttons li > a[action="show"][href="#"][title*="Sho
 
 .listing-page .link.reported .entry .buttons {
     width: calc(100% - 10px);
+}
+
+/* report button thank you
+--------------------------------------------------------------------------------*/
+
+li.report-button {
+    position: relative;
+}
+
+li.report-button:before, li.report-button a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+li.report-button:before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #c8ccd0;
+    margin-bottom: 1px;
+}
+li.report-button a:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid white;
+    margin-bottom: 3px;
+    z-index: 5;
+}
+
+li.report-button:after {
+    content: 'Thanks for helping out the mods!';
+    display: block;
+    position: absolute;
+    background: black;
+    color: white;
+    bottom: 100%;
+    margin-bottom: 6px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 2px 5px;
+    background: white;
+    color: rgba(230,69,72,0.8);
+    border: 1px solid #c8ccd0;
+}
+
+li.report-button:before, li.report-button a:after, li.report-button:after {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms;
+    pointer-events: none;
+}
+li.report-button:hover:before, li.report-button:hover a:after, li.report-button:hover:after {
+    visibility: visible;
+    opacity: 1;
 }

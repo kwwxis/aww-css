@@ -28,6 +28,14 @@
     color: rgba(255,255,255,0.25);
 }
 
+.res.res-nightmode #sr-header-area {
+    border-bottom-color: transparent;
+}
+
+.res.res-nightmode .listing-page .link:not(.self) .midcol:after {
+    background: repeating-linear-gradient(-45deg,rgba(223,244,254,0.05),rgba(223,244,254,0.05) 3px,#303842 3px,#303842 6px);
+}
+
 /* sr header area text color
 --------------------------------------------------------------------------------*/
 .res.res-nightmode .sr-bar a,
@@ -316,6 +324,12 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 
 .res.res-nightmode li.report-button:before {
     border-top-color: #28303B;
+}
+
+.res.res-nightmode .gold-accent.comment-visits-box .title {
+    background: transparent;
+    color: #fbefb9;
+    font-weight: normal;
 }
 
 /* usertext

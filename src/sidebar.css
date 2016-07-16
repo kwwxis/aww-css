@@ -7,11 +7,6 @@
     position: relative;
     padding-top: 314px;
     margin-right: 8px;
-    /* margin-top: 10px; */
-}
-
-.sidecontentbox {
-    padding: 10px;
 }
 
 .titlebox .bottom, .sidebox.create .spacer {
@@ -21,10 +16,15 @@
 /* Welcome text
 --------------------------------------------------------------------------------*/
 
-.titlebox > h1, .titlebox > h1:before, .titlebox > h1 a:before {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+.titlebox > h1 {
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-weight: normal;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 20px;
 }
 
 .titlebox > h1:before {
@@ -40,14 +40,6 @@
     margin-top: -5px;
 }
 
-.titlebox > h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-top: 20px;
-}
-
 /* sidebar title link - text version */
 .titlebox > h1 a:before {
     content: '/r/aww';
@@ -59,12 +51,11 @@
     content: '';
     display: inline-block;
     background-image: url(%%spritesheet%%);
-    background-position: -155px -118px; /* black */
+    /* background-position: -155px -118px; --- black */
     background-position: -155px -3px; /* colored */
     height: 51px;
     width: 189px;
     -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
     transform: scale(0.5);
 }
 
@@ -79,7 +70,7 @@
 .side .md > blockquote:first-of-type {
     position: absolute;
     top: 90px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     border: 0;
     padding: 0 15px;
     font-size: 15px;
@@ -96,7 +87,6 @@
     background-position: -154px -178px;
     width: 56px;
     height: 56px;
-    pointer-events: none;
 }
 
 .side .md > blockquote:first-of-type:before {
@@ -106,16 +96,16 @@
     transform: scale(0.5) rotateZ(-35deg);
 }
 
-
 .side .md > blockquote:first-of-type:after {
-    right: 0;
     bottom: 0px;
+    right: 0;
     -webkit-transform: scale(0.5) rotateZ(35deg);
     transform: scale(0.5) rotateZ(35deg);
 }
 
 .side .md > blockquote:first-of-type p {
     position: relative;
+    padding: 0 20px;
     z-index: 1;
 }
 
@@ -140,11 +130,10 @@
     display: block;
     position: relative;
     border: 0;
-    /* background: #90D4F7; */
     background: #B2D8D7;
     color: white;
     font-weight: normal;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 18px;
     letter-spacing: 0.1px;
     height: 34px;
@@ -212,19 +201,13 @@
     color: white;
 }
 
-.side .md h5 + ul li:nth-of-type(1) {
-    flex-basis: 50%;
-    padding-right: 3px;
-}
-
+.side .md h5 + ul li:nth-of-type(1),
 .side .md h5 + ul li:nth-of-type(2) {
     flex-basis: 50%;
     padding-left: 3px;
 }
 
-.side .md h5 + ul li:nth-of-type(1) a {
-    background-color: #DDDDCE;
-}
+.side .md h5 + ul li:nth-of-type(1) a,
 .side .md h5 + ul li:nth-of-type(2) a {
     background-color: #DDDDCE;
 }
@@ -232,7 +215,7 @@
     background-color: #F3BD92;
 }
 
-/* submit link hover -> read rules
+/* submit link hover -> read rules notification
 --------------------------------------------------------------------------------*/
 
 .submit-link .morelink a:before {
@@ -253,7 +236,9 @@
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     transition: transform 200ms, visibility 200ms;
-    visibility: hidden;
+    visibility: hidden; /* have it hidden in it's default state because having it be `bottom: 100%` is
+                           not good enough - without hidden, in mobile when you scroll down and the address
+                           bar goes away you can see this notification */
 }
 
 .submit-link .morelink:hover a:before {
@@ -342,7 +327,7 @@
 .side #moresearchinfo {
     margin-top: 10px;
     margin-right: 25px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 14px;
 }
 
@@ -393,7 +378,7 @@
     background: 0;
     padding: 0;
     padding-bottom: 10px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     position: relative;
 }
 

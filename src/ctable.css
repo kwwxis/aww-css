@@ -40,18 +40,13 @@
 
 /* comments
 --------------------------------------------------------------------------------*/
-.comment.thing, .comment .entry {
-    border: 0;
-}
 
 .comment {
-    margin-bottom: 0;
-    padding-top: 10px;
     border-radius: 3px;
-    margin-left: 0;
-    padding-left: 10px;
+    margin: 0;
+    padding: 10px 0 0 10px;
 }
-.comment .child {
+.comment .child, .new-comment .usertext-body {
     border: 0;
 }
 
@@ -59,16 +54,10 @@
     margin-top: 5px;
 }
 
-.new-comment .usertext-body {
-    border: 0;
-}
 .commentarea > .sitetable > .comment {
-    margin-bottom: 3px;
-    margin-top: 0 !important;
     border: 1px solid #e3e3e3;
     padding-left: 15px;
     border-radius: 0;
-    margin-left: 0 !important;
 }
 
 /* comment expando button
@@ -81,7 +70,7 @@
 /* comments - tagline
 --------------------------------------------------------------------------------*/
 .comment .tagline {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 13px;
     letter-spacing: 0.2px;
 }
@@ -89,7 +78,7 @@
 /* comments - flat list buttons
 --------------------------------------------------------------------------------*/
 .comment .buttons {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 11px;
     padding-left: 30px; /* padding for extra reply "button" */
 }
@@ -123,7 +112,6 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons {
     padding-left: 0;
 }
 
-
 body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-button {
     display: none;
 }
@@ -134,10 +122,10 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-but
     margin: 0 0px -1px 0px;
     border: 0;
     padding: 10px;
-    font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    padding-left: 20px;
+    font-family: Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
     font-size: 14px;
     position: relative;
-    padding-left: 20px;
     background: #ffc;
     border: 1px solid #e3e3e3;
 }

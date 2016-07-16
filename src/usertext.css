@@ -56,7 +56,7 @@
 
 .usertext .bottom-area .error, .usertext .bottom-area .status {
     font-size: 13px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 /* usertext help buttons (content policy, formatting help, big editor)
@@ -111,7 +111,7 @@
     margin: 0;
     outline: 0;
     margin-right: 5px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 15px;
     margin-bottom: 1px;
 }
@@ -175,7 +175,7 @@
     font-size: 12px;
     padding-left: 5px;
     margin-bottom: 9px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 /* macro thing */
@@ -184,7 +184,7 @@
     bottom: 100%;
     right: 0;
     margin: 0 0 10px 0 !important;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .res .RESMacroDropdownTitle {

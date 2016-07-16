@@ -45,7 +45,6 @@ Order of concatenation
 | links.css     | linklisting links and page                                                                            |
 | linkbtn.css   | link buttons                                                                                          |
 | cpage.css     | comments page page layout & top area (panestack-title, menuarea)                                      |
-| clink.css     | comment page link thing                                                                               |
 | ctable.css    | sitetable and comments in comments page                                                               |
 | usertext.css  | usertext editor and common md styles                                                                  |
 | search.css    | search page (does not include search input in sidebar - sidebar.css)                                  |
@@ -53,5 +52,6 @@ Order of concatenation
 | wiki.css      | subreddit wiki                                                                                        |
 | modpages.css  | any moderator pages that required additional CSS                                                      |
 | ext.css       | misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files   |
-| nightmode.css | nightmode - pretty self explanatory                                                                   |
+| temp.css      | temporary                                                                                             |
+| nightmode.css | nightmode                                                                                             |
 | media.css     | extra media queries for small screens and such                                                        |

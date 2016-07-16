@@ -13,7 +13,7 @@
 
 .link {
     align-items: stretch;
-    padding: 0 0 0 4px;
+    padding: 0 0 10px 4px;
     border: 0;
     border-top: 1px solid transparent;
     background: white;
@@ -22,35 +22,20 @@
 
 /* normal separator border */
 .link:not(:first-child) {
-    border-top: 1px solid #e1e4e5;
-}
-
-.link .thumbnail {
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 5px;
-}
-
-.link .entry, .link .midcol {
-    margin-right: 0;
+    border-top: 2px dashed rgba(0,0,0,0.085);
 }
 
 .link .entry, .link .midcol, .link .rank {
+    padding: 0;
+    margin: 0;
     padding-top: 14px;
 }
-.link .thumbnail {
-    margin-top: 14px;
-}
-
-/* Link entry
---------------------------------------------------------------------------------*/
 
 .listing-page .link .entry {
-    border-left: 1px solid rgba(0,0,0,0.1);
-    padding-left: 0;
-    padding-bottom: 0;
-    padding-right: 0;
-    margin-left: 0;
+    padding-left: 5px;
+}
+.comments-page .link .entry {
+    padding-left: 10px;
 }
 
 /* link rank
@@ -58,34 +43,52 @@
 
 .link .rank {
     text-align: center;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 16px;
     min-width: 18.25px;
+    color: rgba(0,0,0,0.18);
+    margin-top: 15px;
 }
 
-/* Listing page link midcol
+/* link score
+--------------------------------------------------------------------------------*/
+.link .score {
+    font-family: Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+/* link midcol & thumbnail
 --------------------------------------------------------------------------------*/
 
-.listing-page .link .midcol {
-    border-left: 1px solid rgba(0,0,0,0.1);
-    border-right: 1px solid rgba(0,0,0,0.1);
-    background: #fafafa;
-    min-width: 50px;
+.link .midcol {
+    background: transparent;
+    min-width: 41px;
     margin-left: 4px;
 }
 
-/* Listing page link thumbnail
---------------------------------------------------------------------------------*/
+.link:not(.self) .midcol:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 82px;
+    height: 83px;
+    background: repeating-linear-gradient(-45deg,#dff4fe,#dff4fe 3px,#fff 3px,#fff 6px);
+    top: 0;
+    margin-left: 43px;
+    margin-top: 7px;
+}
 
-.listing-page .link .thumbnail {
-    border-color: white !important
+.link .thumbnail {
+    margin: 14px 8px 5px 8px;
 }
 
 /* Link tagline and title
 --------------------------------------------------------------------------------*/
 
 .link .tagline, .link .title {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    margin-left: 0;
 }
 
 .link .title {
@@ -99,18 +102,19 @@
     font-size: small;
 }
 
-.listing-page .link .tagline {
-    margin-left: 10px;
-}
-
-.listing-page .link .entry > .title {
-    margin-left: 10px;
-}
-
+/* clear tagline */
 .link .tagline:after {
     content: '';
     display: table;
     clear: left;
+}
+
+/* Usertext md
+--------------------------------------------------------------------------------*/
+.link .usertext-body .md {
+    background: transparent;
+    border: none;
+    padding: 5px 0;
 }
 
 /* Last clicked
@@ -125,47 +129,11 @@
     border-top: 1px solid transparent;
 }
 
-/* Expando Buttons
+/* link expando margin
 --------------------------------------------------------------------------------*/
 
-.expando-button {
-    float: left;
-	margin: 5px 5px 0px 0px !important;
-	width: 24px !important;
-	height: 24px !important;
-    max-width: none !important;
-    max-height: none !important;
-	background-color: transparent !important;
-	background-image: url(%%spritesheet%%) !important;
-	cursor: pointer;
-}
-
-.expando-button.collapsed,
-.res .expando-button.collapsed {
-    background-position: -14px -244px!important;
-}
-
-.expando-button.collapsed:hover,
-.res .expando-button.collapsed:hover {
-    background-position: -14px -269px !important;
-}
-
-.expando-button.expanded,
-.res .expando-button.expanded {
-    background-position: -38px -244px !important;
-}
-
-.expando-button.expanded:hover,
-.res .expando-button.expanded:hover {
-    background-position: -38px -269px !important;
-}
-
-/* listing page link - expando button
---------------------------------------------------------------------------------*/
-
-.listing-page .link .expando-button {
-    position: static;
-    margin: -3px 3px 0 10px !important;
+.link .expando-button {
+    margin: 5px 9px -12px 3px !important;
     transform: scale(0.9);
 }
 
@@ -193,7 +161,7 @@
     width: 100% !important;
 }
 
-/* Listing page - .buttons bottom stripe when expando open 
+/* Listing page - buttons bottom stripe when expando open 
 --------------------------------------------------------------------------------*/
 
 .listing-page .link .entry .expando-button.expanded ~ .buttons:after {
@@ -221,7 +189,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 .nav-buttons:before {

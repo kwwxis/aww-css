@@ -44,8 +44,8 @@
 }
 
 .comments-page .link .entry {
-    flex-basis: calc(100% - 136px);
-    max-width: calc(100% - 135px);
+    flex-basis: calc(100% - 138px);
+    max-width: calc(100% - 137px);
 }
 
 .comments-page .menuarea.modtools ~ #siteTable .link .entry {
@@ -77,7 +77,6 @@
     height: 70px;
     position: relative;
     overflow: hidden;
-    border: 3px solid #958a86;
 }
 
 .thumbnail img,
@@ -93,7 +92,6 @@
 .search-result.has-thumbnail > .thumbnail.self,
 .search-result.has-thumbnail > .thumbnail.default {
     background: url(%%spritesheet%%) no-repeat;
-    border-color: transparent;
     height: 50px;
 }
 
@@ -108,7 +106,6 @@
 
 .thumbnail.default,
 .search-result.has-thumbnail > .thumbnail.default {
-    border: 3px solid #9edef5;
     height: 70px;
     background-position: -77px -130px;
 }
@@ -128,12 +125,19 @@
 /* Vote arrows
 --------------------------------------------------------------------------------*/
 
-.arrow, .arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
-    background-image: url(%%spritesheet%%) !important;
-    height: 15px;
-    width: 15px;
+.midcol {
+    overflow: visible;
 }
 
+.arrow, .arrow.up, .arrow.upmod, .arrow.down, .arrow.downmod {
+    background-image: url(%%spritesheet%%) !important;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    opacity: 0.8;
+}
+
+/* filled arrows
 .arrow.down {
     background-position: -144px -272px !important;
 }
@@ -145,6 +149,62 @@
 }
 .arrow.upmod {
     background-position: -243px -272px !important;
+}*/
+
+/* outline arrows */
+.arrow.down {
+    background-position: -145px -298px !important;
+}
+.arrow.up {
+    background-position: -178px -298px !important;
+}
+.arrow.downmod {
+    background-position: -211px -298px !important;
+}
+.arrow.upmod {
+    background-position: -244px -298px !important;
+}
+
+/* Upvote animation
+--------------------------------------------------------------------------------*/
+.arrow.up:before, .arrow.upmod:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background: url(%%spritesheet%%) no-repeat;
+    background-position: -2px -362px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    -webkit-transform-origin: center;
+    transform: translate(-50%, -50%) scale(0.5);
+    transform-origin: center;
+    visibility: hidden;
+}
+
+.arrow.upmod:focus:before {
+    animation: upvote 1s ease-out;
+    animation-delay: 150ms;
+}
+
+@keyframes upvote {
+    0% {
+        visibility: visible;
+        -webkit-transform: translate(-50%, -50%) scale(0.5);
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
 
 /* Active Element
@@ -182,4 +242,45 @@
     top: 0;
     bottom: 0;
     margin: auto 0;
+}
+
+/* Expando Buttons
+--------------------------------------------------------------------------------*/
+
+.expando-button {
+    float: left;
+	margin: 5px 5px 0px 0px !important;
+	width: 24px !important;
+	height: 24px !important;
+    max-width: none !important;
+    max-height: none !important;
+	background-color: transparent !important;
+	background-image: url(%%spritesheet%%) !important;
+	cursor: pointer;
+}
+
+.expando-button.collapsed,
+.res .expando-button.collapsed {
+    background-position: -14px -244px !important;
+}
+
+.expando-button.collapsed:hover,
+.res .expando-button.collapsed:hover {
+    background-position: -14px -269px !important;
+}
+
+.expando-button.expanded,
+.res .expando-button.expanded {
+    background-position: -38px -244px !important;
+}
+
+.expando-button.expanded:hover,
+.res .expando-button.expanded:hover {
+    background-position: -38px -269px !important;
+}
+
+/* misc
+--------------------------------------------------------------------------------*/
+.c-close {
+    font-size: 0;
 }

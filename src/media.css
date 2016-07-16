@@ -1,15 +1,5 @@
 
-/* font size fixes - mobile */
 @media screen and (max-device-width: 780px) {
-    .link .title {
-        font-size: 26px;
-    }
-    .link .tagline {
-        font-size: 15px;
-    }
-    .link .entry .buttons {
-        font-size: 18px;
-    }
     .side .md > blockquote:first-of-type {
         font-size: 1.35vw;
     }

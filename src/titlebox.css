@@ -58,7 +58,7 @@ form.toggle.flairtoggle {
     margin-top: 10px;
     color: rgba(0,0,0,0.9);
     font-size: 13px;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 /* subreddit style toggle
@@ -90,7 +90,7 @@ form.toggle.flairtoggle {
 
 .subscribers, .users-online {
     display: inline-block;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     width: 50%;
     box-sizing: border-box;
     text-align: center;
@@ -157,7 +157,7 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 13px;
     border: 0;
     border-radius: 0;
