@@ -383,19 +383,30 @@
     padding-bottom: 10px;
     font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     position: relative;
+    margin-top: 15px;
 }
 
 .linkinfo .date {
     text-align: center;
-    color: rgba(0,0,0,0.5);
     line-height: 28px;
-    background: #f7f7f7;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
     margin-bottom: 10px;
+    color: rgba(0,0,0,0.5);
 }
 
 .linkinfo .score {
     text-align: center;
     margin-top: 2px;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+
+.linkinfo .score .number {
+    color: #86afae;
+    display: block;
+}
+.linkinfo .score .word {
+    display: none;
 }
 
 .linkinfo .totalvotes {
@@ -408,7 +419,7 @@
 .linkinfo .shortlink {
     font-size: 0;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .linkinfo .shortlink input {
@@ -430,19 +441,8 @@
     pointer-events: none;
     -webkit-transform: rotateZ(25deg) scale(0.7);
     transform: rotateZ(25deg) scale(0.7);
-    top: 28px;
+    top: 32px;
     right: 10px;
-}
-
-.linkinfo .score {
-    color: rgba(0,0,0,0.7);
-}
-.linkinfo .score .number {
-    color: #4db5e0;
-}
-.linkinfo .score .word {
-    color: #4db5e0;
-    margin-right: 5px;
 }
 
 /* recently viewed links

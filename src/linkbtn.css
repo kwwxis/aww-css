@@ -11,11 +11,11 @@
     font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: 11px;
     margin-left: -4px;
-    margin-top: 0;
+    margin-top: 1px;
     position: relative;
 }
 .link .entry .expando-button ~ .buttons {
-    margin-left: 31px;
+    margin-left: 32px;
 }
 
 .link .entry .buttons li {
@@ -25,9 +25,6 @@
 }
 
 .link .entry .buttons li + li {
-    margin-right: 4px;
-}
-.comments-page.moderator .link .entry .buttons li + li {
     margin-right: 2px;
 }
 

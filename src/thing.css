@@ -43,35 +43,32 @@
 
 /* link entry */
 .link .entry {
-    flex-basis: calc(100% - 185px);
-    max-width: calc(100% - 184px);
+    flex-basis: calc(100% - 150px);
+    max-width: calc(100% - 149px);
 }
 
-.res .link .entry {
-    flex-basis: calc(100% - 184px);
-    max-width: calc(100% - 183px);
-}
-
+/* comment link entry */
 .comments-page .link .entry {
-    flex-basis: calc(100% - 138px);
-    max-width: calc(100% - 137px);
+    flex-basis: calc(100% - 133px);
+    max-width: calc(100% - 132px);
 }
 
+/* comment link entry - with queue tools*/
 .comments-page .menuarea.modtools ~ #siteTable .link .entry {
-    flex-basis: calc(100% - 151px);
-    max-width: calc(100% - 150px);
+    flex-basis: calc(100% - 148px);
+    max-width: calc(100% - 147px);
 }
 
 /* comment entry */
 .comment .entry {
-    flex-basis: calc(100% - 40px);
-    max-width: calc(100% - 50px);
+    flex-basis: calc(100% - 26px);
+    max-width: calc(100% - 25px);
 }
 
-/* comment entry with queue tools */
+/* comment entry - with queue tools */
 .comments-page.mod-toolbox .menuarea.modtools ~ .commentarea > .sitetable .thing.comment .entry {
-    flex-basis: calc(100% - 50px);
-    max-width: calc(100% - 50px);
+    flex-basis: calc(100% - 45px);
+    max-width: calc(100% - 44px);
 }
 
 /* child - ensure full width on own row */
