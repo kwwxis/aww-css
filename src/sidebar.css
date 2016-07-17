@@ -201,7 +201,10 @@
     color: white;
 }
 
-.side .md h5 + ul li:nth-of-type(1),
+.side .md h5 + ul li:nth-of-type(1) {
+    flex-basis: 50%;
+    padding-right: 3px;
+}
 .side .md h5 + ul li:nth-of-type(2) {
     flex-basis: 50%;
     padding-left: 3px;

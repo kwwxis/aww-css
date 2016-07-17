@@ -8,6 +8,24 @@
     background: white;
 }
 
+.content .spacer {
+    margin: 0;
+}
+
+/* time filter menuarea (links from: ...)
+--------------------------------------------------------------------------------*/
+.content[role="main"] > .menuarea:not(.modtools) {
+    margin: 10px 0 0 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.16);
+    background: white;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.085);
+    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    overflow: visible;
+}
+
 /* Link
 --------------------------------------------------------------------------------*/
 

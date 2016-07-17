@@ -18,7 +18,7 @@ body {
 }
 
 #siteTable, #siteTable_organic {
-    margin: 10px 0 0 10px;
+    margin: 0 0 0 10px;
 }
 .commentarea,
 .reddit-infobar,
@@ -30,15 +30,28 @@ body {
     margin-right: 323px;
     position: relative;
     z-index: 5; /* position above .side */
+    margin-top: 10px;
+}
+
+/* ad space
+--------------------------------------------------------------------------------*/
+.content > .spacer > #siteTable_organic.organic-listing {
+    background: white;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.16);
+    border: 0;
+    opacity: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.085);
 }
 
 /* if both RES and Mod Toolbox, position main content above .side and #header
-   so that queue tools can be above both */
+   so that queue tools can be above both
+--------------------------------------------------------------------------------*/
 .res.mod-toolbox .content[role=main] {
     z-index: 100;
 }
 
-/* a cool "flair" for myself because I think I'm cool */
+/* a cool "flair" for myself because I think I'm cool
+--------------------------------------------------------------------------------*/
 
 .author[href$="/user/kwwxis"]:after, .author[href$="/user/kwwxis/"]:after {
     content: '';

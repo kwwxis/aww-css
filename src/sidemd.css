@@ -4,9 +4,9 @@
 
 .side .md hr {
     border: 0;
-    height: 1px;
-    background: rgba(0,0,0,0.1);
-    margin: 20px -10px 15px -10px;
+    height: 0;
+    border-top: 2px dashed #e2e2e2;
+    margin: 10px 0 10px 0;
 }
 
 
@@ -18,22 +18,22 @@
     font-weight: normal;
     font-size: 18px;
     text-align: center;
+    color: #BBA0DB;
 }
 
 .side .md h3 + ol {
     list-style-type: none;
     counter-reset: siderules;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     padding-left: 30px;
     padding-right: 10px;
 }
 
 .side .md h3 + ol > li {
     position: relative;
-    font-size: 13px;
-    border: 1px solid #e3e3e3;
+    font-size: 11.5px;
     padding: 10px 10px 10px 30px;
     box-sizing: border-box;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 /* li number */
@@ -85,9 +85,9 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: url(%%overlay-1%%);
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.3;
+    background: repeating-linear-gradient(45deg,#F0DDFF,#F0DDFF 3px,#fff 3px,#fff 6px);
 }
 
 /* li text */
@@ -119,6 +119,7 @@
     font-weight: normal !important;
     font-size: 18px;
     text-align: center;
+    color: #83AD9A;
 }
 
 .side .md table td {
@@ -146,12 +147,12 @@
     content: '';
     display: block;
     position: absolute;
-    background: url(%%overlay-1%%);
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.3;
+    background: repeating-linear-gradient(45deg,#CCF9E7,#CCF9E7 3px,#fff 3px,#fff 6px);
 }
 
 .side .md h4 + table tr:not(:last-of-type) td:after {
@@ -171,6 +172,10 @@
     top: 0;
     bottom: 0;
     background: white;
+}
+
+.side .md h4 + table a {
+    color: #83AD9A;
 }
 
 /* spray and neuter box

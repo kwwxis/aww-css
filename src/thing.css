@@ -16,6 +16,15 @@
     justify-content: flex-start;
 }
 
+.thing > * {
+    order: 1;
+}
+
+/* make sure parent is always first so it doesn't mess up the queue tool checkboxes */
+.parent {
+    order: 0;
+}
+
 /* Thing title color
 --------------------------------------------------------------------------------*/
 .thing .title:visited, .thing.visited .title {
@@ -56,11 +65,13 @@
 /* comment entry */
 .comment .entry {
     flex-basis: calc(100% - 40px);
+    max-width: calc(100% - 50px);
 }
 
 /* comment entry with queue tools */
 .comments-page.mod-toolbox .menuarea.modtools ~ .commentarea > .sitetable .thing.comment .entry {
     flex-basis: calc(100% - 50px);
+    max-width: calc(100% - 50px);
 }
 
 /* child - ensure full width on own row */

@@ -97,6 +97,7 @@ body #header:after {
 .res #RESShortcutsTrash,
 #sr-more-link {
     background-color: transparent;
+    color: rgba(0,0,0,0.35);
 }
 
 #sr-header-area * {
@@ -113,6 +114,10 @@ body #header:after {
 
 .res #RESShortcutsViewport {
     margin-right: 70px;
+}
+
+.res #RESShortcutsSort {
+    margin-right: 10px;
 }
 
 /* Pagename

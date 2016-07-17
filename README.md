@@ -10,13 +10,10 @@ Images in use
   - assets/spritesheet.png
   - assets/commentrules.png
   - assets/nothing-here.png
-  - assets/bg/overlay-1.png
   - assets/inherit/kitteh.png
   
-Usage
------
-
-(if the subreddit is compromised, follow these instructions to restore the theme)
+Theme installation instructions
+-------------------------------
 
   1. See the "Images in use" section above, upload all these images to the stylesheet page
   
@@ -25,7 +22,7 @@ Usage
       "upload header image" section under "look and feel" in the subreddit settings
       
   2. See the "sub/" folder, upload the contents of "sidebar_text.txt", "submission_text.txt", "wiki_index.txt"
-     to where the names of the files specify
+     to their respective locations
       
   3. **dist/dist.css** - upload to the stylesheet page
   

@@ -38,36 +38,12 @@
 
 /* sr header area text color
 --------------------------------------------------------------------------------*/
-.res.res-nightmode .sr-bar a,
-.res.res-nightmode .sr-bar .separator,
-.res.res-nightmode .sr-list .separator,
-.res.res-nightmode .srSep,
-.res.res-nightmode .dropdown.srdrop .selected,
-.res.res-nightmode #sr-more-link,
-.res.res-nightmode #RESShortcutsEditContainer,
-.res.res-nightmode #RESShortcutsSort,
-.res.res-nightmode #RESShortcutsRight,
-.res.res-nightmode #RESShortcutsLeft,
-.res.res-nightmode #RESShortcutsAdd,
-.res.res-nightmode #RESShortcutsTrash,
-.res.res-nightmode #RESShortcuts {
+.res.res-nightmode #sr-header-area * {
     color: rgba(255,255,255,0.15);
     transition: color 200ms;
 }
 
-.res.res-nightmode #sr-header-area:hover .sr-bar a,
-.res.res-nightmode #sr-header-area:hover .sr-bar .separator,
-.res.res-nightmode #sr-header-area:hover .sr-list .separator,
-.res.res-nightmode #sr-header-area:hover .srSep,
-.res.res-nightmode #sr-header-area:hover .dropdown.srdrop .selected,
-.res.res-nightmode #sr-header-area:hover #sr-more-link,
-.res.res-nightmode #sr-header-area:hover #RESShortcutsEditContainer,
-.res.res-nightmode #sr-header-area:hover #RESShortcutsSort,
-.res.res-nightmode #sr-header-area:hover #RESShortcutsRight,
-.res.res-nightmode #sr-header-area:hover #RESShortcutsLeft,
-.res.res-nightmode #sr-header-area:hover #RESShortcutsAdd,
-.res.res-nightmode #sr-header-area:hover #RESShortcutsTrash,
-.res.res-nightmode #sr-header-area:hover #RESShortcuts {
+.res.res-nightmode #sr-header-area:hover * {
     color: #a7dbd8;
 }
 
@@ -104,7 +80,9 @@ body.res.res-nightmode,
 .res.res-nightmode .commentarea > .menuarea,
 .res.res-nightmode .commentarea > .usertext,
 .res.res-nightmode .gold-accent.comment-visits-box,
-.res.res-nightmode.submit-page .roundfield {
+.res.res-nightmode.submit-page .roundfield,
+.res.res-nightmode .content[role="main"] > .menuarea:not(.modtools),
+.res.res-nightmode .content>.spacer>#siteTable_organic.organic-listing {
     background: #303842 !important;
 }
 

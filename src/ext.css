@@ -26,16 +26,19 @@
 
 /* queue tools - checkbox margin
 --------------------------------------------------------------------------------*/
+/* link checkbox */
 .thing > input[type=checkbox][tabindex] {
     margin: 5px 0 0 2px !important;
 }
 
+/* comment checkbox */
 .thing.comment > input[type=checkbox][tabindex] {
-    margin: 5px 10px 0 -2px !important;
+    margin: 5px 10px 0 -4px !important;
 }
 
+/* top level comment checkbox */
 .commentarea > .sitetable > .thing.comment > input[type=checkbox][tabindex] {
-    margin: 5px 10px 0 -7px !important;
+    margin: 5px 10px 0 -9px !important;
 }
 
 /* easy check area (Chrome only)

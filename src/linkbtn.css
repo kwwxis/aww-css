@@ -260,6 +260,11 @@ body.moderator .link .entry .buttons li > a[action="show"][title*="Show"]:before
     content: 'show childs';
 }
 
+/* no icon if not moderator */
+body:not(.moderator) .link .entry .buttons li > a[title*="Show"]:before {
+    display: none;
+}
+
 /* link mod actions
 --------------------------------------------------------------------------------*/
 
@@ -288,17 +293,9 @@ body.moderator .link .entry .buttons li > a[action="show"][title*="Show"]:before
 .link.reported .entry .buttons ul.report-reasons {
     border-radius: 0;
     border: 0;
-    border-top: 1px solid #e1b000;
-    border-left: 1px solid #e1b000;
-    width: 100%;
-    margin-left: -11px;
-    padding-right: 20px;
+    border: 1px solid #e1b000;
+    padding: 0 5px;
     box-sizing: content-box;
-}
-
-/* report reasons - add bottom border to report reasons when expando is open */
-.link.reported .entry .expando-button.expanded ~ .buttons ul.report-reasons {
-    border-bottom: 1px solid #e1b000;
 }
 
 /* hide icons except comments if post is reported */
@@ -321,10 +318,6 @@ body.moderator .link .entry .buttons li > a[action="show"][title*="Show"]:before
 }
 .listing-page .link .entry .buttons li.first:after {
     display: none;
-}
-
-.listing-page .link.reported .entry .buttons {
-    width: calc(100% - 10px);
 }
 
 /* report button thank you

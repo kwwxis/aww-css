@@ -53,7 +53,7 @@ form.toggle.flairtoggle {
 .titlebox .leavemoderator {
     margin-left: 20px;
     margin-right: 20px;
-    background: repeating-linear-gradient(45deg,#DFF4FE,#DFF4FE 3px,#fff 3px,#fff 6px);
+    background: repeating-linear-gradient(45deg,#E9F7FE,#E9F7FE 3px,#fff 3px,#fff 6px);
     padding: 10px;
     margin-top: 10px;
     color: rgba(0,0,0,0.9);
@@ -250,19 +250,12 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     min-height: 30px;
     margin: 0;
     position: relative;
-    background: repeating-linear-gradient(45deg,#DFF4FE,#DFF4FE 3px,#fff 3px,#fff 6px);
+    background: repeating-linear-gradient(45deg,#E9F7FE,#E9F7FE 3px,#fff 3px,#fff 6px);
     margin: 10px  20px 20px 20px;
 }
 
-/* margin and bottom "border" before md
+/* margin before md
 --------------------------------------------------------------------------------*/
-
-.side .md hr:first-of-type {
-    margin-top: 0;
-    border-style: dashed;
-    border-width: 2px;
-    border-bottom: 0;
-}
 
 .titlebox > .usertext {
     margin-top: 20px;
