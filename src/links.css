@@ -31,7 +31,7 @@
 
 .link {
     align-items: stretch;
-    padding: 0 0 10px 4px;
+    padding: 0 0 5px 4px;
     border: 0;
     border-top: 1px solid transparent;
     background: white;
@@ -46,7 +46,7 @@
 .link .entry, .link .midcol, .link .rank {
     padding: 0;
     margin: 0;
-    padding-top: 14px;
+    padding-top: 10px;
 }
 
 .listing-page .link .entry {
@@ -89,16 +89,17 @@
     content: '';
     display: block;
     position: absolute;
-    width: 82px;
-    height: 83px;
-    background: repeating-linear-gradient(-45deg,#dff4fe,#dff4fe 3px,#fff 3px,#fff 6px);
+    width: 76px;
+    height: 76px;
+    background: #958a86;
     top: 0;
-    margin-left: 43px;
+    margin-left: 46px;
     margin-top: 7px;
+    opacity: 0.85;
 }
 
 .link .thumbnail {
-    margin: 14px 8px 5px 8px;
+    margin: 10px 8px 5px 8px;
 }
 
 /* Link tagline and title
@@ -290,4 +291,12 @@
 
 .listing-page .link.promotedlink .midcol {
     background: rgba(255,255,255,0.5);
+}
+
+/* flair
+--------------------------------------------------------------------------------*/
+
+/* Flair used by AutoModerator */
+.flair-a, .flair-f, .flair-x {
+    display: none;
 }

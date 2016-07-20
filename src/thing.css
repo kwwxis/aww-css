@@ -43,32 +43,32 @@
 
 /* link entry */
 .link .entry {
-    flex-basis: calc(100% - 150px);
-    max-width: calc(100% - 149px);
+    flex-basis: calc(100% - 162px);
+    max-width: calc(100% - 161px);
 }
 
 /* comment link entry */
 .comments-page .link .entry {
-    flex-basis: calc(100% - 133px);
-    max-width: calc(100% - 132px);
+    flex-basis: calc(100% - 143px);
+    max-width: calc(100% - 142px);
 }
 
 /* comment link entry - with queue tools*/
 .comments-page .menuarea.modtools ~ #siteTable .link .entry {
-    flex-basis: calc(100% - 148px);
-    max-width: calc(100% - 147px);
+    flex-basis: calc(100% - 158px);
+    max-width: calc(100% - 157px);
 }
 
 /* comment entry */
 .comment .entry {
-    flex-basis: calc(100% - 26px);
-    max-width: calc(100% - 25px);
+    flex-basis: calc(100% - 36px);
+    max-width: calc(100% - 35px);
 }
 
 /* comment entry - with queue tools */
 .comments-page.mod-toolbox .menuarea.modtools ~ .commentarea > .sitetable .thing.comment .entry {
-    flex-basis: calc(100% - 45px);
-    max-width: calc(100% - 44px);
+    flex-basis: calc(100% - 55px);
+    max-width: calc(100% - 54px);
 }
 
 /* child - ensure full width on own row */
@@ -93,6 +93,7 @@
     width: auto;
     position: absolute;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
@@ -167,10 +168,12 @@
     background-position: -178px -298px !important;
 }
 .arrow.downmod {
-    background-position: -211px -298px !important;
+    /* background-position: -211px -298px !important; */
+    background-position: -210px -272px !important;
 }
 .arrow.upmod {
-    background-position: -244px -298px !important;
+    /* background-position: -244px -298px !important; */
+    background-position: -243px -272px !important;
 }
 
 /* Upvote animation

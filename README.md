@@ -1,7 +1,7 @@
 CSS theme for /r/aww
 ====================
 
-Images in use
+Images in Use
 -------------
 
   - assets/inherit/snoo.png (upload to both stylesheet and sub settings)
@@ -12,7 +12,7 @@ Images in use
   - assets/nothing-here.png
   - assets/inherit/kitteh.png
   
-Theme installation instructions
+Installation instructions
 -------------------------------
 
   1. See the "Images in use" section above, upload all these images to the stylesheet page
@@ -26,7 +26,7 @@ Theme installation instructions
       
   3. **dist/dist.css** - upload to the stylesheet page
   
-Order of concatenation
+Order of Concatenation
 ----------------------
              
 | File name     | Purpose                                                                                               |

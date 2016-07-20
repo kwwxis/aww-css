@@ -251,7 +251,7 @@ body #header:after {
 }
 
 #sr-header-area .drop-choices.srdrop {
-    display: block;
+    display: none;
     position: absolute;
     background-color: #fff;
     z-index: 500;
@@ -267,6 +267,10 @@ body #header:after {
     -webkit-transform: translateX(-320px);
     transition: .2s -webkit-transform ease-in-out;
     -webkit-transition: .2s -webkit-transform ease-in-out;
+}
+
+#sr-header-area .drop-choices.srdrop.inuse {
+    display: block;
 }
 
 #sr-header-area .drop-choices.srdrop.inuse {
