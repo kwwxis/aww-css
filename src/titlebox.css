@@ -169,35 +169,37 @@ body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
     outline: 0;
 }
 
-/* colors */
+/* subscribe button color */
 .titlebox .fancy-toggle-button.subscribe-button .option.active {
-    color: #F28AA8;
-    border: 3px solid #F28AA8;
+    color: #b2d8d7;
+    border: 3px solid #b2d8d7;
 }
 .titlebox .fancy-toggle-button.subscribe-button .option.active:focus,
 .titlebox .fancy-toggle-button.subscribe-button .option.active:hover {
     color: white;
-    background: #F28AA8;
+    background: #b2d8d7;
 }
 
+/* res shortcut button color */
 .res .titlebox .res-fancy-toggle-button.RESshortcut {
-    color: #9DD320;
-    border: 3px solid #9DD320;
+    color: #ddddce;
+    border: 3px solid #ddddce;
 }
 .res .titlebox .res-fancy-toggle-button.RESshortcut:focus,
 .res .titlebox .res-fancy-toggle-button.RESshortcut:hover {
     color: white;
-    background: #9DD320;
+    background: #ddddce;
 }
 
+/* res dashboard toggle button color */
 .res .titlebox .res-fancy-toggle-button.RESDashboardToggle {
-    color: #4DB5E0;
-    border: 3px solid #4DB5E0;
+    color: #f3bd92;
+    border: 3px solid #f3bd92;
 }
 .res .titlebox .res-fancy-toggle-button.RESDashboardToggle:focus,
 .res .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover {
     color: white;
-    background: #4DB5E0;
+    background: #f3bd92;
 }
 
 /* subscribe buttons box

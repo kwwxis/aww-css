@@ -51,12 +51,14 @@
     content: '';
     display: inline-block;
     background-image: url(%%spritesheet%%);
-    /* background-position: -155px -118px; --- black */
-    background-position: -155px -3px; /* colored */
+    /* background-position: -155px -3px; --- colored */
+    background-position: -155px -118px; /* --- black */
     height: 51px;
     width: 189px;
     -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
     transform: scale(0.5);
+    opacity: 0.7;
 }
 
 /* sub description
@@ -93,6 +95,7 @@
     top: -25px;
     left: 0;
     -webkit-transform: scale(0.5) rotateZ(-35deg);
+    -moz-transform: scale(0.5) rotateZ(-35deg);
     transform: scale(0.5) rotateZ(-35deg);
 }
 
@@ -100,6 +103,7 @@
     bottom: 0px;
     right: 0;
     -webkit-transform: scale(0.5) rotateZ(35deg);
+    -moz-transform: scale(0.5) rotateZ(35deg);
     transform: scale(0.5) rotateZ(35deg);
 }
 
@@ -237,6 +241,7 @@
     text-shadow: 0 1px 4px rgba(0,0,0,0.4);
     border-bottom: 2px solid #f1646c;
     -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
     transform: translateY(0%);
     transition: transform 200ms, visibility 200ms;
     visibility: hidden; /* have it hidden in it's default state because having it be `bottom: 100%` is
@@ -254,25 +259,30 @@
     page load which we don' want */
     visibility: visible;
     -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
     transform: translateY(100%);
 }
 
 @keyframes readrules-in {
     0% {
         -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
         transform: translateY(0%);
         visibility: visible;
     }
     40% {
         -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
         transform: translateY(100%);
     }
     60% {
         -webkit-transform: translateY(85%);
+        -moz-transform: translateY(85%);
         transform: translateY(85%);
     }
     100% {
         -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
         transform: translateY(100%);
         visibility: visible;
     }
@@ -440,6 +450,7 @@
     height: 56px;
     pointer-events: none;
     -webkit-transform: rotateZ(25deg) scale(0.7);
+    -moz-transform: rotateZ(25deg) scale(0.7);
     transform: rotateZ(25deg) scale(0.7);
     top: 32px;
     right: 10px;

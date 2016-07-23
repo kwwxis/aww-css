@@ -75,7 +75,7 @@ body #header:after {
     bottom: 24px;
     right: 0;
     z-index: 20;
-    background: #fcfcfc url(%%awwbanner%%) no-repeat center center / auto 100%;
+    background: #fefefe  url(%%awwbanner%%) no-repeat center center / auto 100%;
 }
 
 /* SR header area
@@ -263,8 +263,9 @@ body #header:after {
     left: 0 !important;
     overflow-y: auto;
     box-sizing: border-box;
-    transform: translateX(-320px);
     -webkit-transform: translateX(-320px);
+    -moz-transform: translateX(-320px);
+    transform: translateX(-320px);
     transition: .2s -webkit-transform ease-in-out;
     -webkit-transition: .2s -webkit-transform ease-in-out;
 }
@@ -274,8 +275,9 @@ body #header:after {
 }
 
 #sr-header-area .drop-choices.srdrop.inuse {
-    transform: translateX(0px);
     -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
 }
 
 #sr-header-area .drop-choices.srdrop:before {

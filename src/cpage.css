@@ -33,7 +33,7 @@
 }
 
 .res #REScommentSubToggle.RESSubscriptionButton {
-    color: #9dd320;
+    color: #4db5e0;
     border: 0;
     font-size: 14px;
     display: flex;
@@ -147,28 +147,28 @@
 }
 
 /* 24px is the height of the div, if you change the height make sure to change this too */
-#REScommentNavToggle div[index="1"]  { margin-top: calc(24px * 0); }
-#REScommentNavToggle div[index="2"]  { margin-top: calc(24px * 1); }
-#REScommentNavToggle div[index="3"]  { margin-top: calc(24px * 2); }
-#REScommentNavToggle div[index="4"]  { margin-top: calc(24px * 3); }
-#REScommentNavToggle div[index="5"]  { margin-top: calc(24px * 4); }
-#REScommentNavToggle div[index="6"]  { margin-top: calc(24px * 5); }
-#REScommentNavToggle div[index="7"]  { margin-top: calc(24px * 6); }
-#REScommentNavToggle div[index="8"]  { margin-top: calc(24px * 7); }
-#REScommentNavToggle div[index="9"]  { margin-top: calc(24px * 8); }
-#REScommentNavToggle div[index="10"] { margin-top: calc(24px * 9); }
-#REScommentNavToggle div[index="11"] { margin-top: calc(24px * 10); }
-#REScommentNavToggle div[index="12"] { margin-top: calc(24px * 11); }
+#REScommentNavToggle div[index="1"]  { margin-top: 0px; /*calc(24px * 0);*/ }
+#REScommentNavToggle div[index="2"]  { margin-top: 24px; /*calc(24px * 1);*/ }
+#REScommentNavToggle div[index="3"]  { margin-top: 48px; /*calc(24px * 2);*/ }
+#REScommentNavToggle div[index="4"]  { margin-top: 72px; /*calc(24px * 3);*/ }
+#REScommentNavToggle div[index="5"]  { margin-top: 96px; /*calc(24px * 4);*/ }
+#REScommentNavToggle div[index="6"]  { margin-top: 120px; /*calc(24px * 5);*/ }
+#REScommentNavToggle div[index="7"]  { margin-top: 144px; /*calc(24px * 6);*/ }
+#REScommentNavToggle div[index="8"]  { margin-top: 168px; /*calc(24px * 7);*/ }
+#REScommentNavToggle div[index="9"]  { margin-top: 192px; /*calc(24px * 8);*/ }
+#REScommentNavToggle div[index="10"] { margin-top: 216px; /*calc(24px * 9);*/ }
+#REScommentNavToggle div[index="11"] { margin-top: 240px; /*calc(24px * 10);*/ }
+#REScommentNavToggle div[index="12"] { margin-top: 264px; /*calc(24px * 11);*/ }
 /* after 12 don't exist yet, but this should cover my ass for a bit in case
    they decided to exist in the near future */
-#REScommentNavToggle div[index="13"] { margin-top: calc(24px * 12); }
-#REScommentNavToggle div[index="14"] { margin-top: calc(24px * 13); }
-#REScommentNavToggle div[index="15"] { margin-top: calc(24px * 14); }
-#REScommentNavToggle div[index="16"] { margin-top: calc(24px * 15); }
-#REScommentNavToggle div[index="17"] { margin-top: calc(24px * 16); }
-#REScommentNavToggle div[index="18"] { margin-top: calc(24px * 17); }
-#REScommentNavToggle div[index="19"] { margin-top: calc(24px * 18); }
-#REScommentNavToggle div[index="20"] { margin-top: calc(24px * 19); }
+#REScommentNavToggle div[index="13"] { margin-top: 288px; /*calc(24px * 12);*/ }
+#REScommentNavToggle div[index="14"] { margin-top: 312px; /*calc(24px * 13);*/ }
+#REScommentNavToggle div[index="15"] { margin-top: 336px; /*calc(24px * 14);*/ }
+#REScommentNavToggle div[index="16"] { margin-top: 360px; /*calc(24px * 15);*/ }
+#REScommentNavToggle div[index="17"] { margin-top: 384px; /*calc(24px * 16);*/ }
+#REScommentNavToggle div[index="18"] { margin-top: 408px; /*calc(24px * 17);*/ }
+#REScommentNavToggle div[index="19"] { margin-top: 432px; /*calc(24px * 18);*/ }
+#REScommentNavToggle div[index="20"] { margin-top: 456px; /*calc(24px * 19);*/ }
 
 /* comment visits box
 --------------------------------------------------------------------------------*/

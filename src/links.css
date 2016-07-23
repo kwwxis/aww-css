@@ -85,19 +85,6 @@
     margin-left: 4px;
 }
 
-.link:not(.self) .midcol:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 76px;
-    height: 76px;
-    background: #958a86;
-    top: 0;
-    margin-left: 46px;
-    margin-top: 7px;
-    opacity: 0.85;
-}
-
 .link .thumbnail {
     margin: 10px 8px 5px 8px;
 }
@@ -106,19 +93,18 @@
 --------------------------------------------------------------------------------*/
 
 .link .tagline, .link .title {
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    /* font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
     margin-left: 0;
 }
 
 .link .title {
-    font-size: large;
     margin-bottom: 5px;
     overflow-wrap: break-word;
     word-break: break-word;
 }
 
 .link .tagline {
-    font-size: small;
+    /* font-size: small; */
 }
 
 /* clear tagline */
@@ -152,7 +138,9 @@
 --------------------------------------------------------------------------------*/
 
 .link .expando-button {
-    margin: 5px 9px -12px 3px !important;
+    margin: 2px 9px -14px 1px !important;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
     transform: scale(0.9);
 }
 

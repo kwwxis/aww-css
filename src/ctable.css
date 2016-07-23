@@ -18,7 +18,7 @@
     left: 0;
     bottom: 0;
     width: 2px;
-    background: #9edcf7;
+    background: #c7e2e0;
     opacity: 0.8;
 }
 
@@ -50,6 +50,12 @@
     border: 0;
 }
 
+.comment .child, .comment .showreplies {
+    margin-left: 0;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
 .comment + .clearleft + .comment {
     margin-top: 5px;
 }
@@ -68,6 +74,8 @@
 /* comment expando button
 --------------------------------------------------------------------------------*/
 .comment .expando-button {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
     transform: scale(0.9);
     margin: -3px 5px -1px 0 !important;
 }
@@ -101,11 +109,14 @@
 .comment .entry .buttons li a[onclick*="return reply"]:before {
     content: 'reply';
     position: absolute;
-    left: 0;
+    left: 35px;
     color: #4db5e0;
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 0.25px
+}
+.commentarea > .sitetable > .comment > .entry .buttons li a[onclick*="return reply"]:before {
+    left: 40px;
 }
 .comment .entry .buttons li.reply-button a:hover:before,
 .comment .entry .buttons li a[onclick*="return reply"]:hover:before {
@@ -143,7 +154,7 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-but
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
-    background: #F4F8FF;
+    background: #f9f9f7;
 }
 
 .commentarea .comment,

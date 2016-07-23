@@ -63,10 +63,12 @@ body {
     margin-bottom: -4px;
     margin-left: 1px;
     -webkit-transform: scale(0.7) rotateZ(0deg);
+    -moz-transform: scale(0.7) rotateZ(0deg);
     transform: scale(0.7) rotateZ(0deg);
     transition: transform 400ms ease;
 }
 .author[href$="/user/kwwxis"]:hover:after, .author[href$="/user/kwwxis/"]:hover:after {
     -webkit-transform: scale(0.7) rotateZ(360deg);
+    -moz-transform: scale(0.7) rotateZ(360deg);
     transform: scale(0.7) rotateZ(360deg);
 }
