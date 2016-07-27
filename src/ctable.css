@@ -70,6 +70,12 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
+.res.res-commentBoxes .commentarea > .sitetable > .comment {
+    padding: 10px 0 0 15px !important;
+}
+.res.res-commentBoxes .commentarea > .sitetable > .comment .comment {
+    padding: 10px 0 0 10px !important;
+}
 
 /* comment expando button
 --------------------------------------------------------------------------------*/
@@ -154,7 +160,7 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-but
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
-    background: #f9f9f7;
+    background-color: #f9f9f7 !important;
 }
 
 .commentarea .comment,
@@ -164,5 +170,5 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-but
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
-    background-color: #fff;
+    background-color: #fff !important;
 }

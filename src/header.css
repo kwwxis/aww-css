@@ -39,6 +39,8 @@
     left: -2px;
     bottom: 0px;
     border-radius: 50%;
+    
+    display: none;
 }
 
 #header-img-a:after {
@@ -55,6 +57,7 @@
     background: #a7dbd8 url(%%snoo%%) no-repeat center center / 90%;
     transition: background-color 100ms;
     z-index: 25;
+    border: 1px solid #fff;
 }
 
 #header-img-a:hover:after {
@@ -75,7 +78,7 @@ body #header:after {
     bottom: 24px;
     right: 0;
     z-index: 20;
-    background: #fefefe  url(%%awwbanner%%) no-repeat center center / auto 100%;
+    background: #fefefe url(%%awwbanner%%) repeat center left / auto 100%;
 }
 
 /* SR header area
@@ -84,7 +87,7 @@ body #header:after {
     background-color: white;
     border: 0;
     border-top: 1px solid #a7dbd8;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid #fff;
     font-size: 10.5px;
     font-family: Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
 }
@@ -342,6 +345,14 @@ body #header:after {
 #header-bottom-right .flat-list, #header-bottom-right .flat-list li {
     display: inline-block;
     height: 24px;
+}
+
+/* beta vial */
+.beta-hint a {
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /* userbar toggle */
