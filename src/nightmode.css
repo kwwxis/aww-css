@@ -18,7 +18,7 @@ body.res.res-nightmode,
 .res.res-nightmode .linkinfo .date,
 .res.res-nightmode .linkinfo,
 .res.res-nightmode #header-img-a:before {
-    background: #2A313B;
+    background: #21262D;
 }
 
 .res.res-nightmode.listing-page #siteTable,
@@ -38,7 +38,8 @@ body.res.res-nightmode,
 .res.res-nightmode.combined-search-page .search-result-group,
 .res.res-nightmode ul.res-search-tabs,
 .res.res-nightmode.combined-search-page #search {
-    background: #303842 !important;
+    /* background: #303842 !important; */
+    background: #272E35 !important;
 }
 
 .res.res-nightmode .submit-link .morelink a:before {
@@ -262,7 +263,7 @@ body.res.res-nightmode,
 .res-nightmode:not(.res-nightMode-coloredLinks).combined-search-page .search-result a:visited,
 .res-nightmode:not(.res-nightMode-coloredLinks).combined-search-page .search-result a:visited > mark,
 .res-nightmode:not(.res-nightMode-coloredLinks) .thing .title {
-    color: #92b9e0 !important;
+    color: #ABBDCE !important;
 }
 
 /* top comment left border */
@@ -281,7 +282,7 @@ body.res.res-nightmode,
 .res.res-nightmode .comment .entry .buttons li a[onclick*="return reply"]:before,
 .res.res-nightmode .content .sitetable .thing .md,
 .res.res-nightmode .midcol .score.unvoted {
-    color: #BDBEBF;
+    color: #B5B6B7;
     font-weight: normal;
 }
 
@@ -327,7 +328,8 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 .res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
 .res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
-    background-color: #2D353F !important;
+    background-color: #2B323A !important;
+    border: 0 !important;
 }
 
 .res.res-nightmode .commentarea .comment,
@@ -337,7 +339,8 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 .res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
 .res.res-nightmode .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
-    background-color: #303842 !important;
+    background-color: #272e35 !important;
+    border: 0 !important;
 }
 
 .res.mod-toolbox.res-nightmode .comment.spam > .child {
@@ -385,6 +388,16 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     background: transparent;
     color: #fbefb9;
     font-weight: normal;
+}
+
+.res.res-nightmode.listing-page .link .entry>.madeVisible,
+.res.res-nightmode.listing-page .link .entry>.usertext,
+.res.res-nightmode.listing-page .link .entry>.expando {
+    background: rgba(255,255,255,0.02);
+}
+
+.res.res-nightmode.listing-page .link .entry .expando-button.expanded ~ .buttons:after {
+    background: rgba(234, 238, 245, 0.05);
 }
 
 /* usertext
