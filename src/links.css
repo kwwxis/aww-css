@@ -275,10 +275,7 @@
 
 .link.promotedlink {
     padding: 0;
-}
-
-.listing-page .link.promotedlink .midcol {
-    background: rgba(255,255,255,0.5);
+    border-top: 0;
 }
 
 /* flair

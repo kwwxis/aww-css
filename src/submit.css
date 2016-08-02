@@ -152,10 +152,7 @@
     color: rgba(0,0,0,0.4);
 }
 
-/* the "or" before the button */
 .submit-page #new-link-image-input > div {
-    float: left;
-    margin-right: 10px;
     color: rgba(0,0,0,0.65);
 }
 
