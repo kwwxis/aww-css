@@ -89,7 +89,7 @@ body #header:after {
     border-top: 1px solid #a7dbd8;
     border-bottom: 1px solid #fff;
     font-size: 10.5px;
-    font-family: Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    font-family: Calibri,Segoe,"Segoe UI",Verdana,Arial,sans-serif;
 }
 
 .res #RESShortcutsEditContainer,
@@ -196,7 +196,7 @@ body #header:after {
     line-height: 23px;
     padding: 0 8px;
     box-sizing: border-box;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-weight: normal;
     font-size: 17px;
     color: white;
@@ -236,7 +236,7 @@ body #header:after {
     left: 0;
     right: 0;
     height: 24px;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 17px;
     color: white;
     line-height: 24px;
@@ -310,7 +310,9 @@ body #header:after {
 --------------------------------------------------------------------------------*/
 
 #header-bottom-right {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
     padding: 0 4px 0 0;
     height: 24px;
@@ -330,7 +332,7 @@ body #header:after {
 }
 
 #header-bottom-right a, .user {
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 12px;
     /* text-shadow: 0 0 2px rgba(0,0,0,0.2); */
     /* color: rgba(28,17,13,0.8); */
@@ -528,7 +530,9 @@ body #header:after {
 .res #RESSettingsButton, .res #openRESPrefs {
     height: 24px;
     line-height: 24px;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
     padding: 0 2px;
 }

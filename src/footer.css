@@ -1,7 +1,7 @@
 
 /* font */
 .footer, .footer .flat-vert.title, .bottommenu {
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
 }
 
 /* borders */
@@ -30,8 +30,9 @@
 
 .footer {
     max-width: none;
-    display: flex;
     display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
 }
 

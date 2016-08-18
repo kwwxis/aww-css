@@ -4,11 +4,15 @@
 --------------------------------------------------------------------------------*/
 
 .link .entry .buttons {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: flex-start;
     justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-align-items: center;
     align-items: center;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 11px;
     margin-left: -4px;
     margin-top: 1px;
@@ -30,7 +34,9 @@
 .link .entry .buttons li > form,
 .link .entry .buttons li > form > *:not(.error) a {
     min-height: 18px;
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
 }
 

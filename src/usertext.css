@@ -48,15 +48,19 @@
 /* Bottom area (where the submit buttons and help buttons area)
 --------------------------------------------------------------------------------*/
 .usertext .bottom-area {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-flex-direction: row-reverse;
     flex-direction: row-reverse;
 }
 
 .usertext .bottom-area .error, .usertext .bottom-area .status {
     font-size: 13px;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
 }
 
 /* usertext help buttons (content policy, formatting help, big editor)
@@ -94,7 +98,9 @@
 
 /* submit button container */
 .usertext .usertext-buttons {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
     height: 100%;
     flex-grow: 1;
@@ -111,7 +117,7 @@
     margin: 0;
     outline: 0;
     margin-right: 5px;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 15px;
     margin-bottom: 1px;
 }
@@ -175,7 +181,7 @@
     font-size: 12px;
     padding-left: 5px;
     margin-bottom: 9px;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
 }
 
 /* macro thing */
@@ -184,7 +190,7 @@
     bottom: 100%;
     right: 0;
     margin: 0 0 10px 0 !important;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
 }
 
 .res .RESMacroDropdownTitle {
