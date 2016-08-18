@@ -89,7 +89,7 @@
 /* comments - tagline
 --------------------------------------------------------------------------------*/
 .comment .tagline {
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 13px;
     letter-spacing: 0.2px;
 }
@@ -97,7 +97,7 @@
 /* comments - flat list buttons
 --------------------------------------------------------------------------------*/
 .comment .buttons {
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 11px;
     padding-left: 30px; /* padding for extra reply "button" */
 }
@@ -145,7 +145,7 @@ body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-but
     border: 0;
     padding: 10px;
     padding-left: 20px;
-    font-family: Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    font-family: Calibri,Segoe,"Segoe UI",Verdana,Arial,sans-serif;
     font-size: 14px;
     position: relative;
     background: #ffc;

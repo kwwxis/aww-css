@@ -20,7 +20,7 @@
     background: white;
     position: relative;
     border-bottom: 1px solid rgba(0,0,0,0.085);
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 15px;
     letter-spacing: 0.1px;
     overflow: visible;
@@ -61,7 +61,7 @@
 
 .link .rank {
     text-align: center;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 16px;
     min-width: 18.25px;
     color: rgba(0,0,0,0.18);
@@ -71,7 +71,7 @@
 /* link score
 --------------------------------------------------------------------------------*/
 .link .score {
-    font-family: Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+    font-family: Calibri,Segoe,"Segoe UI",Verdana,Arial,sans-serif;
     font-size: 15px;
     letter-spacing: 0.3px;
 }
@@ -93,7 +93,7 @@
 --------------------------------------------------------------------------------*/
 
 .link .tagline, .link .title {
-    /* font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
+    /* font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif; */
     margin-left: 0;
 }
 
@@ -192,11 +192,15 @@
 }
 
 .nav-buttons {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
 }
 
 .nav-buttons:before {

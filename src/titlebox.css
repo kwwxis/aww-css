@@ -1,22 +1,50 @@
 
-/* titlebox top border
+/* titlebox
 --------------------------------------------------------------------------------*/
 
 .sponsorshipbox {
     margin-bottom: 15px;
 }
 
+/* top border */
+.titlebox:before {
+    content: '';
+    display: block;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    margin: 0 20px 20px 20px;
+}
+
+/* titlebox */
 .titlebox {
-    border-top: 2px dashed #e2e2e2;
     padding-top: 10px;
     margin-top: 20px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* order */
+.titlebox > * {
+    order: 5;
+}
+.titlebox > h1 {
+    order: 0;
+}
+.titlebox > .subscribers, .titlebox > .users-online {
+    order: 1;
+}
+.titlebox > .subButtons, .titlebox > .subscribe-button {
+    order: 2;
+}
+.titlebox > .leavemoderator, .titlebox > .leavecontributor-button {
+    order: 6;
 }
 
 /* submit text button - moderators
 --------------------------------------------------------------------------------*/
-
-.submit-text {
-}
 
 .submit-text .morelink {
     font-size: 15px;
@@ -26,44 +54,13 @@
     color: inherit;
 }
 
-/* titlebox toggles
---------------------------------------------------------------------------------*/
-
-.titlebox form.toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form.toggle.flairtoggle {
-    display: none;
-}
-
-.titlebox > .tagline {
-    text-align: center;
-}
-
-/* remove icons */
-.titlebox form.leavecontributor-button:before,
-.titlebox .leavemoderator:before, .moderator.toggle .main:before {
-    display: none;
-}
-
-.titlebox form.toggle:not(.res-sr-style-toggle),
-.titlebox .leavemoderator {
-    margin-left: 20px;
-    margin-right: 20px;
-    background: repeating-linear-gradient(45deg,#E9F7FE,#E9F7FE 3px,#fff 3px,#fff 6px);
-    padding: 10px;
-    margin-top: 10px;
-    color: rgba(0,0,0,0.9);
-    font-size: 13px;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-}
-
 /* subreddit style toggle
 --------------------------------------------------------------------------------*/
 
+.res .titlebox form.toggle, .leavemoderator.res-sr-style-toggle {
+    text-align: center;
+    display: block;
+}
 .res .res-sr-style-toggle label {
     color: rgba(0,0,0,0.35);
 }
@@ -85,180 +82,181 @@ form.toggle.flairtoggle {
     margin-right: 5px;
 }
 
-/* subscribers & users online
+/* subscribers & users online & subscribe buttons
 --------------------------------------------------------------------------------*/
 
-.subscribers, .users-online {
+/* subscribe stuff */
+.titlebox > .subscribers, .titlebox > .users-online {
+    display: block;
+    width: 100%;
+    padding: 0;
+    color: #333;
+    box-sizing: border-box;
+    font-family: "Segoe UI Light","Segoe UI",Segoe,Roboto,"Helvetica Neue",Helvetica,"Calibri Light",Calibri,Arial,sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+.titlebox > .subscribers {
+    margin-top: 0;
+    font-size: 17px;
+}
+.titlebox > .users-online {
+    margin-bottom: 10px;
+    margin-top: 2px;
+    font-style: italic;
+}
+.users-online:before { display: none; }
+
+.fancy-toggle-button.subscribe-button, .subButtons {
+    margin: 0;
+    padding: 8px 0 20px 0;
+    text-align: center;
+}
+
+.subButtons {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: relative;
+}
+
+.res .fancy-toggle-button.subscribe-button {
+    padding: 0;
+}
+
+.fancy-toggle-button.subscribe-button .active,
+.res .res-fancy-toggle-button {
     display: inline-block;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    width: 50%;
+    height: 24px;
+    line-height: 24px;
+    color: white;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 0;
     box-sizing: border-box;
     text-align: center;
-    margin: 15px 0 10px 0;
+    margin: 0;
+}
+.fancy-toggle-button.subscribe-button .active.add {
+    width: 200px;
+    margin: 0 20px 5px 20px;
+    height: 26px;
+    line-height: 26px;
 }
 
-.subscribers {
-    float: left;
+.res .res-fancy-toggle-button {
+    margin-left: 5px;
 }
 
-.users-online:before {
-    display: none;
+.RESshortcutside.remove, .RESDashboardToggle.remove, .fancy-toggle-button .remove {
+    background: #b44 !important;
 }
 
-.subscribers .word, .users-online .word {
+.RESshortcutside.add, .RESDashboardToggle.add, .fancy-toggle-button .add {
+    background: #79B54F !important;
+}
+
+
+/* mod toggles
+-------------------------------------------------------------------------------- */
+.leavemoderator, form.toggle.leavecontributor-button {
+    height: 24px;
+    line-height: 24px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin: 0 10px;
+    margin-top: 20px;
+    padding-left: 24px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.06);
+    background: rgba(0,0,0,0.025);
+    text-align: left !important;
+    border-radius: 3px 3px 0 0;
+}
+
+.leavemoderator + form.toggle.leavecontributor-button {
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
+    margin-top: 0;
+}
+
+.leavemoderator:before, form.toggle.leavecontributor-button:before {
+    position: absolute;
+    margin: 0;
+    top: 4px;
+    left: 3px;
+}
+
+form.toggle.leavecontributor-button .option.main {
+    font-size: 0;
+}
+form.toggle.leavecontributor-button .option.main:before,
+form.toggle.leavecontributor-button .option.main:after,
+form.toggle.leavecontributor-button .option.main > * {
+    font-size: 10px;
+}
+form.toggle.leavecontributor-button .option.main:before {
+    content: 'you are an approved submitter (';
+}
+form.toggle.leavecontributor-button .option.main:after {
+    content: ')';
+}
+
+/* flair toggle
+-------------------------------------------------------------------------------- */
+.titlebox form.flairtoggle, .res .titlebox form.flairtoggle {
+    text-align: left;
+    margin: 0;
+    margin-top: 0;
+    padding-left: 3px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.titlebox form.flairtoggle input {
+    position: relative;
+    bottom: -3px;
+    right: -2px
+}
+.titlebox > .tagline {
+    margin: 0;
+    padding: 6px 0 6px 22px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.flairtoggle label {
     font-size: 0;
 }
 
-.subscribers .word:before  { content: 'Subscribers'; }
-.users-online .word:before { content: 'Online'; }
-
-.subscribers .word:before, .users-online .word:before {
-    font-size: 14px;
-    color: rgba(0,0,0,0.55);
+.flairtoggle label:after {
+    content: 'Show my flair:';
+    color: rgba(0,0,0,0.35);
+    font-size: 10px;
 }
 
-.subscribers .number, .users-online .number {
+
+.side #flair_enabled ~ label:before {
+    content: '✓';
+    display: inline-block;
     font-weight: bold;
-    font-size: 16px;
-    display: block;
-}
-
-
-/* subscribe buttons
---------------------------------------------------------------------------------*/
-
-.titlebox .fancy-toggle-button.subscribe-button {
-    display: flex;
-    justify-content: center;
-}
-
-.res .subButtons {
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 10px;
+    color: rgba(0,0,0,0.35);
 }
-
-/* margin top/bottom */
-.titlebox .fancy-toggle-button.subscribe-button, .res .titlebox .res-fancy-toggle-button {
-    margin-top: 10px;
-    margin-bottom: 15px;
+.side #flair_enabled:not(:checked) ~ label:before {
+    color: transparent;
 }
-
-/* subscribe button no-RES */
-body:not(.res) .titlebox .fancy-toggle-button.subscribe-button .option.active {
-    width: 100%;
-    max-width: 150px;
-}
-
-/* subscribe and RES sub button */
-.titlebox .fancy-toggle-button.subscribe-button .option.active,
-.res .titlebox .res-fancy-toggle-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    font-size: 13px;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    color: #333;
-    height: 38px;
-    min-width: 82px;
-    box-sizing: border-box;
-    outline: 0;
-}
-
-/* subscribe button color */
-.titlebox .fancy-toggle-button.subscribe-button .option.active {
-    color: #b2d8d7;
-    border: 3px solid #b2d8d7;
-}
-.titlebox .fancy-toggle-button.subscribe-button .option.active:focus,
-.titlebox .fancy-toggle-button.subscribe-button .option.active:hover {
-    color: white;
-    background: #b2d8d7;
-}
-
-/* res shortcut button color */
-.res .titlebox .res-fancy-toggle-button.RESshortcut {
-    color: #ddddce;
-    border: 3px solid #ddddce;
-}
-.res .titlebox .res-fancy-toggle-button.RESshortcut:focus,
-.res .titlebox .res-fancy-toggle-button.RESshortcut:hover {
-    color: white;
-    background: #ddddce;
-}
-
-/* res dashboard toggle button color */
-.res .titlebox .res-fancy-toggle-button.RESDashboardToggle {
-    color: #f3bd92;
-    border: 3px solid #f3bd92;
-}
-.res .titlebox .res-fancy-toggle-button.RESDashboardToggle:focus,
-.res .titlebox .res-fancy-toggle-button.RESDashboardToggle:hover {
-    color: white;
-    background: #f3bd92;
-}
-
-/* subscribe buttons box
---------------------------------------------------------------------------------*/
-
-/* count box */
-.subscribers:before {
-    content: '';
-    display: block;
-    position: absolute;
-    background: #eef2f9;
-    height: 75px;
-    left: 20px;
-    right: 20px;
-    margin-top: -20px;
-    opacity: 0.7;
-    /* border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);*/
-    background: repeating-linear-gradient(45deg,#DFF4FE,#DFF4FE 3px,#fff 3px,#fff 6px);
-}
-
-.subscribers .word, .subscribers .number, .users-online .word, .users-online .number {
-    position: relative;
-    z-index: 5;
-}
-
-/* count box separator */
-.users-online:before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 35px;
-    width: 1px;
-    background: rgba(0,0,0,0.06);
-}
-
-/* count box space */
-.users-online {
-    margin-bottom: 21px;
-    position: relative;
-}
-
-/* flair tagline box
---------------------------------------------------------------------------------*/
-
-.titlebox > .tagline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 30px;
-    margin: 0;
-    position: relative;
-    background: repeating-linear-gradient(45deg,#E9F7FE,#E9F7FE 3px,#fff 3px,#fff 6px);
-    margin: 10px  20px 20px 20px;
-}
-
-/* margin before md
---------------------------------------------------------------------------------*/
-
-.titlebox > .usertext {
-    margin-top: 20px;
+.side #flair_enabled {
+    display: none;
 }
