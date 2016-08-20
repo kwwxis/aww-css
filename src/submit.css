@@ -205,6 +205,7 @@
     font-family: Calibri,Segoe,"Segoe UI",Verdana,Arial,sans-serif;
     display: block;
     margin-bottom: 20px;
+    text-transform: none;
     text-transform: initial;
     color: rgba(0,0,0,0.8);
     font-size: 17px;
