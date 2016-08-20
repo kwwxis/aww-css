@@ -105,7 +105,9 @@ body.res.res-nightmode,
 .res.res-nightmode #searchexpando,
 .res.res-nightmode .icon-menu a,
 .res.res-nightmode .usertext.grayed .usertext-body,
-.res.res-nightmode .hover-bubble.multi-selector label:hover {
+.res.res-nightmode .hover-bubble.multi-selector label:hover,
+.res.res-nightmode .titlebox form.toggle:not(.res-sr-style-toggle),
+.res.res-nightmode .titlebox .tagline {
     background-color: transparent;
 }
 
@@ -120,14 +122,15 @@ body.res.res-nightmode,
 }
 
 .res.res-nightmode .subscribers:before,
-.res.res-nightmode .titlebox form.toggle:not(.res-sr-style-toggle),
 .res.res-nightmode .titlebox .leavemoderator,
-.res.res-nightmode .titlebox .tagline,
+.res.res-nightmode .side .leavecontributor-button,
 .res.res-nightmode .side .md h3 + ol > li,
+.res.res-nightmode .side .md h4,
 .res.res-nightmode .side .md table td,
 .res.res-nightmode .side .md h6,
 .res.res-nightmode .sidecontentbox .collapse-button,
-.res.res-nightmode .linkinfo .shortlink input {
+.res.res-nightmode .linkinfo .shortlink input,
+.res.res-nightmode .side .md h3+ol+ul {
     background: rgba(255,255,255,0.02) !important;
     opacity: 1;
     border: 0;
@@ -469,13 +472,12 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 
 /* rules list
 --------------------------------------------------------------------------------*/
-.res.res-nightmode .side .md h3 + ol {
-    margin-right: 10px;
-    padding-left: 20px
-}
-
 .res.res-nightmode .side .md h3 + ol > li > p:first-child:before {
     opacity: 0.1;
+}
+
+.res.res-nightmode .side .md h3+ol>li:before {
+    color: white;
 }
 
 /* morelinks
@@ -533,10 +535,14 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 /* style toggle
 --------------------------------------------------------------------------------*/
 
-.res.res-nightmode .res-sr-style-toggle label {
+.res.res-nightmode .res-sr-style-toggle label,
+.res.res-nightmode .flairtoggle label,
+.res.res-nightmode .flairtoggle label:after,
+.res.res-nightmode .side #flair_enabled ~ label:before {
     color: #BDBEBF;
 }
-.res.res-nightmode .res-sr-style-toggle label:before {
+.res.res-nightmode .res-sr-style-toggle label:before,
+.res.res-nightmode .side #flair_enabled ~ label::before {
     background: rgba(255,255,255,0.05);
 }
 
@@ -546,10 +552,11 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 .res.res-nightmode .titlebox .fancy-toggle-button.subscribe-button .option.active,
 .res.res-nightmode .titlebox .res-fancy-toggle-button,
 .res.res-nightmode .titlebox .res-fancy-toggle-button.RESshortcut,
-.res.res-nightmode .titlebox .res-fancy-toggle-button.RESDashboardToggle {
+.res.res-nightmode .titlebox .res-fancy-toggle-button.RESDashboardToggle,
+.res.res-nightmode .side .md h3 {
     border: 0;
     opacity: 0.7;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.03) !important;
 }
 
 /* linkinfo box
