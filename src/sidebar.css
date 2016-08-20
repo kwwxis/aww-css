@@ -134,7 +134,7 @@
     display: block;
     position: relative;
     border: 0;
-    background: #B2D8D7;
+    background: #8ac3c1;
     color: white;
     font-weight: normal;
     font-family: Segoe, "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
@@ -142,15 +142,18 @@
     letter-spacing: 0.1px;
     height: 34px;
     line-height: 34px;
-    border-radius: 3px;
-    max-width: 250px;
+    border-radius: 2px;
+    max-width: 248px;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 6px;
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.12);
 }
 
 /* button dark bottom edge */
-.submit-link .morelink:after, .side .md h5 + ul li a:after, .submit-text .morelink:after {
+/*.submit-link .morelink:after, .side .md h5 + ul li a:after, .submit-text .morelink:after {
     content: '';
     display: block;
     position: absolute;
@@ -160,7 +163,7 @@
     right: 0;
     background: rgba(0,0,0,0.1);
     border-radius: 0 0 3px 3px;
-}
+}*/
 
 /* button active */
 .submit-link .morelink:active, .side .md h5 + ul li a:active, .submit-text .morelink:active {
@@ -190,17 +193,19 @@
     left: 0;
     right: 0;
     max-width: 250px;
+    width: 100%;
     margin: 0 auto;
     list-style-type: none;
-    display: -webkit-flex;
+    /* display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .side .md h5 + ul li {
     width: 100%;
     box-sizing: border-box;
+    padding-right: 2px;
 }
 
 .side .md h5 + ul li a {
@@ -208,20 +213,24 @@
 }
 
 .side .md h5 + ul li:nth-of-type(1) {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
+    width: 50%;
     padding-right: 3px;
+    float: left;
 }
 .side .md h5 + ul li:nth-of-type(2) {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
+    width: 50%;
     padding-left: 3px;
+    overflow: hidden;
 }
 
 .side .md h5 + ul li:nth-of-type(1) a,
 .side .md h5 + ul li:nth-of-type(2) a {
-    background-color: #DDDDCE;
+    background-color: #c3c3b3;
 }
 .side .md h5 + ul li:nth-of-type(3) a {
-    background-color: #F3BD92;
+    background-color: #e8ae80;
 }
 
 /* submit link hover -> read rules notification
@@ -309,7 +318,7 @@
 }
 
 #search, #search input[type=text] {
-    max-width: 250px;
+    max-width: 248px;
     margin: 0 auto;
 }
 

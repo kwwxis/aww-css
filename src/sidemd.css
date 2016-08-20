@@ -60,11 +60,10 @@
     margin-right: -13px;
     z-index: 3;
     border-radius: 50%;
-    background: white;
-    background: #CFDAF0;
     background: transparent;
-    color: white;
-    text-shadow: 0 0 6px rgba(0,0,0,0.5);
+    color: #494949;
+    font-weight: bold;
+    font-size: 12px;
 }
 
 /* li number paw */
@@ -187,7 +186,7 @@
 
 .side .md h4 + table a {
     color: #647d72;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 /* spray and neuter box
