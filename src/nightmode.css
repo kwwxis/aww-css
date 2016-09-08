@@ -488,12 +488,14 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 }
 
 .res.res-nightmode .submit-link .morelink,
-.res.res-nightmode .submit-text .morelink {
+.res.res-nightmode .submit-text .morelink,
+.res.res-nightmode .create .morelink {
     background: transparent;
     border: 1px solid #b2d8d7;
 }
 .res.res-nightmode .submit-link .morelink a,
-.res.res-nightmode .submit-text .morelink a {
+.res.res-nightmode .submit-text .morelink a,
+.res.res-nightmode .create .morelink a {
     color: #b2d8d7;
 }
 
@@ -512,6 +514,7 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 
 .res.res-nightmode .submit-link .morelink,
 .res.res-nightmode .submit-text .morelink,
+.res.res-nightmode .create .morelink,
 .res.res-nightmode .side .md h5+ul li,
 .res.res-nightmode #search input[type=text] {
     opacity: 0.75;

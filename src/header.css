@@ -350,7 +350,7 @@ body #header:after {
 }
 
 /* beta vial */
-.beta-hint a {
+.beta-hint, .beta-hint a {
     top: 0;
     bottom: 0;
     margin-top: auto;
