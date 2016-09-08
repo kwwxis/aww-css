@@ -99,11 +99,6 @@
 .comment .buttons {
     font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
     font-size: 11px;
-    padding-left: 30px; /* padding for extra reply "button" */
-}
-/* /r/aww/comments page */
-.listing-page .comment .buttons {
-    padding-left: 0;
 }
 
 .comment .entry .buttons li a {
@@ -111,31 +106,11 @@
 }
 
 /* extra reply "button" */
-.comment .entry .buttons li.reply-button a:before,
-.comment .entry .buttons li a[onclick*="return reply"]:before {
-    content: 'reply';
-    position: absolute;
-    left: 35px;
+.comment .entry .buttons .reply-button a {
     color: #4db5e0;
     cursor: pointer;
     font-weight: bold;
     letter-spacing: 0.25px
-}
-.commentarea > .sitetable > .comment > .entry .buttons li a[onclick*="return reply"]:before {
-    left: 40px;
-}
-.comment .entry .buttons li.reply-button a:hover:before,
-.comment .entry .buttons li a[onclick*="return reply"]:hover:before {
-    text-decoration: underline;
-}
-
-.archived-infobar ~ .commentarea .comment .buttons,
-body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons {
-    padding-left: 0;
-}
-
-body:not(.moderator) .locked-infobar ~ .commentarea .comment .buttons .reply-button {
-    display: none;
 }
 
 /* comments - single thread infobar
