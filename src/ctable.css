@@ -9,7 +9,8 @@
 /* comment left stripe
 --------------------------------------------------------------------------------*/
 
-.sitetable > .comment:before,
+.commentarea > .sitetable > .comment:before,
+#bottom-comments > .sitetable > .comment:before,
 .comment-permalink-page.comments-page .commentarea > .infobar:before {
     content: '';
     display: block;
@@ -23,17 +24,20 @@
 }
 
 /* stickied-comment left stripe */
-.sitetable > .comment.stickied:before {
+.commentarea > .sitetable > .comment.stickied:before,
+#bottom-comments > .sitetable > .comment.stickied:before {
     background: #71E096;
 }
 
 /* spam-comment left stripe */
-.sitetable > .comment.spam:before {
+.commentarea > .sitetable > .comment.spam:before,
+#bottom-comments > .sitetable > .comment.spam:before {
     background: #FF8B94;
 }
 
 /* single comment thread left stripe */
-.comment-permalink-page .sitetable > .comment:before,
+.comment-permalink-page .commentarea > .sitetable > .comment:before,
+.comment-permalink-page #bottom-comments > .sitetable > .comment:before,
 .comment-permalink-page.comments-page .commentarea>.infobar:before {
     background: #FFDC89;
 }
@@ -60,7 +64,8 @@
     margin-top: 5px;
 }
 
-.sitetable > .comment {
+.commentarea > .sitetable > .comment,
+#bottom-comments > .sitetable > .comment {
     border: 1px solid #e3e3e3;
     padding-left: 15px;
     border-radius: 0;
@@ -70,10 +75,12 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
-.res.res-commentBoxes .sitetable > .comment {
+.res.res-commentBoxes .commentarea > .sitetable > .comment,
+.res.res-commentBoxes #bottom-comments > .sitetable > .comment {
     padding: 10px 0 0 15px !important;
 }
-.res.res-commentBoxes .sitetable > .comment .comment {
+.res.res-commentBoxes .commentarea .sitetable > .comment .comment,
+.res.res-commentBoxes #bottom-comments > .sitetable > .comment .comment {
     padding: 10px 0 0 10px !important;
 }
 
@@ -179,4 +186,23 @@ h1.seo-comments {
 .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment
 {
     background-color: #fff !important;
+}
+
+.commentarea .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam
+{
+    background-color: #ffd6d9 !important;
+}
+
+.commentarea .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam,
+.commentarea .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam .comment.spam
+{
+    background-color: #ffe0e2 !important;
 }
