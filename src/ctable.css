@@ -9,7 +9,7 @@
 /* comment left stripe
 --------------------------------------------------------------------------------*/
 
-.commentarea > .sitetable > .comment:before,
+.sitetable > .comment:before,
 .comment-permalink-page.comments-page .commentarea > .infobar:before {
     content: '';
     display: block;
@@ -23,17 +23,17 @@
 }
 
 /* stickied-comment left stripe */
-.commentarea > .sitetable > .comment.stickied:before {
+.sitetable > .comment.stickied:before {
     background: #71E096;
 }
 
 /* spam-comment left stripe */
-.commentarea > .sitetable > .comment.spam:before {
+.sitetable > .comment.spam:before {
     background: #FF8B94;
 }
 
 /* single comment thread left stripe */
-.comment-permalink-page .commentarea > .sitetable > .comment:before,
+.comment-permalink-page .sitetable > .comment:before,
 .comment-permalink-page.comments-page .commentarea>.infobar:before {
     background: #FFDC89;
 }
@@ -60,7 +60,7 @@
     margin-top: 5px;
 }
 
-.commentarea > .sitetable > .comment {
+.sitetable > .comment {
     border: 1px solid #e3e3e3;
     padding-left: 15px;
     border-radius: 0;
@@ -70,11 +70,44 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
-.res.res-commentBoxes .commentarea > .sitetable > .comment {
+.res.res-commentBoxes .sitetable > .comment {
     padding: 10px 0 0 15px !important;
 }
-.res.res-commentBoxes .commentarea > .sitetable > .comment .comment {
+.res.res-commentBoxes .sitetable > .comment .comment {
     padding: 10px 0 0 10px !important;
+}
+
+/* feature=seo_comments_page
+--------------------------------------------------------------------------------*/
+.commentarea > .spacer > #siteTable {
+    margin: 0;
+}
+
+h1.seo-comments {
+    border: 1px solid #e2e2e2;
+    background: white;
+    margin: 15px 0 0;
+    padding: 8px 10px;
+    font-weight: normal;
+}
+
+.commentarea > .spacer > #siteTable .link {
+    border-top: 0;
+}
+
+#bottom-comments h1.seo-comments {
+    border-bottom: 0;
+}
+
+.commentarea > .seo-comments.spacer {
+    margin-top: 10px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 3px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 /* comment expando button
