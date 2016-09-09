@@ -213,6 +213,22 @@ body #header:after {
     background: rgba(0,0,0,0.06);
 }
 
+@media (max-width: 1470px) {
+    body.res.mod-toolbox #header .tabmenu li {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1390px) {
+    body.res.mod-toolbox #header .tabmenu li a {
+        padding: 0 7px;
+    }
+
+    body.res.mod-toolbox #header .tabmenu li a[href$='/ads/'] {
+        display: none;
+    }
+}
+
 /* tab menu decorations
 --------------------------------------------------------------------------------*/
 
