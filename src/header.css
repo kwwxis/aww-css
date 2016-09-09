@@ -460,10 +460,11 @@ body #header:after {
     padding-right: 5px;
 }
 
-/* Mod mail
+/* Mod mail + New Modmail icon
 --------------------------------------------------------------------------------*/
 
-#modmail, #modmail.havemail, #modmail.nohavemail {
+#modmail, #modmail.havemail, #modmail.nohavemail,
+#new_modmail, #new_modmail.havemail, #new_modmail.nohavemail {
     font-size: 0 !important;
     background-image: none !important;
     height: 24px;
@@ -471,10 +472,10 @@ body #header:after {
     top: 0;
     margin-bottom: 0;
 }
-#modmail.havemail {
+#modmail.havemail, #new_modmail.havemail {
     background: #FF7500;
 }
-#modmail:after {
+#modmail:after, #new_modmail:after {
     content: '';
     display: block;
     background: url(%%spritesheet%%) -9px -116px;
@@ -492,8 +493,15 @@ body #header:after {
     background-position: -9px -116px;
 }
 
-#modmail:not(.havemail):hover {
+#modmail:not(.havemail):hover, #new_modmail:not(.havemail):hover {
     background: rgba(0,0,0,0.06);
+}
+
+#new_modmail:after {
+    background-position: -9px -176px;
+}
+#new_modmail.havemail:after {
+    background-position: -9px -176px;
 }
 
 /* Preferences
