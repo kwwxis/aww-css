@@ -37,7 +37,8 @@ body.res.res-nightmode,
 .res.res-nightmode.combined-search-page #previoussearch,
 .res.res-nightmode.combined-search-page .search-result-group,
 .res.res-nightmode ul.res-search-tabs,
-.res.res-nightmode.combined-search-page #search {
+.res.res-nightmode.combined-search-page #search,
+.res.res-nightmode h1.seo-comments {
     /* background: #303842 !important; */
     background: #272E35 !important;
 }
@@ -241,7 +242,8 @@ body.res.res-nightmode,
 .res.res-nightmode .commentarea > .menuarea,
 .res.res-nightmode .commentarea > .usertext,
 .res.res-nightmode .gold-accent.comment-visits-box,
-.res.res-nightmode .commentarea > .sitetable > .comment {
+.res.res-nightmode .commentarea > .sitetable > .comment,
+.res.res-nightmode h1.seo-comments {
     border: 0;
 }
 
@@ -323,6 +325,16 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     background: rgba(0,0,0,0.1);
     border: 0;
     padding: 2px 3px;
+}
+
+.res.res-nightmode a.c-btn.c-btn-primary {
+    color: white;
+}
+.res.res-nightmode .commentarea > .seo-comments.spacer {
+    background: rgba(255,255,255,0.02);
+}
+.res.res-nightmode h1.seo-comments {
+    color: #b5b6b7;
 }
 
 .res.res-nightmode .commentarea .comment .comment,
