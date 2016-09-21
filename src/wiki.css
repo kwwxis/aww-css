@@ -22,10 +22,6 @@
     text-align: center;
 }
 
-.wiki-page-index.wiki-page .toc {
-    display: none;
-}
-
 .wiki-page-index.wiki-page .wiki-page-content .wiki.md {
     max-width: 890px;
     margin: 0 auto;
@@ -75,4 +71,59 @@
 .wiki-page-index.wiki-page .wiki.md h4 + p + ul li p {
     line-height: 1.7em;
     color: rgba(0,0,0,0.85);
+}
+
+/* Index (rules) page - TOC
+--------------------------------------------------------------------------------*/
+
+.wiki-page-index.wiki-page .wiki-page-content .wiki>.toc ul,
+.wiki-page-index.wiki-page .wiki-page-content .wiki>.toc ul ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+    max-width: none;
+    box-sizing:border-box;
+}
+
+.wiki-page-index.wiki-page .wiki-page-content .wiki>.toc>ul {
+    border: 0;
+    background: hsla(195,20%,95%,1);
+    padding: 11px 22px 10px 15px;
+    float: none;
+}
+.wiki-page-index.wiki-page .wiki-page-content .wiki>.toc ul ul {
+    padding-left:0;
+    border: 0;
+}
+
+.wiki-page-index.wiki-page .wiki-page-content .wiki>.toc>ul>li:first-of-type {
+    display: none;
+}
+
+.wiki-page-index.wiki-page .wiki-page-content .wiki>.toc>ul li {
+    line-height: 27px;
+    height: 27px;
+}
+
+.wiki-page-index.wiki-page a[href="#wiki_aww_rules"] {
+    font-size: 0;
+    color: rgba(0,0,0,0.6);
+    margin-right: 10px;
+}
+.wiki-page-index.wiki-page a[href="#wiki_aww_rules"]:before {
+    font-size: 14px;
+    content: 'Rules quick jump:';
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.wiki-page-index.wiki-page [class^=wiki_rule_]:not(:last-of-type):after {
+    content: '|';
+    color: rgba(0,0,0,0.2);
+    padding: 0 5px;
 }
