@@ -227,20 +227,22 @@ form.toggle.leavecontributor-button .option.main:after {
     margin-bottom: 5px;
     text-align: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .flairtoggle label {
     font-size: 0;
 }
 
-.flairtoggle label:after {
+.flairtoggle label:after, .sr_style_toggle label {
     content: 'Show my flair:';
     color: rgba(0,0,0,0.35);
     font-size: 10px;
 }
 
 
-.side #flair_enabled ~ label:before {
+.side #flair_enabled ~ label:before,
+.side #sr_style_enabled ~ label:before {
     content: '✓';
     display: inline-block;
     font-weight: bold;
@@ -254,9 +256,11 @@ form.toggle.leavecontributor-button .option.main:after {
     font-size: 10px;
     color: rgba(0,0,0,0.35);
 }
-.side #flair_enabled:not(:checked) ~ label:before {
+.side #flair_enabled:not(:checked) ~ label:before,
+.side #sr_style_enabled:not(:checked) ~ label:before {
     color: transparent;
 }
-.side #flair_enabled {
+.side #flair_enabled,
+.side #sr_style_enabled {
     display: none;
 }

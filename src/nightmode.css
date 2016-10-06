@@ -52,7 +52,8 @@ body.res.res-nightmode,
 .res.res-nightmode #editShortcutDialog,
 .res.res-nightmode #RESShortcutsAddFormContainer,
 .res.res-nightmode .RESDialogSmall,
-.res.res-nightmode .RESHover.RESHoverDropdownList.RESDropdownList {
+.res.res-nightmode .RESHover.RESHoverDropdownList.RESDropdownList,
+.res.res-nightmode .reddit-infobar {
     background: #3F4754 !important;
     border-color: #28303B;
 }
@@ -168,6 +169,10 @@ body.res.res-nightmode,
 .res.res-nightmode #header-bottom-left:before,
 .res.res-nightmode #header-img-a:after {
     background-color: #99c6c3;
+}
+
+.res.res-nightmode .tabmenu li.selected a {
+    background: rgba(255,255,255,0.2);
 }
 
 /* header bottom right
@@ -418,6 +423,17 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     background: rgba(234, 238, 245, 0.05);
 }
 
+/* RES - Never Ending Reddit
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .NERPageMarker {
+    background: rgba(255,255,255,0.03);
+    color: rgba(255,255,255,0.5);
+}
+
+.res.res-nightmode .NERPageMarker .gearIcon:after {
+    color: rgba(255,255,255,0.15);
+}
+
 /* usertext
 --------------------------------------------------------------------------------*/
 .res.res-nightmode .usertext-edit textarea {
@@ -441,9 +457,14 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 
 .res.res-nightmode .usertext button[type=submit] {
     border-color: rgba(42,186,192,0.4);
-    background-color: rgba(66, 198, 191, 0.45);
-    box-shadow: inset 0 1px 0 rgba(74,221,217,0.15);
+    background-color: rgba(66,198,191,0.7);
+    box-shadow: inset 0 1px 0 rgba(74,221,217,0.3);
     color: rgba(255,255,255,0.75);
+}
+.res.res-nightmode.mod-toolbox select.tb-top-macro-select.tb-action-button {
+    background-color: #3e424d !important;
+    border: 0 !important;
+    color: rgba(255,255,255,0.5) !important;
 }
 
 .res.res-nightmode .thing .md hr {
@@ -472,6 +493,7 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 --------------------------------------------------------------------------------*/
 .res.res-nightmode .side .md h6 {
     margin: 10px;
+    width: 280px; /* original width is 300px so subtract 10 (margin) * 2 (left and right) */
 }
 
 /* side hr
@@ -527,12 +549,15 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     color: #f3bd92;
 }
 
-.res.res-nightmode .submit-link .morelink,
-.res.res-nightmode .submit-text .morelink,
-.res.res-nightmode .create .morelink,
+.res.res-nightmode .side .morelink,
 .res.res-nightmode .side .md h5+ul li,
 .res.res-nightmode #search input[type=text] {
     opacity: 0.75;
+}
+.res.res-nightmode .side .morelink:hover,
+.res.res-nightmode .side .md h5+ul li:hover,
+.res.res-nightmode #search input[type=text]:hover {
+    opacity: 1;
 }
 
 .res.res-nightmode .submit-link .morelink:after,
@@ -550,17 +575,25 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     color: white;
 }
 
+.res.res-nightmode #searchexpando {
+    background: rgba(255,255,255,0.02);
+    border-radius: 3px;
+}
+
 /* style toggle
 --------------------------------------------------------------------------------*/
 
 .res.res-nightmode .res-sr-style-toggle label,
 .res.res-nightmode .flairtoggle label,
 .res.res-nightmode .flairtoggle label:after,
+.res.res-nightmode .sr_style_toggle label,
+.res.res-nightmode .side #sr_style_enabled ~ label:before,
 .res.res-nightmode .side #flair_enabled ~ label:before {
     color: #BDBEBF;
 }
 .res.res-nightmode .res-sr-style-toggle label:before,
-.res.res-nightmode .side #flair_enabled ~ label::before {
+.res.res-nightmode .side #flair_enabled ~ label:before,
+.res.res-nightmode .side #sr_style_enabled ~ label:before {
     background: rgba(255,255,255,0.05);
 }
 
