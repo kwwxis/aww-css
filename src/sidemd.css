@@ -115,6 +115,66 @@
     box-sizing: border-box;
 }
 
+/* quick rules - more info hover card
+--------------------------------------------------------------------------------*/
+.side .md h3+ol>li blockquote {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 50;
+    border: 0;
+    border-bottom: 2px solid #85d6fb;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.35), 0 -1px 0px rgba(0,0,0,0.07);
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 3px;
+    transition: opacity 200ms, margin-top 200ms;
+    margin-top: 7px;
+}
+.side .md h3+ol>li:hover blockquote {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+}
+
+.side .md h3+ol>li blockquote:before,
+.side .md h3+ol>li blockquote:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: 100%;
+}
+.side .md h3+ol>li blockquote:before {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid rgba(0,0,0,0.18);
+    left: 8px;
+}
+.side .md h3+ol>li blockquote:after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    left: 9px;
+}
+
+.side .md h3+ol>li blockquote ul, .side .md h3+ol>li blockquote ol {
+    padding-left: 25px;
+}
+
+.side .md h3+ol>li blockquote > p:first-of-type:before {
+    content: 'Extra Info - click "more" above for full details';
+    display: block;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 10px;
+}
+
 /* related subs table
 --------------------------------------------------------------------------------*/
 

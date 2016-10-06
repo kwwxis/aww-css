@@ -181,19 +181,22 @@ body #header:after {
     z-index: 15;
     padding-left: 90px;
     margin: 0;
+    height: 24px;
+    display: -webkit-flex;
+    display: flex;
 }
 
 /* tabmenu items */
 .tabmenu li {
     display: inline-block;
     position: relative;
-    height: 23px;
+    height: 24px;
 }
 
 .tabmenu li a {
     background: transparent;
     display: inline-block;
-    line-height: 23px;
+    line-height: 24px;
     padding: 0 8px;
     box-sizing: border-box;
     font-family: Calibri, Segoe, "Segoe UI", Verdana, Arial, sans-serif;
@@ -345,6 +348,10 @@ body #header:after {
     border-color: transparent;
     /* color: rgba(28,17,13,0.8); */
     color: white;
+}
+
+#header-bottom-right .user {
+    height: 24px;
 }
 
 #header-bottom-right a, .user {
