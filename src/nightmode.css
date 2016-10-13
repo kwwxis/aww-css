@@ -53,7 +53,8 @@ body.res.res-nightmode,
 .res.res-nightmode #RESShortcutsAddFormContainer,
 .res.res-nightmode .RESDialogSmall,
 .res.res-nightmode .RESHover.RESHoverDropdownList.RESDropdownList,
-.res.res-nightmode .reddit-infobar {
+.res.res-nightmode .reddit-infobar,
+.res.res-nightmode .drop-choices {
     background: #3F4754 !important;
     border-color: #28303B;
 }
@@ -849,4 +850,34 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 .res.res-nightmode .markdownEditor .edit-btn.btn-link:after {
     left: 50%;
     margin-left: -3px;
+}
+
+/* wiki page index (rules page)
+--------------------------------------------------------------------------------*/
+.res.res-nightmode .wiki-page .wiki-page-content .md.wiki > .toc ul {
+    background: #272E35 !important;
+    border-radius: 3px;
+    color: white;
+}
+
+.res.res-nightmode .wiki-page .wiki-page-content .md.wiki > .toc ul a,
+.res.res-nightmode .wiki-page-index.wiki-page [class^=wiki_rule_]:not(:last-of-type):after {
+    color: rgba(255,255,255,0.5);
+}
+
+.res.res-nightmode .wiki-page-index.wiki-page .wiki.md h4+p+ul {
+    background: #272E35 !important;
+}
+
+.res.res-nightmode .wiki-page-index.wiki-page .wiki.md h4+p {
+    background: hsla(210,15%,22%,1) !important;
+}
+
+.res.res-nightmode .wiki-page .pageactions .wikiaction-current,
+.res.res-nightmode .wiki-page .pageactions .wikiaction.wikiaction-current:hover {
+    background-color: #272E35;
+    color: #548dc6;
+}
+.res.res-nightmode .wiki-page .pageactions .wikiaction:hover {
+    background-color: #272E35;
 }
