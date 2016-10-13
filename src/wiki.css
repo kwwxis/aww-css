@@ -73,6 +73,32 @@
     color: rgba(0,0,0,0.85);
 }
 
+/* Index (rules) page - page actions
+--------------------------------------------------------------------------------*/
+
+.wiki-page.wiki-page-index .pageactions {
+    max-width: 890px;
+    margin: 0 auto;
+    display: block;
+    border: 0;
+}
+
+.wiki-page.wiki-page-index .pageactions a {
+    margin: 0;
+    padding: 0 9px;
+    line-height: 22px;
+    margin-right: 2px;
+}
+
+.wiki-page.wiki-page-index .pageactions .wikiaction-current,
+.wiki-page.wiki-page-index .pageactions .wikiaction.wikiaction-current:hover {
+    background-color: rgba(95,153,207,0.2);
+    color: #369;
+}
+.wiki-page.wiki-page-index .pageactions .wikiaction:hover {
+    background-color: hsla(195,20%,95%,1);
+}
+
 /* Index (rules) page - TOC
 --------------------------------------------------------------------------------*/
 
