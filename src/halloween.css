@@ -1,0 +1,42 @@
+.pagename a, .res.res-nightmode .pagename a {
+    background: url(%%aww-halloween%%) no-repeat center / contain;
+}
+
+.pagename, .pagename a,
+.res.res-nightmode .pagename, .res.res-nightmode .pagename a {
+    width: 235px;
+    height: 105px;
+    margin: 0;
+}
+
+#header-bottom-left:before, 
+.res.res-nightmode #header-bottom-left:before {
+    background: #FB732F;
+}
+
+#header .tabmenu, .res.res-nightmode #header .tabmenu {
+    background-color: #fa864a;
+}
+
+#header .tabmenu li.selected a,
+.res.res-nightmode #header .tabmenu li.selected a {
+    background-color: #FB732F;
+}
+
+#header-img-a:after,
+.res.res-nightmode #header-img-a:after {
+    background-color: #fa864a;
+}
+#header-img-a:hover:after,
+.res.res-nightmode #header-img-a:hover:after {
+    background-color: #FB732F;
+}
+
+#sr-header-area,
+.res.res-nightmode #sr-header-area {
+    border-top-color: #FB732F;
+}
+
+.res.res-nightmode #sr-header-area:hover * {
+    color: #fdbc9b;
+}
