@@ -57,7 +57,7 @@
 /* subreddit style toggle
 --------------------------------------------------------------------------------*/
 
-.res .titlebox form.toggle, .leavemoderator.res-sr-style-toggle {
+.titlebox form.toggle, .leavemoderator.res-sr-style-toggle {
     text-align: center;
     display: block;
 }
