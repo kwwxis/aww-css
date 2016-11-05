@@ -325,6 +325,31 @@ body #header:after {
     padding: 2px 5px 1px 5px;
 }
 
+/* RES SR DROP CHOICES
+--------------------------------------------------------------------------------*/
+.res #srList {
+    border: 0;
+    box-shadow: 0px 3px 6px 0 rgba(0,0,0,0.4);
+    background: white;
+}
+
+.res #srList tr {
+    border: 0;
+}
+
+.res #srList td {
+    border-bottom: 1px solid hsla(177,42%,85%,1);
+}
+
+.res #srList thead td {
+    background: rgba(0,0,0,0.05);
+    border-bottom: 0;
+}
+
+.res #srList a {
+    color: #474747;
+}
+
 /* header bottom right (user area)
 --------------------------------------------------------------------------------*/
 
