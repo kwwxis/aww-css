@@ -156,7 +156,23 @@ body.res.res-nightmode,
     margin-top: 25px;
 }
 
-
+/* RES SR LIST
+--------------------------------------------------------------------------------*/
+.res.res-nightmode #srList {
+    background: #272E35;
+}
+.res.res-nightmode #srList thead td {
+    background: rgba(255,255,255,0.04);
+}
+.res.res-nightmode #srList td {
+    border-bottom-color: rgba(255,255,255,0.06);
+}
+.res.res-nightmode #srList a {
+    color: rgb(204,204,204);
+}
+.res.res-nightmode #srList tr:hover {
+    background: #2B323A;
+}
 
 /* tabmenu
 --------------------------------------------------------------------------------*/
@@ -284,6 +300,18 @@ body.res.res-nightmode,
 .res.res-nightmode .commentarea > .sitetable > .comment:before,
 .res.res-nightmode .comment-permalink-page.comments-page .commentarea > .infobar:before {
     opacity: 0.3;
+}
+
+/* permalink comment infobar */
+.res.res-nightmode .comment-permalink-page.comments-page .commentarea > .infobar {
+    background: hsl(210, 15%, 19%);
+    border: 0;
+    border-top: 4px solid hsla(210,15%,16%,1);
+    border-bottom: 2px solid hsla(210,15%,17%,1);
+}
+
+.res.res-nightmode .comment-permalink-page.comments-page .commentarea>.infobar:before {
+    display: none;
 }
 
 /* thing colors for md, tagline, buttons, and stuff*/
