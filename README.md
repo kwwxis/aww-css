@@ -24,7 +24,7 @@ Installation instructions
   2. See the "sub/" folder, upload the contents of "sidebar_text.txt", "submission_text.txt", "wiki_index.txt"
      to their respective locations
       
-  3. **dist/dist.css** - upload to the stylesheet page
+  3. **dist.css** - upload to the stylesheet page
   
 Order of Concatenation
 ----------------------
