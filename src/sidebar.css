@@ -9,6 +9,10 @@
     margin-right: 8px;
 }
 
+.search-page #ad_main_top {
+    margin-top: 15px;
+}
+
 .titlebox .bottom, .sidebox.create .spacer {
     display: none
 }

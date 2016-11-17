@@ -684,6 +684,10 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     color: rgba(255,255,255,0.7);
 }
 
+.res.res-nightmode #new-link-image-input {
+    background: #3E424D !important;
+    border-color: #777;
+}
 
 /* search page
 --------------------------------------------------------------------------------*/
@@ -714,6 +718,15 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 }
 .res.res-nightmode.combined-search-page .search-icon:after {
     background-color: rgba(255,255,255,0.6);
+}
+
+.res.res-nightmode ul.res-search-tabs li a {
+    background: #32353e !important;
+}
+
+.res.res-nightmode ul.res-search-tabs li.res-search-tab-active a,
+.res.res-nightmode .combined-search-page #previoussearch .res-search-pane {
+    background: #30333b !important;
 }
 
 /* editor buttons
