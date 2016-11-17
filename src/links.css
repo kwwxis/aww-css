@@ -129,8 +129,8 @@
     word-break: break-word;
 }
 
-.link .tagline {
-    /* font-size: small; */
+.link .entry .expando-button ~ .tagline {
+    margin-left: 34px;
 }
 
 /* clear tagline */

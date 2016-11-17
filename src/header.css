@@ -387,6 +387,11 @@ body #header:after {
     color: white;
 }
 
+#header-bottom-right a.imageInfoButton {
+    color: #666;
+    margin-right: 5px;
+}
+
 #header-bottom-right .separator {
     color: rgba(255,255,255,0.6);
     display: none !important;
