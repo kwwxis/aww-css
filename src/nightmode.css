@@ -729,6 +729,14 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
     background: #30333b !important;
 }
 
+.res.res-nightmode .combined-search-page #previoussearch .search-result-group footer .nav-buttons {
+    border-top: 0;
+}
+
+.res.res-nightmode.combined-search-page .res-search-pane .search-result-group {
+    background: transparent !important;
+}
+
 /* editor buttons
 --------------------------------------------------------------------------------*/
 
