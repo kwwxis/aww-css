@@ -35,7 +35,7 @@ order       = [ 'etc.css',       # general layout, common margins, and whatever 
                 
 # input/output variables
 src_dir     = 'src'
-dist_dir    = 'dist'
+dist_dir    = '.'
 dist_file   = 'dist.css'
 
 def top(build_ver):
