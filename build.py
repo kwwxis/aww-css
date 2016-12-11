@@ -30,7 +30,8 @@ order       = [ 'etc.css',       # general layout, common margins, and whatever 
                 'ext.css',       # misc. styles for extensions (RES, Mod Toolbox, etc.) that can't be categorized into the other files
                 'temp.css',      # temporary
                 'nightmode.css', # nightmode
-                'media.css'      # extra media queries for small screens and such
+                'media.css',     # extra media queries for small screens and such
+                'snow.css'       # temporary for holidays
               ]      
                 
 # input/output variables
