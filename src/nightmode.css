@@ -154,6 +154,8 @@ body.res.res-nightmode,
     background-position: -154px -58px;
     height: 60px;
     margin-top: 25px;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 /* RES SR LIST
@@ -190,6 +192,12 @@ body.res.res-nightmode,
 
 .res.res-nightmode .tabmenu li.selected a {
     background: rgba(255,255,255,0.2);
+}
+
+.res.res-nightmode .beta-hint,
+.res.res-nightmode #header-bottom-right,
+.res.res-nightmode #userbarToggle {
+    background: #a7cdc7;
 }
 
 /* header bottom right

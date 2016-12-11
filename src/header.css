@@ -216,6 +216,10 @@ body #header:after {
     background: rgba(0,0,0,0.06);
 }
 
+.res-tabmenu-button.res-toggle-filterline-visibility a {
+    font-size: 12px;
+}
+
 @media (max-width: 1470px) {
     body.res.mod-toolbox #header .tabmenu li {
         margin: 0;
@@ -358,7 +362,7 @@ body #header:after {
     display: flex;
     -webkit-align-items: center;
     align-items: center;
-    padding: 0 4px 0 0;
+    padding: 0 4px 0 6px;
     height: 24px;
     line-height: 24px;
     position: absolute;
@@ -369,7 +373,7 @@ body #header:after {
 }
 
 #header-bottom-right, .res #userbarToggle {
-    background-color: transparent;
+    background-color: #a7dbd8;
     border-color: transparent;
     /* color: rgba(28,17,13,0.8); */
     color: white;
@@ -409,15 +413,34 @@ body #header:after {
     margin-top: auto;
     margin-bottom: auto;
 }
+.beta-hint {
+    background: #a7dbd8;
+    height: 24px;
+    margin-left: -24px;
+    opacity: 1;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+.beta-hint a {
+    margin: auto;
+    font-size: 0;
+    width: 13px;
+    left: 0;
+    right: 0;
+    transform: scale(0.9);
+}
 
 /* userbar toggle */
 .res #userbarToggle {
     min-height: 24px !important;
     border-radius: 0 !important;
+    left: 3px!important;
+    line-height: 24px !important;
 }
 
 #userbarToggle.userbarShow {
-    left: -17px;
+    left: -10px !important;
 }
 
 .res #userbarToggle:hover {
