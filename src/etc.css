@@ -53,7 +53,7 @@ body {
 /* a cool "flair" for myself because I think I'm cool
 --------------------------------------------------------------------------------*/
 
-.author[href$="/user/kwwxis"]:after, .author[href$="/user/kwwxis/"]:after {
+.author[href$="/user/kwwxis"]:after {
     content: '';
     display: inline-block;
     width: 15px;
@@ -67,7 +67,7 @@ body {
     transform: scale(0.7) rotateZ(0deg);
     transition: transform 400ms ease;
 }
-.author[href$="/user/kwwxis"]:hover:after, .author[href$="/user/kwwxis/"]:hover:after {
+.author[href$="/user/kwwxis"]:hover:after {
     -webkit-transform: scale(0.7) rotateZ(360deg);
     -moz-transform: scale(0.7) rotateZ(360deg);
     transform: scale(0.7) rotateZ(360deg);
