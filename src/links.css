@@ -295,7 +295,7 @@
 
 /* no results
 --------------------------------------------------------------------------------*/
-#noresults {
+#noresults:not(.tb-kitteh) {
     font-size: 0;
     width: 450px;
     height: 70px;
@@ -313,10 +313,25 @@
     border-top: 0;
 }
 
+.link.promotedlink.new-ad-style-grey {
+    border: 0;
+    padding: 0 0 5px 4px;
+}
+
 /* flair
 --------------------------------------------------------------------------------*/
 
 /* Flair used by AutoModerator */
 .flair-a, .flair-f, .flair-x {
     display: none;
+}
+
+/* noresults as direct descendent of #siteTable (promoted page)
+--------------------------------------------------------------------------------*/
+
+#siteTable > #noresults {
+    padding-top: 80px;
+    margin: 5px auto;
+    padding-bottom: 80px;
+    background-position: center;
 }

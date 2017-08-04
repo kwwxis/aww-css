@@ -31,7 +31,6 @@ order       = [ 'etc.css',       # general layout, common margins, and whatever 
                 'temp.css',      # temporary
                 'nightmode.css', # nightmode
                 'media.css',     # extra media queries for small screens and such
-                'snow.css'       # temporary for holidays
               ]      
                 
 # input/output variables

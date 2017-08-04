@@ -219,8 +219,12 @@ body.res.res-nightmode,
 .res.res-nightmode #new_modmail.nohavemail:after {
     background-position: -367px -176px;
 }
-.res.res-nightmode #mail.nohavemail:after {
+.res.res-nightmode #mail.nohavemail:after,
+.res.res-nightmode #message.nohavemail:after {
     background-position: -367px -31px;
+}
+.res.res-nightmode #inbox.nohavemail:after {
+    background-position: -334px -201px;
 }
 .res.res-nightmode #RESAccountSwitcherIcon:after {
     background-position: -367px -56px;
@@ -641,7 +645,8 @@ body.res.res-nightmode.mod-toolbox .tb-bracket-button,
 .res.res-nightmode .titlebox .res-fancy-toggle-button,
 .res.res-nightmode .titlebox .res-fancy-toggle-button.RESshortcut,
 .res.res-nightmode .titlebox .res-fancy-toggle-button.RESDashboardToggle,
-.res.res-nightmode .side .md h3 {
+.res.res-nightmode .side .md h3,
+.res.res-nightmode .multi-count {
     border: 0;
     opacity: 0.7;
     background: rgba(255,255,255,0.03) !important;

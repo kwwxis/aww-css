@@ -3,17 +3,3 @@
     font-size: 24px;
     margin-top: 40px;
 }
-
-
-/* Modqueue kitteh */
-body.moderator:not(.search-page):not(.comments-page):not(.other-discussions-page) p#noresults {
-    display: block;
-    min-width: 330px;
-    min-height: 351px;
-    width: 100%;
-    background-image: url(%%kitteh%%);
-    background-repeat: no-repeat;
-    background-position: center center;
-    text-indent: -1000px;
-    overflow: hidden;
-}

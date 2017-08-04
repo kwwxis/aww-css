@@ -454,6 +454,15 @@
     padding: 5px 2px;
 }
 
+.linkinfo .views {
+    text-align: center;
+    color: rgba(0,0,0,0.55);
+}
+
+.linkinfo .views .view-count {
+    color: #86afae;
+}
+
 .linkinfo:after {
     content: '';
     display: block;

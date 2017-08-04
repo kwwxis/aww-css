@@ -42,6 +42,7 @@
 
 .footer .col {
     flex: initial;
+    flex: inherit;
 }
 
 .footer .col .title {

@@ -401,11 +401,6 @@ body #header:after {
     display: none !important;
 }
 
-#header-bottom-right .flat-list, #header-bottom-right .flat-list li {
-    display: inline-block;
-    height: 24px;
-}
-
 /* beta vial */
 .beta-hint, .beta-hint a {
     top: 0;
@@ -452,6 +447,41 @@ body #header:after {
     margin-left: 5px;
 }
 
+/* flat list
+--------------------------------------------------------------------------------*/
+#header-bottom-right > ul.flat-list {
+    height: 24px;
+}
+
+#header-bottom-right > ul.flat-list li {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+#header-bottom-right > ul.flat-list li > a {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-align: center;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+}
+
+#header-bottom-right > ul.flat-list li > a:hover {
+    background: rgba(0,0,0,0.06);
+}
+
 /* User profile link
 --------------------------------------------------------------------------------*/
 .user > a {
@@ -492,6 +522,8 @@ body #header:after {
 /* mail icon
 --------------------------------------------------------------------------------*/
 
+#message:after, #message.nohavemail:after, #message.havemail:after,
+#inbox:after, #inbox.nohavemail:after, #inbox.havemail:after,
 #mail:after, #mail.nohavemail:after, #mail.havemail:after {
     content: '';
     display: block;
@@ -509,10 +541,27 @@ body #header:after {
     left: 0;
     margin: auto;
 }
+
+#message.havemail:after,
 #mail.havemail:after {
     background-position: -8px -31px;
 }
 
+#inbox {
+    margin-left: 1px !important;
+}
+#inbox:after {
+    height: 24px !important;
+}
+#inbox.nohavemail:after {
+    background-position: -8px -201px;
+}
+#inbox.havemail:after {
+    background-position: -41px -201px;
+}
+
+#message, #message.nohavemail, #message.havemail,
+#inbox, #inbox.nohavemail, #inbox.havemail,
 #mail, #mail.nohavemail, #mail.havemail {
     background-image: none !important;
     position: relative;
@@ -521,19 +570,32 @@ body #header:after {
     top: 0;
     padding-left: 5px;
     margin-left: 5px;
+    font-size: 0 !important;
 }
 
+#message.havemail,
+#inbox.havemail,
 #mail.havemail {
     background: #FF7500;
 }
-#mail:not(.havemail):hover    {
+
+#message:not(.havemail):hover,
+#inbox:not(.havemail):hover,
+#mail:not(.havemail):hover {
     background: rgba(0,0,0,0.06);
 }
 
-.message-count {
+.message-count,
+.inbox-count {
     border-radius: 0;
     margin-left: 0;
+    padding: 0px 3px;
     padding-right: 5px;
+    background-color: #FF7500;
+    font-weight: bold;
+}
+.inbox-count {
+    margin-right: 5px;
 }
 
 /* Mod mail + New Modmail icon
@@ -598,15 +660,7 @@ body #header:after {
     transform: scale(0.8);
 }
 .pref-lang {
-    display: inline-block;
-    position: relative;
     font-size: 0 !important;
-    width: 24px;
-    height: 24px;
-    top: -4px;
-}
-.pref-lang:hover {
-    background: rgba(0,0,0,0.06);
 }
 
 /* RES settings gear icon

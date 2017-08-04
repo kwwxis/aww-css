@@ -46,8 +46,8 @@
 
 /* link entry */
 .link .entry {
-    flex-basis: calc(100% - 162px);
-    max-width: calc(100% - 161px);
+    flex-basis: calc(100% - 178px);
+    max-width: calc(100% - 177px);
 }
 
 /* comment link entry */

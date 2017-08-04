@@ -101,7 +101,9 @@
 }
 
 /* read full rules link */
-.side .md h3 + ol + ul {
+.side .md h3 + ol + ul,
+.side .md hr + h3,
+.side .md hr + h3 + h3 {
     font-size: 14px;
     list-style-type: none;
     margin: 15px 15px 0 25px;
@@ -177,7 +179,7 @@
 
 /* related subs table
 --------------------------------------------------------------------------------*/
-
+/*
 .side .md h4, .side .md h4 strong {
     font-weight: normal !important;
     font-size: 18px;
@@ -253,6 +255,30 @@
 
 .side .md h4 + table a {
     color: #647d72;
+    font-size: 12px;
+}*/
+
+/* related subs and aww sub of the week links
+--------------------------------------------------------------------------------*/
+
+.side .md hr + h3 {
+    background: hsla(150, 50%, 97%, 1);
+    border-color: hsla(150, 50%, 85%, 1);
+    padding: 0;
+    line-height: 32px;
+}
+.side .md hr + h3 a {
+    color: hsla(150, 50%, 22%, 1);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.side .md hr + h3 + h3 {
+    background: #f4f8ff;
+    border-color: #d6e5ff;
+    padding: 0;
+    line-height: 32px;
+    font-weight: 600;
     font-size: 12px;
 }
 
