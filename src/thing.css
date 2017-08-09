@@ -52,8 +52,8 @@
 
 /* comment link entry */
 .comments-page .link .entry {
-    flex-basis: calc(100% - 143px);
-    max-width: calc(100% - 142px);
+    flex-basis: calc(100% - 150px);
+    max-width: calc(100% - 149px);
 }
 
 /* comment link entry - with queue tools*/
