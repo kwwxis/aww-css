@@ -10,7 +10,13 @@
 }
 
 #header-bottom-left:before, 
-.res.res-nightmode #header-bottom-left:before {
+.res.res-nightmode #header-bottom-left:before,
+#header-bottom-right .beta-hint,
+#header-bottom-right,
+.res #userbarToggle,
+.res.res-nightmode #header-bottom-right .beta-hint,
+.res.res-nightmode #header-bottom-right,
+.res.res-nightmode #userbarToggle {
     background: #FB732F;
 }
 
@@ -39,4 +45,8 @@
 
 .res.res-nightmode #sr-header-area:hover * {
     color: #fdbc9b;
+}
+
+#modmail.havemail, #new_modmail.havemail {
+    background: #f54900;
 }
