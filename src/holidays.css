@@ -1,0 +1,131 @@
+
+/* AWW-LOGO
+   ~~~~~~~~ */
+.pagename a, .res.res-nightmode .pagename a {
+    background: url(%%aww-christmas%%) no-repeat;
+    background-position: center center;
+    background-size: 200px;
+    height: 105px;
+    margin: 0;
+    transform: scale(1.0) translateY(4px);
+}
+
+
+/* HEADER BAR
+   ~~~~~~~~~~ */
+#header-bottom-left:before,
+#header-bottom-right,
+.res #userbarToggle,
+#header .tabmenu,
+
+.res.res-nightmode #header-bottom-left:before,
+.res.res-nightmode #header-bottom-right,
+.res.res-nightmode #userbarToggle,
+.res.res-nightmode #header .tabmenu {
+    background: #00654f;
+}
+
+/* TABMENU
+   ~~~~~~~ */
+#header .tabmenu li a {
+    font-size: 15px;
+}
+.res.res-nightmode #header .tabmenu li a {
+    color: #fff;
+    font-weight: normal;
+}
+
+#header .tabmenu li.selected a,
+.res.res-nightmode #header .tabmenu li.selected a {
+    background-color: #ec3a4e;
+}
+
+/* SNOO LOGO
+   ~~~~~~~~~ */
+
+#header-img-a, .res.res-nightmode #header-img-a {
+    z-index: 25;
+    background: #ec3a4e;
+    box-shadow: 0 0px 5px hsla(167, 100%, 10%, 1);
+    border-radius: 50%;
+}
+#header-img-a:before,
+.res.res-nightmode #header-img-a:before {
+    content: '';
+    display: block;
+    z-index: 25;
+    background: url(%%snoo-wreath%%) no-repeat center -7px / 92px;
+    height: 84px;
+    bottom: -10px;
+}
+#header-img-a:after,
+.res.res-nightmode #header-img-a:after {
+    background: url(%%snoo2%%) no-repeat center center / 90%;
+    background-color: transparent !important;
+    border: 0;
+    transform: scale(0.75) translate(-1px, -2px);
+}
+
+/* HEADER-BOTTOM-RIGHT
+   ~~~~~~~~~~~~~~~~~~~ */
+
+#mail.havemail, #modmail.havemail, #new_modmail.havemail {
+    background: #ec3a4e;
+}
+
+.res.res-nightmode #header-bottom-right *,
+.res.res-nightmode #header-bottom-right .user *,
+.res.res-nightmode .res.res-nightmode #header-bottom-right a {
+    color: white;
+}
+
+.res.res-nightmode #RESAccountSwitcherIcon:after {
+    background-position: -8px -56px;
+}
+
+.res.res-nightmode #message.nohavemail:after,
+.res.res-nightmode #mail.nohavemail:after {
+    background-position: -8px -31px;
+}
+
+.res.res-nightmode #modmail.nohavemail:after {
+    background-position: -9px -116px;
+}
+
+.res.res-nightmode #new_modmail.nohavemail:after {
+    background-position: -9px -176px;
+}
+
+.res.res-nightmode .pref-lang:after {
+    background-position: -8px -146px;
+}
+.res.res-nightmode .gearIcon:after {
+    color: white;
+}
+
+/* SR-HEADER-AREA
+   ~~~~~~~~~~~~~~ */
+
+#sr-header-area {
+    border-top-color: #ec3a4e;
+}
+.res.res-nightmode #sr-header-area {
+    border-top-color: hsl(167, 100%, 20%);
+}
+
+#sr-header-area * {
+    font-weight: bold;
+    letter-spacing: 0.2px;
+}
+
+#sr-header-area #RESShortcutsEditContainer * {
+    font-weight: normal;
+}
+#sr-header-area:hover * {
+    color: #ec3a4e;
+}
+
+.res.res-nightmode #sr-header-area a.RESShortcutsCurrentSub,
+.res.res-nightmode #sr-header-area:hover * {
+    color: hsla(353, 82%, 67%, 1) !important;
+}

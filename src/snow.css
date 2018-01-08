@@ -2,11 +2,12 @@
     content: '';
     background: url(%%flake4%%), url(%%flake1%%), url(%%flake3%%), url(%%flake2%%);
     display: block;
-    width: 100vw;
     height: 106px;
     z-index: 23;
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     animation: snow 10s infinite linear;
 }
 

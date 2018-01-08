@@ -132,6 +132,11 @@
     border-color: transparent;
 }
 
+.link.stickied .thumbnail:not(.self),
+.link.promoted .thumbnail:not(.self) {
+    border-color: transparent;
+}
+
 /* Special colors
 --------------------------------------------------------------------------------*/
 .thing.spam {

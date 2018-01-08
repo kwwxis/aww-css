@@ -92,6 +92,11 @@ body #header:after {
     font-family: Calibri,Segoe,"Segoe UI",Verdana,Arial,sans-serif;
 }
 
+.res #RESShortcutsEditContainer {
+    width: 75px;
+    top: 2px;
+}
+
 .res #RESShortcutsEditContainer,
 .res #RESShortcutsSort,
 .res #RESShortcutsRight,
@@ -370,6 +375,7 @@ body #header:after {
     top: initial !important;
     bottom: 0 !important;
     z-index: 20;
+    border-radius: 0 !important;
 }
 
 #header-bottom-right, .res #userbarToggle {
@@ -402,28 +408,30 @@ body #header:after {
 }
 
 /* beta vial */
-.beta-hint, .beta-hint a {
-    top: 0;
-    bottom: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-}
 .beta-hint {
-    background: #a7dbd8;
-    height: 24px;
-    margin-left: -24px;
-    opacity: 1;
+    top: 0;
+    position: absolute;
+    right: 100%;
+    display: block;
     width: 24px;
-    line-height: 24px;
-    text-align: center;
+    height: 24px;
 }
 .beta-hint a {
-    margin: auto;
-    font-size: 0;
-    width: 13px;
-    left: 0;
+    top: 0;
     right: 0;
-    transform: scale(0.9);
+    margin: 0;
+    background: 0;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    text-indent: 0;
+    text-align: center;
+    font-size: 0 !important;
+}
+.beta-hint a:before {
+    content: 'β';
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* userbar toggle */
