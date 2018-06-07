@@ -606,6 +606,20 @@ body #header:after {
     margin-right: 5px;
 }
 
+#chat {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#chat-count.message-count {
+    height: 18px;
+    line-height: 18px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-left: -3px;
+    padding: 0 4px 0 4px;
+}
+
 /* Mod mail + New Modmail icon
 --------------------------------------------------------------------------------*/
 

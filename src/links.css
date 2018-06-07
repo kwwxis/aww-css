@@ -335,3 +335,29 @@
     padding-bottom: 80px;
     background-position: center;
 }
+
+/* pinned content
+--------------------------------------------------------------------------------*/
+.pinnable-content.pinned,
+.pinnable-content.pinned .thing {
+    height: 150px;
+}
+
+.pinnable-content.pinned .thumbnail {
+    display: none;
+}
+
+.pinnable-content.pinned .top-matter {
+
+}
+
+.pinnable-content.pinned .link .entry .expando-button ~ .tagline {
+    margin-left: 4px;
+}
+.pinnable-content.pinned .link .entry .expando-button ~ .buttons {
+    margin-left: 0;
+}
+
+.pinnable-content.pinned .expando {
+    margin-left: 65px;
+}

@@ -49,26 +49,3 @@ body {
 .res.mod-toolbox .content[role=main] {
     z-index: 100;
 }
-
-/* a cool "flair" for myself because I think I'm cool
---------------------------------------------------------------------------------*/
-
-.author[href$="/user/kwwxis"]:after {
-    content: '';
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url(%%spritesheet%%);
-    background-position: -111px -272px;
-    margin-bottom: -4px;
-    margin-left: 1px;
-    -webkit-transform: scale(0.7) rotateZ(0deg);
-    -moz-transform: scale(0.7) rotateZ(0deg);
-    transform: scale(0.7) rotateZ(0deg);
-    transition: transform 400ms ease;
-}
-.author[href$="/user/kwwxis"]:hover:after {
-    -webkit-transform: scale(0.7) rotateZ(360deg);
-    -moz-transform: scale(0.7) rotateZ(360deg);
-    transform: scale(0.7) rotateZ(360deg);
-}

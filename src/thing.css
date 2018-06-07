@@ -28,6 +28,16 @@
     order: 0;
 }
 
+/* Thing reporting
+--------------------------------------------------------------------------------*/
+.report-flow-form {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+.report-flow-form > * {
+    width: 100%;
+}
+
 /* Thing title color
 --------------------------------------------------------------------------------*/
 .thing .title:visited, .thing.visited .title {
