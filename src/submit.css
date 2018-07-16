@@ -228,7 +228,7 @@
 /* hide everything but the last item because of the CSS rule reminders above */
 .submit-page .submit_text h1,
 .submit-page .submit_text h2,
-.submit-page .submit_text ul li:not(:last-child),
+.submit-page .submit_text ul li:not(:last-child):not(:first-child),
 .submit-page .submit_text ul li:last-child p:last-child {
     display:none;
 }
