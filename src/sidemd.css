@@ -100,10 +100,11 @@
     margin-top: 7px;
 }
 
-/* read full rules link */
+/* read full rules link, related subreddits link, aww sub of week, discord button */
 .side .md h3 + ol + ul,
 .side .md hr + h3,
-.side .md hr + h3 + h3 {
+.side .md hr + h3 + h3,
+.side .md a[href*=discord] {
     font-size: 14px;
     list-style-type: none;
     margin: 15px 15px 0 25px;
@@ -280,6 +281,24 @@
     line-height: 32px;
     font-weight: 600;
     font-size: 12px;
+}
+
+/* discord link
+--------------------------------------------------------------------------------*/
+.side .md a[href*=discord] {
+    display: block;
+    background: url(%%discord%%) no-repeat 7px 8px / 30px 30px;
+    background-color: hsl(227, 58%, 65%);
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    padding: 0;
+    line-height: 42px;
+    transition: all 150ms ease;
+}
+
+.side .md a[href*=discord]:hover {
+    background-color: hsla(227, 58%, 60%);
 }
 
 /* spray and neuter box
