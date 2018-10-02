@@ -74,3 +74,11 @@
 .res.res-nightmode #chat:before {
     background: #000;
 }
+
+.res.listing-page .link.RES-keyNav-activeThing:before {
+    border-left-color: #fa864a;
+}
+
+.res .link.RES-keyNav-activeThing:after {
+    background: #fa864a;
+}
