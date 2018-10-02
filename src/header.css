@@ -620,6 +620,19 @@ body #header:after {
     padding: 0 4px 0 4px;
 }
 
+#chat {
+    content: "";
+    display: block;
+    position: relative;
+    height: 16px;
+}
+#chat:not(.active) {
+    background: url(%%spritesheet%%) -7px -1px / 270px;
+}
+.res.res-nightmode #chat:not(.active) {
+    background: url(%%spritesheet%%) 21px -1px / 270px;
+}
+
 /* Mod mail + New Modmail icon
 --------------------------------------------------------------------------------*/
 
