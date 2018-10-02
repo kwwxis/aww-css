@@ -48,5 +48,29 @@
 }
 
 #modmail.havemail, #new_modmail.havemail {
-    background: #f54900;
+    background: #F00;
+}
+
+#chat {
+    overflow: visible !important;
+    background: url(%%spritesheet%%) -7px -1px / 270px !important;
+}
+
+#chat:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid #FB732F;
+}
+
+.res.res-nightmode #chat {
+    background: url(%%spritesheet%%) 21px -1px / 270px !important;
+}
+.res.res-nightmode #chat:before {
+    background: #000;
 }
