@@ -253,7 +253,7 @@
 
 /* Active Element
 --------------------------------------------------------------------------------*/
-.res .RES-keyNav-activeElement, .res .RES-keyNav-activeElement .md-container {
+.res .RES-keyNav-activeElement, .res .entry.res-selected.RES-keyNav-activeElement, .res .RES-keyNav-activeElement .md-container {
     background-color: transparent !important;
 }
 
